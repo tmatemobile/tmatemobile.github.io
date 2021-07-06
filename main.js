@@ -162,8 +162,7 @@ window.onload = function(){
     var samsung16 = {name:"Samsung Note5", desc:"[5.7 inches, has home button, camera and flash light from left to right, pen hole on the bottom left]", images:"images/samsung16.png"};
     var samsung17 = {name:"Samsung J2 Pro(2018)", desc:"[5 inches, round corners all around, thin linear shape beside the camera island]", images:"images/samsung17.png"};
     var samsung19 = {name:"Samsung J8", desc:"[6 inches, two cameras, fingerprint unlock, no home button]", images:"images/samsung19.png"};
-    var samsung20 = {name:"Samsung A8", desc:"[5.7 inches]", images:"images/samsung20.png"};
-    var samsung21 = {name:"Samsung A10", desc:"[6.2 inches, no home button, one dot camera front, top left corner camera and flash light]", images:"images/samsung21.png"};
+    var samsung20 = {name:"Samsung A8", desc:"[5.7 inches]", images:"images/samsung20.png"}
     var samsung22 = {name:"Samsung A20/30", desc:"[6.4 inches, one dot camera front, fingerprint access at the back, two camers on back, one singled out flash light below]", images:"images/samsung22.png"};
     var samsung23 = {name:"Samsung A50", desc:"[One dot camera front, three cameras + one singled out flash light, no fingerprint access on back]", images:"images/samsung23.png"};
     var samsung24 = {name:"Samsung Galaxy S21", desc:"[6.2 inches, three outstanding eyes recessed into metal module, stand alone flash light beside Matte Glass front and glass back]", images:"images/samsung24.jpg"};
@@ -239,7 +238,7 @@ window.onload = function(){
         ipad15, ipad16, ipad17);
     //三星主流手机型号题库； iphone, ipad, 三星主流型号题库， 以及小型号手机题库 共同组成主页上的 “phone/ipad model identification” ；可加入型号
     var samsungList = new this.Array(samsung1, samsung2, samsung3, samsung4, samsung5, samsung7, samsung8, samsung9, samsung10,
-        samsung11, samsung12, samsung13, samsung14, samsung15, samsung16, samsung17, samsung19, samsung20, samsung21, samsung22,
+        samsung11, samsung12, samsung13, samsung14, samsung15, samsung16, samsung17, samsung19, samsung20, samsung22,
         samsung23, samsung24, samsung25, samsung26, samsung27, samsung28, samsung29, samsung30, samsung31, samsung32, samsung33, samsung34,
         samsung35, samsung36);
     //小型号手机题库； iphone, ipad, 三星主流型号题库， 以及小型号手机题库 共同组成主页上的 “phone/ipad model identification” ；可加入型号
