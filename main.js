@@ -1,6 +1,6 @@
 window.onload = function(){
     //更新时间的注释
-    console.log('updated 06/07/2021, 16:31')
+    console.log('updated 23/01/2023, 16:00')
 
     //店内产品
     var case1={name:"Soft jelly case",price:"15",image:"images/case1.png"};
@@ -132,23 +132,25 @@ window.onload = function(){
     var iphone14promax = {name:"Iphone 14 Pro Max", desc:"[6.7 inches, triple rear cameras, vertical edge]", images:"images/iphones/iphone14promax.png"};
 
     //Ipad
-    var ipad1 = {name:"IPAD mini 3", desc:"[Microphone hole in the middle, touch ID unlock, single camera, slient button]", images:"images/ipad1.png"};
-    var ipad2 = {name:"IPAD mini/mini 2", desc:"[Microphone hole in the middle, no Touch ID unlock, single camera, slient button]", images:"images/ipad2.png"};
-    var ipad3 = {name:"IPAD mini 4", desc:"[Touch ID unlock, no silence button, microphone hole on the right of camera]", images:"images/ipad3.png"};
-    var ipad4 = {name:"IPAD mini5(2019)", desc:"[Touch ID unlock, no silence button, one microphone hole on the back middle]", images:"images/ipad4.png"};
-    var ipad5 = {name:"IPAD 2/3/4", desc:"[Wide bezel on the front，large charge port, 9.7 inches]", images:"images/ipad5.png"};
-    var ipad6 = {name:"IPAD Air1", desc:"[No finger print access，single camera, microphone in the middle, 9.7 inches]", images:"images/ipad6.png"};
-    var ipad7 = {name:"IPAD Air2", desc:"[Finger print access，no silent button, tiny microphone on the right of rear camera, 9.7 inches]", images:"images/ipad7.png"};
-    var ipad8 = {name:"IPAD 9.7(2017/2018)", desc:"[Camera only, no flash light，touch ID home button, no silent button, microphone at the middle, 9.7 inches]", images:"images/ipad8.png"};
-    var ipad9 = {name:"IPAD Pro 11(2018)", desc:"[Many pin holes on top, no home button]", images:"images/ipad9.png"};
-    var ipad10 = {name:"IPAD Pro 12.9inch(2015)", desc:"[12.9 inches, camera and flash light beside each other, has home button]", images:"images/ipad10.png"};
-    var ipad11 = {name:"IPAD Pro 12.9inch(2017)", desc:"[12.9 inches, vertical shape, camera on top and flash light under, has home button]", images:"images/ipad11.png"};
-    var ipad12 = {name:"IPAD Pro 10.5inch", desc:"[Vertical shape, camera on top and flash light under, has home button]", images:"images/ipad12.png"};
-    var ipad13 = {name:"IPAD Pro 9.7inch(2016)", desc:"[Camera above the flash light]", images:"images/ipad13.png"};
-    var ipad14 = {name:"IPAD Air 4", desc:"[Touch ID, no silent button & no home button, no flash light, microphone on the middle, square edge]", images:"images/ipad14.jpg"};
-    var ipad15 = {name:"IPAD Pro 12.9(2020)", desc:"[12.9 inches, back island camera, no home button, square edge]", images:"images/ipad15.png"};
-    var ipad16 = {name:"iPad Pro 11 (2020)", desc:"[11 inches, back island camera, no home button, square edge]", images:"images/ipad16.png"};
-    var ipad17 = {name:"iPad Pro 12.9 (2018)", desc:"[12.9 inches, no home button, no framing on the rear camera, flash light right under, top and bottom both having speakers]", images:"images/ipad17.png"};
+    var ipadmini3 = {name:"IPAD mini 3", desc:"[Microphone hole in the middle, touch ID unlock, single camera, slient button]", images:"images/ipad1.png"};
+    var ipadmini1_2 = {name:"IPAD mini/mini 2", desc:"[Microphone hole in the middle, no Touch ID unlock, single camera, slient button]", images:"images/ipad2.png"};
+    var ipadmini4 = {name:"IPAD mini 4", desc:"[Touch ID unlock, no silence button, microphone hole on the right of camera]", images:"images/ipad3.png"};
+    var ipadmini5 = {name:"IPAD mini5(2019)", desc:"[Touch ID unlock, no silence button, one microphone hole on the back middle]", images:"images/ipad4.png"};
+    var ipad2_3_4 = {name:"IPAD 2/3/4th generation", desc:"[Wide bezel on the front, large charge port, 9.7 inches]", images:"images/ipad5.png"};
+    var ipadair1 = {name:"IPAD Air1", desc:"[9.7 inches, No finger print access, single camera, microphone in the middle]", images:"images/ipad6.png"};
+    var ipadair2 = {name:"IPAD Air2", desc:"[9.7 inches, Finger print access, no silent button, tiny microphone on the right of rear camera, ]", images:"images/ipad7.png"};
+    var ipad5_6 = {name:"IPAD 5/6th Generation", desc:"[9.7 inches, Camera only, no flash light, touch ID home button, no silent button, microphone at the middle]", images:"images/ipad8.png"};
+    var ipadpro_11inch_2018 = {name:"IPAD Pro 11(2018)", desc:"[Many pin holes on top, no home button]", images:"images/ipad9.png"};
+    var ipadpro_129inch_2015 = {name:"IPAD Pro 12.9inch(2015)", desc:"[12.9 inches, camera and flash light beside each other, has home button]", images:"images/ipad10.png"};
+    var ipadpro_129inch_2017 = {name:"IPAD Pro 12.9inch(2017)", desc:"[12.9 inches, vertical shape, camera on top and flash light under, has home button]", images:"images/ipad11.png"};
+    var ipadpro_105inch = {name:"IPAD Pro 10.5 inch", desc:"[Vertical shape, camera on top and flash light under, has home button]", images:"images/ipad12.png"};
+    var ipadpro_97inch = {name:"IPAD Pro 9.7 inch(2016)", desc:"[Camera above the flash light]", images:"images/ipad13.png"};
+    var ipadair4_5 = {name:"IPAD Air 4/5", desc:"[Touch ID, no silent button & no home button, no flash light, microphone on the middle, square edge]", images:"images/ipad14.jpg"};
+    var ipadpro_129inch_2020_2021_2022 = {name:"IPAD Pro 12.9(2020/2021/2022)", desc:"[12.9 inches, back island camera, no home button, square edge]", images:"images/ipad15.png"};
+    var ipadpro_11inch_2020_2021_2022 = {name:"iPad Pro 11 (2020/2021/2022)", desc:"[11 inches, back island camera, no home button, square edge]", images:"images/ipad16.png"};
+    var ipadpro_129inch_2018 = {name:"iPad Pro 12.9 (2018)", desc:"[12.9 inches, no home button, no framing on the rear camera, flash light right under, top and bottom both having speakers]", images:"images/ipad17.png"};
+    var ipad10 = {name:"iPad 10th Generation", desc:"[10.9 inches, Touch ID unlock, no home button, support 1st Gen Apple Pencil only]", images:"images/ipad18.png"};
+    var ipad7_8_9 = {name:"iPad 7/8/9th Generation", desc:"[10.2 inches, has home button, rounded edge]", images:"images/ipad19.png"};
 
     //三星手机
     var samsung1 = {name:"Samsung S10/S10+", desc:"[6.4/6.7 inches, three camera lens with flash light]", images:"images/samsung1.png"};
@@ -186,13 +188,13 @@ window.onload = function(){
     var samsung36 = {name:"Samsung A70 (2019)", desc:"[6.7 inches, Three cameras + one singled out flash light, no fingerprint access at the back]", images:"images/samsung36.png"};
     
     //其它小型号手机
-    var otherPhone1 = {name:"HUAWEI P30", desc:"[6.15 inches，one dot camera front, oval round shape of fingerprint access on back, three cameras and one singled out  flash light, log at the left bottom corner]", images:"images/otherPhone1.png"};
-    var otherPhone2 = {name:"HUAWEI P30 Pro", desc:"[6.47 inches，one dot camera front, three cameras framed on one island, bottom left logo]", images:"images/otherPhone2.png"};
-    var otherPhone3 = {name:"HUAWEI Mate20", desc:"[6.53 inches，square island on the back with 3 cameras and one flash light, fingerprint access on the back]", images:"images/otherPhone3.png"};
-    var otherPhone4 = {name:"HUAWEI Mate20 Pro", desc:"[6.39 inches，square framed rear cameras, left top is flash light, no fingerprint access]", images:"images/otherPhone4.png"};
-    var otherPhone5 = {name:"HUAWEI Mate30 Pro", desc:"[6.53 inches，three cameras front, four cameras back on round swirl shape]", images:"images/otherPhone5.png"};
-    var otherPhone6 = {name:"HUAWEI P20", desc:"[5.8 inches]", images:"images/otherPhone6.png"};
-    var otherPhone7 = {name:"HUAWEI Nova 3i", desc:"[6.3 inches，a straight recessed line front ( camera and other stuff ); two cameras, flash light and touch ID at the back side]", images:"images/otherPhone7.png"};
+    //var otherPhone1 = {name:"HUAWEI P30", desc:"[6.15 inches，one dot camera front, oval round shape of fingerprint access on back, three cameras and one singled out  flash light, log at the left bottom corner]", images:"images/otherPhone1.png"};
+    //var otherPhone2 = {name:"HUAWEI P30 Pro", desc:"[6.47 inches，one dot camera front, three cameras framed on one island, bottom left logo]", images:"images/otherPhone2.png"};
+    //var otherPhone3 = {name:"HUAWEI Mate20", desc:"[6.53 inches，square island on the back with 3 cameras and one flash light, fingerprint access on the back]", images:"images/otherPhone3.png"};
+    //var otherPhone4 = {name:"HUAWEI Mate20 Pro", desc:"[6.39 inches，square framed rear cameras, left top is flash light, no fingerprint access]", images:"images/otherPhone4.png"};
+    //var otherPhone5 = {name:"HUAWEI Mate30 Pro", desc:"[6.53 inches，three cameras front, four cameras back on round swirl shape]", images:"images/otherPhone5.png"};
+    //var otherPhone6 = {name:"HUAWEI P20", desc:"[5.8 inches]", images:"images/otherPhone6.png"};
+    //var otherPhone7 = {name:"HUAWEI Nova 3i", desc:"[6.3 inches，a straight recessed line front ( camera and other stuff ); two cameras, flash light and touch ID at the back side]", images:"images/otherPhone7.png"};
     var otherPhone8 = {name:"Google Pixel 4", desc:"[5.7 inches，square island top left on back, flash light on the bottom of the island, Front one single line black]", images:"images/otherPhone8.png"};
     var otherPhone9 = {name:"Google Pixel 3/3 XL", desc:"[5.5/6.3 inches]", images:"images/otherPhone9.png"};
     var otherPhone10 = {name:"Google Pixel 3a/ 3a XL", desc:"[5.6/6 inches]", images:"images/otherPhone10.png"};
@@ -200,11 +202,11 @@ window.onload = function(){
     var otherPhone12 = {name:"OPPO A57", desc:"[One camera, microphone in between, flash light]", images:"images/otherPhone12.png"};
     var otherPhone13 = {name:"OPPO R17 Pro", desc:"[6.4 inches, three cameras on the middle top]", images:"images/otherPhone13.png"};
     var otherPhone14 = {name:"OPPO Ax5", desc:"[6.2 inches, two camera lens and flash light on the back]", images:"images/otherPhone14.png"};
-    var otherPhone15 = {name:"HUAWEI P20 Pro (2018)", desc:"[6.1 inches, home button in the front side, three cameras and flash light at the back]", images:"images/otherPhone15.png"};
-    var otherPhone16 = {name:"HUAWEI P20 Lite / Nova 3e", desc:"[5.84 inches, no home button, has fingerprint access on the back, two cameras with flash, no speaking on the back]", images:"images/otherPhone16.png"};
-    var otherPhone17 = {name:"HUAWEI Mate 10 (2017)", desc:"[5.9 inches, Have Home Button]", images:"images/otherPhone17.png"};
-    var otherPhone18 = {name:"HUAWEI Mate 10 Lite/ Nova 2i (2017)", desc:"[5.9 inches, two camera in one slot, flash on top of the camera, fingerprint access on the back, no home button]", images:"images/otherPhone18.png"};
-    var otherPhone19 = {name:"HUAWEI Mate 9 (2016)", desc:"[5.9 inches]", images:"images/otherPhone19.png"};
+    //var otherPhone15 = {name:"HUAWEI P20 Pro (2018)", desc:"[6.1 inches, home button in the front side, three cameras and flash light at the back]", images:"images/otherPhone15.png"};
+    //var otherPhone16 = {name:"HUAWEI P20 Lite / Nova 3e", desc:"[5.84 inches, no home button, has fingerprint access on the back, two cameras with flash, no speaking on the back]", images:"images/otherPhone16.png"};
+    //var otherPhone17 = {name:"HUAWEI Mate 10 (2017)", desc:"[5.9 inches, Have Home Button]", images:"images/otherPhone17.png"};
+    //var otherPhone18 = {name:"HUAWEI Mate 10 Lite/ Nova 2i (2017)", desc:"[5.9 inches, two camera in one slot, flash on top of the camera, fingerprint access on the back, no home button]", images:"images/otherPhone18.png"};
+    //var otherPhone19 = {name:"HUAWEI Mate 9 (2016)", desc:"[5.9 inches]", images:"images/otherPhone19.png"};
     var otherPhone20 = {name:"Pixel 2 XL (2017)", desc:"[6 inches, front speaker on the very top of the screen]", images:"images/otherPhone20.png"};
     var otherPhone21 = {name:"Pixel  (2016)", desc:"[5 inches, fingerprint access on the back, Flash -> Camera -> Speaker on the top]", images:"images/otherPhone21.png"};
     var otherPhone22 = {name:"Pixel  XL (2016)", desc:"[5.5 inches, Fingerprint access on the back, Flash -> Camera -> Speaker on the top, Cases normally (Camera Part) have a long hole]", images:"images/otherPhone22.png"};
@@ -240,8 +242,11 @@ window.onload = function(){
     var iphoneList = new this.Array(iphone6_6plus, iphone7_8, iphone7plus_8plus, iphonex_xs, iphonexr, iphonexsmax, iphone11, iphone11pro, iphone11promax,
         iphone12mini, iphone12, iphone12pro, iphone12promax, iphone13mini, iphone13_14, iphone13pro, iphone13promax, iphone14plus, iphone14pro, iphone14promax);
     //ipad 题库，同时也是day2 题库； 此外， iphone, ipad, 三星主流型号题库， 以及小型号手机题库 共同组成主页上的 “phone/ipad model identification” ；可加入型号
-    var ipadList = new this.Array(ipad1, ipad2,ipad3, ipad4,ipad5,ipad6,ipad7, ipad8, ipad9, ipad10, ipad11, ipad12, ipad13, ipad14,
-        ipad15, ipad16, ipad17);
+    var ipadList = new this.Array(
+        ipadmini3, ipadmini1_2, ipadmini4, ipadmini5, ipad2_3_4, 
+        ipadair1, ipadair2, ipad5_6, ipadpro_11inch_2018, ipadpro_129inch_2015, 
+        ipadpro_129inch_2017,  ipadpro_105inch,  ipadpro_97inch,  ipadair4_5,  ipadpro_129inch_2020_2021_2022, 
+        ipadpro_11inch_2020_2021_2022,  ipadpro_129inch_2018, ipad10, ipad7_8_9);
     //三星主流手机型号题库； iphone, ipad, 三星主流型号题库， 以及小型号手机题库 共同组成主页上的 “phone/ipad model identification” ；可加入型号
     var samsungList = new this.Array(samsung1, samsung2, samsung3, samsung4, samsung5, samsung7, samsung8, samsung9, samsung10,
         samsung11, samsung12, samsung13, samsung14, samsung15, samsung16, samsung17, samsung19, samsung20, samsung22,
