@@ -6,14 +6,14 @@ window.onload = function(){
     var case1={name:"Soft jelly case",price:"15",image:"images/case1.png"};
     var case2={name:"Mercury soft",price:"20",image:"images/case2.png"};
     var case3={name:"Mercury SF(soft feeling)",price:"25",image:"images/case3.png"};
-    var case4={name:"Soft premium",price:"20",image:"images/case4.png"};
-    var case5={name:"Soft premium+",price:"25",image:"images/case5.png"};
+    //var case4={name:"Soft premium",price:"20",image:"images/case4.png"};
+    //var case5={name:"Soft premium+",price:"25",image:"images/case5.png"};
     var case6={name:"Stand armor case",price:"25",image:"images/case6.png"};
     var case7={name:"Armor case 钢甲",price:"25",image:"images/case7.png"};
     var case8={name:"Armor case 拉丝",price:"25",image:"images/case8.png"};
-    var case9={name:"Armor case 大黄蜂",price:"25",image:"images/case9.png"};
+    //var case9={name:"Armor case 大黄蜂",price:"25",image:"images/case9.png"};
     var case10={name:"Ring armor case",price:"25",image:"images/case10.png"};
-    var case11={name:"Bumper armor case",price:"25",image:"images/case11.png"};
+    //var case11={name:"Bumper armor case",price:"25",image:"images/case11.png"};
     var case12={name:"One piece armor case",price:"25",image:"images/case12.png"};
     var case14={name:"Tech case 菱格",price:"25",image:"images/case14.png"};
     var case15={name:"Tech pattern case",price:"25",image:"images/case15.png"};
@@ -30,99 +30,106 @@ window.onload = function(){
     var case27={name:"Triple fold flip(hard/soft)",price:"35",image:"images/case27.png"};
     var case28={name:"IPAD Fancy diary",price:"35",image:"images/case28.png"};
     var case29={name:"Pattern flip case",price:"35",image:"images/case29.png"};
-    var case30={name:"IPAD Heavy duty case",price:"40",image:"images/case30.png"};
-    var case31={name:"B Bird car holder",price:"25",image:"images/case31.png"};
+    var case30={name:"IPAD Heavy duty case",price:"45",image:"images/case30.png"};
+    //var case31={name:"B Bird car holder",price:"25",image:"images/case31.png"};
     var case32={name:"Magnetic holder(air vent or wind",price:"25",image:"images/case32.png"};
     var case33={name:"Auto clamp crab holde",price:"30",image:"images/case33.png"};
-    var case34={name:"Auto clamp extension holder",price:"30",image:"images/case34.png"};
+    var case34={name:"Auto clamp extension holder",price:"35",image:"images/case34.png"};
     var case35={name:"Vonk fast charging cable(lighting/micro USB/TYPE-C)",price:"20",image:"images/case35.png"};
     var case36={name:"Vonk fast cable with auto power cut-off(lighting/micro USB/TYPE-C)",price:"30",image:"images/case36.png"};
-    var case37={name:"Hoco M35 earphone",price:"25",image:"images/case37.png"};
-    var case38={name:"Armor case with belt clip",price:"25",image:"images/case38.png"};
+    //var case37={name:"Hoco M35 earphone",price:"25",image:"images/case37.png"};
+    //var case38={name:"Armor case with belt clip",price:"25",image:"images/case38.png"};
     var case39={name:"Card case 圆角",price:"30",image:"images/case39.png"};
     var case40={name:"Back Card case",price:"35",image:"images/case40.png"};
     var case41={name:"Heavy duty case",price:"35(5 extra for clip)",image:"images/case41.png"};
-    var case42={name:"Heavy duty slim",price:"35",image:"images/case42.png"};
-    var case43={name:"Magnetic wallet with zip",price:"50",image:"images/case43.png"};
-    var case44={name:"Slim soft",price:"10",image:"images/case44.png"};
+    var case42={name:"Heavy duty slim",price:"40",image:"images/case42.png"};
+    //var case43={name:"Magnetic wallet with zip",price:"50",image:"images/case43.png"};
+    //var case44={name:"Slim soft",price:"10",image:"images/case44.png"};
     var case45={name:"Bling armor case",price:"25",image:"images/case45.png"};
     var case46={name:"Matt armor case",price:"25",image:"images/case46.png"};
-    var case47={name:"Roar rico armor case",price:"25",image:"images/case47.png"};
-    var case48={name:"Roar mirror armor case",price:"25",image:"images/case48.png"};
+    //var case47={name:"Roar rico armor case",price:"25",image:"images/case47.png"};
+    //var case48={name:"Roar mirror armor case",price:"25",image:"images/case48.png"};
     var case49={name:"Tech case (Dot)",price:"25",image:"images/case49.png"};
-    var case50={name:"Flower Case",price:"25",image:"images/case50.png"};
-    var case51={name:"Silicon cartoon case",price:"25",image:"images/case51.png"};
-    var case52={name:"Roar card case with mirror",price:"30",image:"images/case52.png"};
-    var case53={name:"Roar card case with stand",price:"30",image:"images/case53.png"};
+    //var case50={name:"Flower Case",price:"25",image:"images/case50.png"};
+    //var case51={name:"Silicon cartoon case",price:"25",image:"images/case51.png"};
+    //var case52={name:"Roar card case with mirror",price:"30",image:"images/case52.png"};
+    //var case53={name:"Roar card case with stand",price:"30",image:"images/case53.png"};
     var case54={name:"Hanman back flip card case",price:"35",image:"images/case54.png"};
-    var case55={name:"Puloka card case",price:"35",image:"images/case55.png"};
-    var case56={name:"EFM aspen armor case",price:"35",image:"images/case56.png"};
-    var case57={name:"Metal 360 armor case",price:"40",image:"images/case57.png"};
+    //var case55={name:"Puloka card case",price:"35",image:"images/case55.png"};
+    //var case56={name:"EFM aspen armor case",price:"35",image:"images/case56.png"};
+    //var case57={name:"Metal 360 armor case",price:"40",image:"images/case57.png"};
     var case58={name:"Hanman slim",price:"30",image:"images/case58.png"};
-    var case59={name:"Sonata diary",price:"35",image:"images/case59.png"};
+    var case59={name:"Sonata diary",price:"30",image:"images/case59.png"};
     var case60={name:"Mansoor diary",price:"40",image:"images/case60.png"};
     var case61={name:"Hanman magnetic case (old)",price:"40",image:"images/case61.png"};
     var case62={name:"Hanman magnetic case (new) ",price:"40",image:"images/case62.png"};
-    var case63={name:"Molan Cano wallet case",price:"40",image:"images/case63.png"};
+    //var case63={name:"Molan Cano wallet case",price:"40",image:"images/case63.png"};
     var case64={name:"BRG magnetic big wallet",price:"50",image:"images/case64.png"};
     var case65={name:"Caseme magnetic wallet",price:"50",image:"images/case65.png"};
-    var case66={name:"EFM Monaco wallet case",price:"50",image:"images/case66.png"};
-    var case67={name:"Universal tablet case",price:"20",image:"images/case67.png"};
-    var case68={name:"Tablet Tech case",price:"25",image:"images/case68.png"};
+    //var case66={name:"EFM Monaco wallet case",price:"50",image:"images/case66.png"};
+    //var case67={name:"Universal tablet case",price:"20",image:"images/case67.png"};
+    //var case68={name:"Tablet Tech case",price:"25",image:"images/case68.png"};
     var case69={name:"Tablet Hanman diary case",price:"35",image:"images/case69.png"};
-    var case70={name:"Kids cover - one handle",price:"35",image:"images/case70.png"};
-    var case71={name:"Kids cover - two handles",price:"35",image:"images/case71.png"};
-    var case72={name:"Kids cover - butterfly",price:"35",image:"images/case72.png"};
-    var case73={name:"Kids cover 10.2/10.5”",price:"35",image:"images/case73.png"};
+    var case70={name:"Kids cover - one handle",price:"40",image:"images/case70.png"};
+    var case71={name:"Kids cover - two handles",price:"40",image:"images/case71.png"};
+    var case72={name:"Kids cover - butterfly",price:"40",image:"images/case72.png"};
+    var case73={name:"Kids cover 10.2/10.5”",price:"40",image:"images/case73.png"};
     var case74={name:"Bluetooth Keyboard Case",price:"60(mini) or 70(big)",image:"images/case74.png"};
-    var case75={name:"Mini car holder",price:"10",image:"images/case75.png"};
-    var case76={name:"Car hook",price:"20",image:"images/case76.png"};
+    //var case75={name:"Mini car holder",price:"10",image:"images/case75.png"};
+    //var case76={name:"Car hook",price:"20",image:"images/case76.png"};
     var case77={name:"Tablet Car holder",price:"35",image:"images/case77.png"};
-    var case78={name:"Hoco lightning to type-c fast cable",price:"25",image:"images/case78.png"};
+    var case78={name:"Hoco lightning to type-c fast cable",price:"25",image:"images/case78.png"}; // needs image update
     var case79={name:"Hoco 3 metres cable",price:"25",image:"images/case79.png"};
-    var case80={name:"Magnetic",price:"5",image:"images/case80.png"};
-    var case81={name:"Popsocket (White package)",price:"5",image:"images/case81.png"};
-    var case82={name:"Sim card adapter",price:"10",image:"images/case82.png"};
-    var case83={name:"Popsocket (Yellow & Blue package)/ I-ring",price:"10",image:"images/case83.png"};
-    var case84={name:"Popsocket (airbag)",price:"15",image:"images/case84.png"};
+    var case80={name:"Magnet",price:"5",image:"images/case80.png"};
+    //var case81={name:"Popsocket (White package)",price:"10",image:"images/case81.png"};
+    //var case82={name:"Sim card adapter",price:"10",image:"images/case82.png"};
+    var case83={name:"Popsocket",price:"10",image:"images/case83.png"};
+    //var case84={name:"Popsocket (airbag)",price:"15",image:"images/case84.png"};
     var case85={name:"Medium/ long stylus",price:"10",image:"images/case85.png"};
-    var case86={name:"Card holder with ring sticker",price:"15",image:"images/case86.png"};
-    var case87={name:"Selfie light",price:"15",image:"images/case87.png"};
-    var case88={name:"Waterproof pouch",price:"15",image:"images/case88.png"};
-    var case89={name:"Arm band",price:"15",image:"images/case89.png"};
+    //var case86={name:"Card holder with ring sticker",price:"15",image:"images/case86.png"};
+    //var case87={name:"Selfie light",price:"15",image:"images/case87.png"};
+    var case88={name:"Waterproof pouch",price:"20",image:"images/case88.png"}; // needs image update
+    var case89={name:"Universal arm band",price:"15",image:"images/case89.png"}; // needs image update
     var case90={name:"Portable tablet stand",price:"15",image:"images/case90.png"};
-    var case91={name:"Universal belt clip",price:"20",image:"images/case91.png"};
-    var case92={name:"EFM dual wall charger",price:"30",image:"images/case92.png"};
-    var case93={name:"4 in 1 camera lens",price:"35",image:"images/case93.png"};
+    //var case91={name:"Universal belt clip",price:"20",image:"images/case91.png"};
+    //var case92={name:"EFM dual wall charger",price:"30",image:"images/case92.png"};
+    //var case93={name:"4 in 1 camera lens",price:"35",image:"images/case93.png"};
     var case94={name:"Bluetooth selfie stick with stand",price:"35",image:"images/case94.png"};
-    var case95={name:"Mini selfie stick",price:"35",image:"images/case95.png"};
-    var case96={name:"Cord car charger",price:"20",image:"images/case96.png"};
+    //var case95={name:"Mini selfie stick",price:"35",image:"images/case95.png"};
+    //var case96={name:"Cord car charger",price:"20",image:"images/case96.png"};
     var case97={name:"3sixt 3.4A car charger set (with cable)",price:"30",image:"images/case97.png"};
-    var case98={name:"3sixt 5.4A quick car charger",price:"35",image:"images/case98.png"};
-    var case99={name:"3sixt 5.4A quick car charger set (with cable)",price:"40",image:"images/case99.png"};
-    var case100={name:"Airpods / Airpods pro rubber cover",price:"20",image:"images/case100.png"};
-    var case101={name:"Airpods pro leather looking cover",price:"25",image:"images/case101.png"};
-    var case102={name:"Nylon watch bands",price:"30",image:"images/case102.png"};
+    var case98={name:"3sixt 5.4A quick car charger",price:"30",image:"images/case98.png"}; // needs image update
+    //var case99={name:"3sixt 5.4A quick car charger set (with cable)",price:"40",image:"images/case99.png"};
+    var case100={name:"Airpods / Airpods pro rubber cover",price:"30",image:"images/case100.png"}; // needs image update
+    var case101={name:"Airpods pro leather looking cover",price:"25",image:"images/case101.png"}; // needs image update
+    var case102={name:"Nylon watch bands",price:"25",image:"images/case102.png"};
     var case103={name:"Milane watch bands",price:"40",image:"images/case103.png"};
     var case104={name:"Stainless steel watch bands",price:"60",image:"images/case104.png"};
-    var case105={name:"Stainless steel premium watch bands",price:"70",image:"images/case105.png"};
+    //var case105={name:"Stainless steel premium watch bands",price:"70",image:"images/case105.png"};
     var case106={name:"Soft 拉丝",price:"20",image:"images/case106.png"}; 
 
     //Iphone
-    var iphone1 = {name:"Iphone11 Pro Max", desc:"[6.5 inches, triple rear cameras，rounded edge]", images:"images/iphone1.png"};
-    var iphone2 = {name:"Iphone11 Pro", desc:"[5.8 inches, triple rear cameras，rounded edge]", images:"images/iphone2.png"};
-    var iphone3 = {name:"Iphone11", desc:"[6.1 inches, two rear cameras and one flash light，rounded edge]", images:"images/iphone3.png"};
-    var iphone4 = {name:"Iphone XS MAX", desc:"[6.5 inches, two cameras and one flash light，rounded edge]", images:"images/iphone4.png"};
-    var iphone5 = {name:"Iphone X/XS", desc:"[5.8 inches,Two rear cameras，rounded edge]", images:"images/iphone5.png"};
-    var iphone6 = {name:"Iphone XR ", desc:"[6.1 inches, one camera，rounded edge]", images:"images/iphone6.png"};
-    var iphone8 = {name:"Iphone 7/8 plus", desc:"[5.5 inches, bottom Speaker equal to each other, no earphone plug]", images:"images/iphone8.png"};
-    var iphone9 = {name:"Iphone 7/8", desc:"[4.7 inches, bottom speaker equal to each other, no earphone plug]", images:"images/iphone9.png"};
-    var iphone10 = {name:"Iphone 6/6s/6 Plus/6s Plus", desc:"[4.7/5.5 inches, have earphone plug]", images:"images/iphone10.png"};
-    var iphone11 = {name:"Iphone 5c", desc:"[bright color]", images:"images/iphone11.png"};
-    var iphone12 = {name:"Iphone 12 Pro Max", desc:"[6.7 inches, triple rear cameras，verticle edge]", images:"images/iphone12.jpg"};
-    var iphone13 = {name:"Iphone 12 Pro", desc:"[6.1 inches, triple rear cameras，verticle edge]", images:"images/iphone13.jpg"};
-    var iphone14 = {name:"Iphone 12", desc:"[6.1 inches, two rear cameras，verticle edge]", images:"images/iphone14.jpg"};
-    var iphone15 = {name:"Iphone 12 mini", desc:"[5.4 inches, two rear cameras，verticle edge]", images:"images/iphone15.jpg"};
+    var iphone5c = {name:"Iphone 5c", desc:"[bright color]", images:"images/iphones/iphone5c.png"};
+    var iphone6_6plus = {name:"Iphone 6/6s/6 Plus/6s Plus", desc:"[4.7/5.5 inches, round edge, have earphone plug]", images:"images/iphones/iphone6_6plus.png"};
+    var iphone7_8 = {name:"Iphone 7/8", desc:"[4.7 inches, bottom speakers are symmetrical, no earphone plug]", images:"images/iphones/iphone7_8.png"};
+    var iphone7plus_8plus = {name:"Iphone 7/8 plus", desc:"[5.5 inches, bottom speakers are symmetrical, no earphone plug]", images:"images/iphones/iphone7plus_8plus.png"};
+    var iphonex_xs = {name:"Iphone X/XS", desc:"[5.8 inches,Two rear cameras, rounded edge]", images:"images/iphones/iphonex_xs.png"};
+    var iphonexr = {name:"Iphone XR ", desc:"[6.1 inches, one camera and one flashlight, rounded edge]", images:"images/iphones/iphonexr.png"};
+    var iphonexsmax = {name:"Iphone XS MAX", desc:"[6.5 inches, two cameras and one flashlight, rounded edge]", images:"images/iphones/iphonexsmax.png"};
+    var iphone11 = {name:"Iphone11", desc:"[6.1 inches, two rear cameras, rounded edge]", images:"images/iphones/iphone11.png"};
+    var iphone11pro = {name:"Iphone11 Pro", desc:"[5.8 inches, triple rear cameras, rounded edge]", images:"images/iphones/iphon11pro.png"};
+    var iphone11promax = {name:"Iphone11 Pro Max", desc:"[6.5 inches, triple rear cameras, rounded edge]", images:"images/iphones/iphone11promax.png"};
+    var iphone12mini = {name:"Iphone 12 mini", desc:"[5.4 inches, two rear cameras, vertical edge]", images:"images/iphones/iphone12mini.png"};
+    var iphone12 = {name:"Iphone 12", desc:"[6.1 inches, two rear cameras align vertically, vertical edge]", images:"images/iphones/iphone12.png"};
+    var iphone12pro = {name:"Iphone 12 Pro", desc:"[6.1 inches, triple rear cameras, vertical edge]", images:"images/iphones/iphone12pro.png"};
+    var iphone12promax = {name:"Iphone 12 Pro Max", desc:"[6.7 inches, triple rear cameras, vertical edge]", images:"images/iphones/iphone12promax.png"};
+    var iphone13mini = {name:"Iphone 13 mini", desc:"[5.4 inches, two rear cameras, vertical edge]", images:"images/iphones/iphone15.png"};
+    var iphone13_14 = {name:"Iphone 13/14", desc:"[6.1 inches, two rear cameras aligned diagonally, vertical edge]", images:"images/iphones/iphone13_14.png"};
+    var iphone13pro = {name:"Iphone 13 Pro", desc:"[6.1 inches, triple rear cameras, top speaker is touching the edge, vertical edge]", images:"images/iphones/iphone13pro.png"};
+    var iphone13promax = {name:"Iphone 13 Pro Max", desc:"[6.7 inches, triple rear cameras, top speaker is touching the edge, vertical edge]", images:"images/iphones/iphone13promax.png"};
+    var iphone14plus = {name:"Iphone 14 plus", desc:"[6.7 inches, two rear cameras aligned diagonally, vertical edge]", images:"images/iphones/iphone14plus.png"};
+    var iphone14pro = {name:"Iphone 14 Pro", desc:"[6.1 inches, triple rear cameras, vertical edge]", images:"images/iphones/iphone14pro.png"};
+    var iphone14promax = {name:"Iphone 14 Pro Max", desc:"[6.7 inches, triple rear cameras, vertical edge]", images:"images/iphones/iphone14promax.png"};
 
     //Ipad
     var ipad1 = {name:"IPAD mini 3", desc:"[Microphone hole in the middle, touch ID unlock, single camera, slient button]", images:"images/ipad1.png"};
@@ -230,8 +237,8 @@ window.onload = function(){
     var day3List = new Array(case75, case76, case77, case78, case79, case80, case81, case82, case83, case84, case85, case86, case87, case88, case89, case90,
         case91, case92, case93, case94, case95, case96, case97, case98, case99, case100, case101, case102, case103, case104, case105);
     //iphone 题库； iphone, ipad, 三星主流型号题库， 以及小型号手机题库 共同组成主页上的 “phone/ipad model identification” ；可加入型号
-    var iphoneList = new this.Array(iphone1,iphone2,iphone3,iphone4,iphone5,iphone6,iphone8,iphone9,iphone10,iphone11,iphone12,
-        iphone13,iphone14,iphone15);
+    var iphoneList = new this.Array(iphone6_6plus, iphone7_8, iphone7plus_8plus, iphonex_xs, iphonexr, iphonexsmax, iphone11, iphone11pro, iphone11promax,
+        iphone12mini, iphone12, iphone12pro, iphone12promax, iphone13mini, iphone13_14, iphone13pro, iphone13promax, iphone14plus, iphone14pro, iphone14promax);
     //ipad 题库，同时也是day2 题库； 此外， iphone, ipad, 三星主流型号题库， 以及小型号手机题库 共同组成主页上的 “phone/ipad model identification” ；可加入型号
     var ipadList = new this.Array(ipad1, ipad2,ipad3, ipad4,ipad5,ipad6,ipad7, ipad8, ipad9, ipad10, ipad11, ipad12, ipad13, ipad14,
         ipad15, ipad16, ipad17);
@@ -245,12 +252,12 @@ window.onload = function(){
         otherPhone9, otherPhone10, otherPhone11, otherPhone12, otherPhone13, otherPhone14, otherPhone15, otherPhone16, otherPhone17, otherPhone18, otherPhone19, otherPhone20,
         otherPhone21, otherPhone22, otherPhone23, otherPhone24, otherPhone25, otherPhone26, otherPhone27, otherPhone28);
     //店内产品题库， 也就是主页上的"case and accessaries identification" ；可加入产品
-    var caseList=new Array(case1, case2, case3, case4, case5, case6, case7, case8, case9, case10,case11, case12, case14, case15, 
-        case16, case17, case18, case19, case20, case21, case23, case24, case25, case26, case27, case28, case29, case30, case31, 
-        case32, case33, case34, case35, case36, case37, case38, case39, case40, case41, case42, case43, case44, case45, case46, case47, case48, case49, case50, case51,
-        case52, case53, case54, case55, case56, case57, case58, case59, case60, case61, case62, case63, case64, case65, case66, case67, case68, case69, case70, case71, case72, case73,
-        case74, case75, case76, case77, case78, case79, case80, case81, case82, case83, case84, case85, case86, case87, case88, case89, case90, case91, case92, case93, case94, case95,
-        case96, case97, case98, case99, case100, case101, case102, case103, case104, case105, case106);
+    var caseList=new Array(case1, case2, case3, case6, case7, case8, case10, case12, case14, case15, 
+        case16, case17, case18, case19, case20, case21, case23, case24, case25, case26, case27, case28, case29, case30,
+        case32, case33, case34, case35, case36, case39, case40, case41, case42, case45, case46, case49,
+        case54, case58, case59, case60, case61, case62, case64, case65, case69, case70, case71, case72, case73,
+        case74, case77, case78, case79, case80, case83, case85, case88, case89, case90, case94,
+        case97, case98, case100, case101, case102, case103, case104, case106);
     //三星平板题库，也就是主页上的 “samsung tablet model identification”；可加入型号
     var otherTabList=new Array(otherTablet1, otherTablet2, otherTablet3, otherTablet4, otherTablet5, otherTablet6, otherTablet7, otherTablet8, otherTablet9, otherTablet10, otherTablet11,
         otherTablet12, otherTablet13);
