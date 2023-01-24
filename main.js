@@ -139,6 +139,7 @@ window.onload = function(){
     var ipad2_3_4 = {name:"IPAD 2/3/4th generation", desc:"[Wide bezel on the front, large charge port, 9.7 inches]", images:"images/ipad5.png"};
     var ipadair1 = {name:"IPAD Air1", desc:"[9.7 inches, No finger print access, single camera, microphone in the middle]", images:"images/ipad6.png"};
     var ipadair2 = {name:"IPAD Air2", desc:"[9.7 inches, Finger print access, no silent button, tiny microphone on the right of rear camera, ]", images:"images/ipad7.png"};
+    var ipadair3 = {name:"IPAD Pro 10.5 inch", desc:"[10.5 inches, Vertical shape, camera on top, no flash light, has home button]", images:"images/ipad20.png"};
     var ipad5_6 = {name:"IPAD 5/6th Generation", desc:"[9.7 inches, Camera only, no flash light, touch ID home button, no silent button, microphone at the middle]", images:"images/ipad8.png"};
     var ipadpro_11inch_2018 = {name:"IPAD Pro 11(2018)", desc:"[Many pin holes on top, no home button]", images:"images/ipad9.png"};
     var ipadpro_129inch_2015 = {name:"IPAD Pro 12.9inch(2015)", desc:"[12.9 inches, camera and flash light beside each other, has home button]", images:"images/ipad10.png"};
@@ -153,39 +154,39 @@ window.onload = function(){
     var ipad7_8_9 = {name:"iPad 7/8/9th Generation", desc:"[10.2 inches, has home button, rounded edge]", images:"images/ipad19.png"};
 
     //三星手机
-    var samsung1 = {name:"Samsung S10/S10+", desc:"[6.4/6.7 inches, three camera lens with flash light]", images:"images/samsung1.png"};
-    var samsung2 = {name:"Samsung S8/S8+", desc:"[5.8/6.2 inches, three objects on the back, flash light, square camera, fingerprint unlock]", images:"images/samsung2.png"};
-    var samsung3 = {name:"Samsung S9/S9+", desc:"[5.8/6.2 inches, camera above fingerprint, fingerprint recognition on the back, small rectangle glass lense beside]", images:"images/samsung3.png"};
-    var samsung4 = {name:"Samsung S7", desc:"[5.1 inches, home button, square framed camera, flash light on the right, single hole at the top]", images:"images/samsung4.png"};
-    var samsung5 = {name:"Samsung S7 Edge", desc:"[5.5 inches, edge curved screen, home button, square framed camera on back, flash light on the right]", images:"images/samsung5.png"};
-    var samsung7 = {name:"Samsung Note 10/10Plus", desc:"[6.3/6.8 inches, long thin cameras frame]", images:"images/samsung7.png"};
-    var samsung8 = {name:"Samsung Note9", desc:"[6.4 inches, back is the shape of “丅”]", images:"images/samsung8.png"};
-    var samsung9 = {name:"Samsung Note8", desc:"[6.3 inches]", images:"images/samsung9.png"};
-    var samsung10 = {name:"Samsung S3", desc:"[4.8 inches, round corner, 3 objects at the back in the layout of 'left, middle, and right']", images:"images/samsung10.png"};
-    var samsung11 = {name:"Samsung S4", desc:"[5 inches, ertically laid camera and flash light, linear speaker on the bottom left up]", images:"images/samsung11.png"};
-    var samsung12 = {name:"Samsung S6", desc:"[5.1 inches, camera is at the left, two holes at the top]", images:"images/samsung12.png"};
-    var samsung13 = {name:"Samsung S6 Edge", desc:"[5.1 inches, curved screen, two holes at the top]", images:"images/samsung13.png"};
-    var samsung14 = {name:"Samsung Note3", desc:"[5.7 inches, has home button, pen hole at bottom left]", images:"images/samsung14.png"};
-    var samsung15 = {name:"Samsung Note4", desc:"[5.7 inches, pen hole and linear speaker on the bottom left part]", images:"images/samsung15.png"};
-    var samsung16 = {name:"Samsung Note5", desc:"[5.7 inches, has home button, camera and flash light from left to right, pen hole on the bottom left]", images:"images/samsung16.png"};
-    var samsung17 = {name:"Samsung J2 Pro(2018)", desc:"[5 inches, round corners all around, thin linear shape beside the camera island]", images:"images/samsung17.png"};
-    var samsung19 = {name:"Samsung J8", desc:"[6 inches, two cameras, fingerprint unlock, no home button]", images:"images/samsung19.png"};
-    var samsung20 = {name:"Samsung A8", desc:"[5.7 inches]", images:"images/samsung20.png"}
-    var samsung22 = {name:"Samsung A20/30", desc:"[6.4 inches, one dot camera front, fingerprint access at the back, two camers on back, one singled out flash light below]", images:"images/samsung22.png"};
-    var samsung23 = {name:"Samsung A50", desc:"[One dot camera front, three cameras + one singled out flash light, no fingerprint access on back]", images:"images/samsung23.png"};
-    var samsung24 = {name:"Samsung Galaxy S21", desc:"[6.2 inches, three outstanding eyes recessed into metal module, stand alone flash light beside Matte Glass front and glass back]", images:"images/samsung24.jpg"};
-    var samsung25 = {name:"Samsung Galaxy S21 plus", desc:"[6.7 inches, three cameras lined up vertically and one flash light set alone.]", images:"images/samsung25.jpg"};
-    var samsung26 = {name:"Samsung Galaxy S21 Ultra", desc:"[6.8 inches, glass front and glass back with S PEN A slightly wide island module on the back 4 cameras]", images:"images/samsung26.jpg"};
-    var samsung27 = {name:"Samsung Galaxy S20 FE", desc:"[6.5 inches, phone body is bigger than s20. Plastic back. S20  flagship is with glass back. S20 FE front screen flat, s20 curved screen.]", images:"images/samsung27.jpg"};
-    var samsung28 = {name:"Samsung Galaxy S20 ultra", desc:"[6.9 inches, 4 cameras One stand out telephoto camera below]", images:"images/samsung28.jpg"};
-    var samsung29 = {name:"Samsung Galaxy Note 20", desc:"[6.7 inches, glass front / plastic back]", images:"images/samsung29.jpg"};
-    var samsung30 = {name:"Samsung Galaxy Note 20 ultra", desc:"[6.9 inches, glass front / glass back, laser auto focus sensor under flash]", images:"images/samsung30.jpg"};
-    var samsung31 = {name:"Samsung J7 Pro 2017", desc:"[5.5 inches, camera and flashlight cover by straight black outline]", images:"images/samsung31.png"};
-    var samsung32 = {name:"Samsung J5 Pro 2017", desc:"[5.2 inches, camera and flashlight cover by straight black outline]", images:"images/samsung32.png"};
-    var samsung33 = {name:"Samsung J7 Prime (2016)", desc:"[5.5 inches, Single Camera in the middle with flash on the right]", images:"images/samsung33.png"};
-    var samsung34 = {name:"Samsung J5 Prime (2016)", desc:"[5 inches, Single Camera in the middle with flash on the right]", images:"images/samsung34.png"};
-    var samsung35 = {name:"Samsung A51 (2019)", desc:"[6.5 inches, 4 Camera with flash light]", images:"images/samsung35.png"};
-    var samsung36 = {name:"Samsung A70 (2019)", desc:"[6.7 inches, Three cameras + one singled out flash light, no fingerprint access at the back]", images:"images/samsung36.png"};
+    var samsungS10_S10plus = {name:"Samsung S10/S10+", desc:"[6.4/6.7 inches, three camera lens with flash light]", images:"images/samsung1.png"};
+    var samsungS8_S8plus = {name:"Samsung S8/S8+", desc:"[5.8/6.2 inches, three objects on the back, flash light, square camera, fingerprint unlock]", images:"images/samsung2.png"};
+    var samsungS9_S9plus = {name:"Samsung S9/S9+", desc:"[5.8/6.2 inches, camera above fingerprint, fingerprint recognition on the back, small rectangle glass lense beside]", images:"images/samsung3.png"};
+    var samsungS7 = {name:"Samsung S7", desc:"[5.1 inches, home button, square framed camera, flash light on the right, single hole at the top]", images:"images/samsung4.png"};
+    var samsungS7edge = {name:"Samsung S7 Edge", desc:"[5.5 inches, edge curved screen, home button, square framed camera on back, flash light on the right]", images:"images/samsung5.png"};
+    var samsungNote10_Note10plus = {name:"Samsung Note 10/10Plus", desc:"[6.3/6.8 inches, long thin cameras frame]", images:"images/samsung7.png"};
+    var samsungNote9 = {name:"Samsung Note9", desc:"[6.4 inches, back is the shape of “丅”]", images:"images/samsung8.png"};
+    var samsungNote8 = {name:"Samsung Note8", desc:"[6.3 inches]", images:"images/samsung9.png"};
+    var samsungS3 = {name:"Samsung S3", desc:"[4.8 inches, round corner, 3 objects at the back in the layout of 'left, middle, and right']", images:"images/samsung10.png"};
+    var samsungS4 = {name:"Samsung S4", desc:"[5 inches, ertically laid camera and flash light, linear speaker on the bottom left up]", images:"images/samsung11.png"};
+    var samsungS6 = {name:"Samsung S6", desc:"[5.1 inches, camera is at the left, two holes at the top]", images:"images/samsung12.png"};
+    var samsungS6edge = {name:"Samsung S6 Edge", desc:"[5.1 inches, curved screen, two holes at the top]", images:"images/samsung13.png"};
+    var samsungNote3 = {name:"Samsung Note3", desc:"[5.7 inches, has home button, pen hole at bottom left]", images:"images/samsung14.png"};
+    var samsungNote4 = {name:"Samsung Note4", desc:"[5.7 inches, pen hole and linear speaker on the bottom left part]", images:"images/samsung15.png"};
+    var samsungNote5 = {name:"Samsung Note5", desc:"[5.7 inches, has home button, camera and flash light from left to right, pen hole on the bottom left]", images:"images/samsung16.png"};
+    var samsungJ2pro = {name:"Samsung J2 Pro(2018)", desc:"[5 inches, round corners all around, thin linear shape beside the camera island]", images:"images/samsung17.png"};
+    var samsungJ8 = {name:"Samsung J8", desc:"[6 inches, two cameras, fingerprint unlock, no home button]", images:"images/samsung19.png"};
+    var samsungA8 = {name:"Samsung A8", desc:"[5.7 inches]", images:"images/samsung20.png"}
+    var samsungA20_A30 = {name:"Samsung A20/30", desc:"[6.4 inches, one dot camera front, fingerprint access at the back, two camers on back, one singled out flash light below]", images:"images/samsung22.png"};
+    var samsungA50 = {name:"Samsung A50", desc:"[One dot camera front, three cameras + one singled out flash light, no fingerprint access on back]", images:"images/samsung23.png"};
+    var samsungS21 = {name:"Samsung Galaxy S21", desc:"[6.2 inches, three outstanding eyes recessed into metal module, stand alone flash light beside Matte Glass front and glass back]", images:"images/samsung24.jpg"};
+    var samsungS21plus = {name:"Samsung Galaxy S21 plus", desc:"[6.7 inches, three cameras lined up vertically and one flash light set alone.]", images:"images/samsung25.jpg"};
+    var samsungS21Ultra = {name:"Samsung Galaxy S21 Ultra", desc:"[6.8 inches, glass front and glass back with S PEN A slightly wide island module on the back 4 cameras]", images:"images/samsung26.jpg"};
+    var samsungS20FE = {name:"Samsung Galaxy S20 FE", desc:"[6.5 inches, phone body is bigger than s20. Plastic back. S20  flagship is with glass back. S20 FE front screen flat, s20 curved screen.]", images:"images/samsung27.jpg"};
+    var samsungS20Ultra = {name:"Samsung Galaxy S20 ultra", desc:"[6.9 inches, 4 cameras One stand out telephoto camera below]", images:"images/samsung28.jpg"};
+    var samsungNote20 = {name:"Samsung Galaxy Note 20", desc:"[6.7 inches, glass front / plastic back]", images:"images/samsung29.jpg"};
+    var samsungNote20Ultra = {name:"Samsung Galaxy Note 20 ultra", desc:"[6.9 inches, glass front / glass back, laser auto focus sensor under flash]", images:"images/samsung30.jpg"};
+    var samsungJ7pro = {name:"Samsung J7 Pro 2017", desc:"[5.5 inches, camera and flashlight cover by straight black outline]", images:"images/samsung31.png"};
+    var samsungJ5pro = {name:"Samsung J5 Pro 2017", desc:"[5.2 inches, camera and flashlight cover by straight black outline]", images:"images/samsung32.png"};
+    var samsungJ7prime = {name:"Samsung J7 Prime (2016)", desc:"[5.5 inches, Single Camera in the middle with flash on the right]", images:"images/samsung33.png"};
+    var samsungJ5prime = {name:"Samsung J5 Prime (2016)", desc:"[5 inches, Single Camera in the middle with flash on the right]", images:"images/samsung34.png"};
+    var samsungA51 = {name:"Samsung A51 (2019)", desc:"[6.5 inches, 4 Camera with flash light]", images:"images/samsung35.png"};
+    var samsungA70 = {name:"Samsung A70 (2019)", desc:"[6.7 inches, Three cameras + one singled out flash light, no fingerprint access at the back]", images:"images/samsung36.png"};
     
     //其它小型号手机
     //var otherPhone1 = {name:"HUAWEI P30", desc:"[6.15 inches，one dot camera front, oval round shape of fingerprint access on back, three cameras and one singled out  flash light, log at the left bottom corner]", images:"images/otherPhone1.png"};
@@ -195,27 +196,27 @@ window.onload = function(){
     //var otherPhone5 = {name:"HUAWEI Mate30 Pro", desc:"[6.53 inches，three cameras front, four cameras back on round swirl shape]", images:"images/otherPhone5.png"};
     //var otherPhone6 = {name:"HUAWEI P20", desc:"[5.8 inches]", images:"images/otherPhone6.png"};
     //var otherPhone7 = {name:"HUAWEI Nova 3i", desc:"[6.3 inches，a straight recessed line front ( camera and other stuff ); two cameras, flash light and touch ID at the back side]", images:"images/otherPhone7.png"};
-    var otherPhone8 = {name:"Google Pixel 4", desc:"[5.7 inches，square island top left on back, flash light on the bottom of the island, Front one single line black]", images:"images/otherPhone8.png"};
-    var otherPhone9 = {name:"Google Pixel 3/3 XL", desc:"[5.5/6.3 inches]", images:"images/otherPhone9.png"};
-    var otherPhone10 = {name:"Google Pixel 3a/ 3a XL", desc:"[5.6/6 inches]", images:"images/otherPhone10.png"};
-    var otherPhone11 = {name:"Google Pixel 2", desc:"[5 inches，top and bottom linear speaker on front, flash light before camera, two pin holes microphone below]", images:"images/otherPhone11.png"};
-    var otherPhone12 = {name:"OPPO A57", desc:"[One camera, microphone in between, flash light]", images:"images/otherPhone12.png"};
-    var otherPhone13 = {name:"OPPO R17 Pro", desc:"[6.4 inches, three cameras on the middle top]", images:"images/otherPhone13.png"};
-    var otherPhone14 = {name:"OPPO Ax5", desc:"[6.2 inches, two camera lens and flash light on the back]", images:"images/otherPhone14.png"};
+    var pixel4 = {name:"Google Pixel 4", desc:"[5.7 inches，square island top left on back, flash light on the bottom of the island, Front one single line black]", images:"images/otherPhone8.png"};
+    var pixel3_3XL = {name:"Google Pixel 3/3 XL", desc:"[5.5/6.3 inches]", images:"images/otherPhone9.png"};
+    var pixel3a_3aXL = {name:"Google Pixel 3a/ 3a XL", desc:"[5.6/6 inches]", images:"images/otherPhone10.png"};
+    var pixel2 = {name:"Google Pixel 2", desc:"[5 inches，top and bottom linear speaker on front, flash light before camera, two pin holes microphone below]", images:"images/otherPhone11.png"};
+    var oppoA57 = {name:"OPPO A57", desc:"[One camera, microphone in between, flash light]", images:"images/otherPhone12.png"};
+    var oppoR17pro = {name:"OPPO R17 Pro", desc:"[6.4 inches, three cameras on the middle top]", images:"images/otherPhone13.png"};
+    var oppoAx5 = {name:"OPPO Ax5", desc:"[6.2 inches, two camera lens and flash light on the back]", images:"images/otherPhone14.png"};
     //var otherPhone15 = {name:"HUAWEI P20 Pro (2018)", desc:"[6.1 inches, home button in the front side, three cameras and flash light at the back]", images:"images/otherPhone15.png"};
     //var otherPhone16 = {name:"HUAWEI P20 Lite / Nova 3e", desc:"[5.84 inches, no home button, has fingerprint access on the back, two cameras with flash, no speaking on the back]", images:"images/otherPhone16.png"};
     //var otherPhone17 = {name:"HUAWEI Mate 10 (2017)", desc:"[5.9 inches, Have Home Button]", images:"images/otherPhone17.png"};
     //var otherPhone18 = {name:"HUAWEI Mate 10 Lite/ Nova 2i (2017)", desc:"[5.9 inches, two camera in one slot, flash on top of the camera, fingerprint access on the back, no home button]", images:"images/otherPhone18.png"};
     //var otherPhone19 = {name:"HUAWEI Mate 9 (2016)", desc:"[5.9 inches]", images:"images/otherPhone19.png"};
-    var otherPhone20 = {name:"Pixel 2 XL (2017)", desc:"[6 inches, front speaker on the very top of the screen]", images:"images/otherPhone20.png"};
-    var otherPhone21 = {name:"Pixel  (2016)", desc:"[5 inches, fingerprint access on the back, Flash -> Camera -> Speaker on the top]", images:"images/otherPhone21.png"};
-    var otherPhone22 = {name:"Pixel  XL (2016)", desc:"[5.5 inches, Fingerprint access on the back, Flash -> Camera -> Speaker on the top, Cases normally (Camera Part) have a long hole]", images:"images/otherPhone22.png"};
-    var otherPhone23 = {name:"R17 (2018)", desc:"[6.4 inches, two camera lens with flash light, only one front camera]", images:"images/otherPhone23.png"};
-    var otherPhone24 = {name:"R15 (2018)", desc:"[6.28 inches, two camera lens with flash light located on the right (similar to ip8 plus), fingerprint access on the back]", images:"images/otherPhone24.png"};
-    var otherPhone25 = {name:"R11(2017)", desc:"[5.5 inches, two camera lens with flash light located on the right (similar to ip8 plus), has Home button, no fingerprint access]", images:"images/otherPhone25.png"};
-    var otherPhone26 = {name:"R11 Plus (2017)", desc:"[6 inches, two camera lens with flash light located on the right (similar to ip8 plus), has Home button, no fingerprint access]", images:"images/otherPhone26.png"};
-    var otherPhone27 = {name:"R11s (2017)", desc:"[6.01 inches, two camera lens with flash light located on the right (similar to ip8 plus), no home button, fingerprint access on the back]", images:"images/otherPhone27.png"};
-    var otherPhone28 = {name:"R11s Plus (2017)", desc:"[6.43 inches, two camera lens with flash light located on the right (similar to ip8 plus), no home button, fingerprint access on the back]", images:"images/otherPhone28.png"};
+    var pixel2XL = {name:"Pixel 2 XL (2017)", desc:"[6 inches, front speaker on the very top of the screen]", images:"images/otherPhone20.png"};
+    var pixel1 = {name:"Pixel  (2016)", desc:"[5 inches, fingerprint access on the back, Flash -> Camera -> Speaker on the top]", images:"images/otherPhone21.png"};
+    var pixelXL = {name:"Pixel  XL (2016)", desc:"[5.5 inches, Fingerprint access on the back, Flash -> Camera -> Speaker on the top, Cases normally (Camera Part) have a long hole]", images:"images/otherPhone22.png"};
+    var oppoR17 = {name:"R17 (2018)", desc:"[6.4 inches, two camera lens with flash light, only one front camera]", images:"images/otherPhone23.png"};
+    var oppoR15 = {name:"R15 (2018)", desc:"[6.28 inches, two camera lens with flash light located on the right (similar to ip8 plus), fingerprint access on the back]", images:"images/otherPhone24.png"};
+    var oppoR11 = {name:"R11(2017)", desc:"[5.5 inches, two camera lens with flash light located on the right (similar to ip8 plus), has Home button, no fingerprint access]", images:"images/otherPhone25.png"};
+    var oppoR11plus = {name:"R11 Plus (2017)", desc:"[6 inches, two camera lens with flash light located on the right (similar to ip8 plus), has Home button, no fingerprint access]", images:"images/otherPhone26.png"};
+    var oppoR11s = {name:"R11s (2017)", desc:"[6.01 inches, two camera lens with flash light located on the right (similar to ip8 plus), no home button, fingerprint access on the back]", images:"images/otherPhone27.png"};
+    var oppoR11splus = {name:"R11s Plus (2017)", desc:"[6.43 inches, two camera lens with flash light located on the right (similar to ip8 plus), no home button, fingerprint access on the back]", images:"images/otherPhone28.png"};
 
     //小型号平板，三星平板
     var otherTablet1 = {name:"OTab A 10.1” T510 (2019)", desc:"[Camera on the left corner in square shape]", images:"images/otherTab1.png"};
@@ -233,32 +234,37 @@ window.onload = function(){
     var otherTablet13 = {name:"S2 8” T710 (2015)", desc:"[One single camera on the back]", images:"images/otherTab13.png"};
     
     //day1 多选题题库(day1默认包含所有iPhone型号，即iphoneList的内容)； 可加入型号
-    var day1List = new Array(samsung1, samsung24, samsung25, samsung26, samsung27, samsung28, samsung29, samsung30, samsung7);
+    var day1List = new Array(samsungS10_S10plus, samsungS21, samsungS21plus, samsungS21Ultra, samsungS20FE, samsungS20Ultra, samsungNote20, samsungNote20Ultra, samsungNote10_Note10plus);
     //day2 默认为ipad题库
     //day3 多选题题库；可加入产品
-    var day3List = new Array(case75, case76, case77, case78, case79, case80, case81, case82, case83, case84, case85, case86, case87, case88, case89, case90,
-        case91, case92, case93, case94, case95, case96, case97, case98, case99, case100, case101, case102, case103, case104, case105);
+    var day3List = new Array(case77, case78, case79, case80, case83, case85, case88, case89, case90,
+        case94, case97, case98, case100, case101, case102, case103, case104);
     //iphone 题库； iphone, ipad, 三星主流型号题库， 以及小型号手机题库 共同组成主页上的 “phone/ipad model identification” ；可加入型号
-    var iphoneList = new this.Array(iphone6_6plus, iphone7_8, iphone7plus_8plus, iphonex_xs, iphonexr, iphonexsmax, iphone11, iphone11pro, iphone11promax,
-        iphone12mini, iphone12, iphone12pro, iphone12promax, iphone13mini, iphone13_14, iphone13pro, iphone13promax, iphone14plus, iphone14pro, iphone14promax);
+    var iphoneList = new this.Array(iphone6_6plus, iphone7_8, iphone7plus_8plus, 
+        iphonex_xs, iphonexr, iphonexsmax, 
+        iphone11, iphone11pro, iphone11promax,
+        iphone12mini, iphone12, iphone12pro, iphone12promax, 
+        iphone13mini, iphone13_14, iphone13pro, iphone13promax, 
+        iphone14plus, iphone14pro, iphone14promax);
     //ipad 题库，同时也是day2 题库； 此外， iphone, ipad, 三星主流型号题库， 以及小型号手机题库 共同组成主页上的 “phone/ipad model identification” ；可加入型号
     var ipadList = new this.Array(
-        ipadmini3, ipadmini1_2, ipadmini4, ipadmini5, ipad2_3_4, 
-        ipadair1, ipadair2, ipad5_6, ipadpro_11inch_2018, ipadpro_129inch_2015, 
-        ipadpro_129inch_2017,  ipadpro_105inch,  ipadpro_97inch,  ipadair4_5,  ipadpro_129inch_2020_2021_2022, 
-        ipadpro_11inch_2020_2021_2022,  ipadpro_129inch_2018, ipad10, ipad7_8_9);
+        ipadmini1_2, ipadmini3, ipadmini4, ipadmini5,
+        ipadair1, ipadair2, ipadair3, ipadair4_5,
+        ipad2_3_4, ipad5_6, ipad7_8_9, ipad10,
+        ipadpro_97inch, ipadpro_105inch,
+        ipadpro_11inch_2018, ipadpro_11inch_2020_2021_2022,
+        ipadpro_129inch_2015, ipadpro_129inch_2017, ipadpro_129inch_2018,  ipadpro_129inch_2020_2021_2022);
     //三星主流手机型号题库； iphone, ipad, 三星主流型号题库， 以及小型号手机题库 共同组成主页上的 “phone/ipad model identification” ；可加入型号
-    var samsungList = new this.Array(samsung1, samsung2, samsung3, samsung4, samsung5, samsung7, samsung8, samsung9, samsung10,
-        samsung11, samsung12, samsung13, samsung14, samsung15, samsung16, samsung17, samsung19, samsung20, samsung22,
-        samsung23, samsung24, samsung25, samsung26, samsung27, samsung28, samsung29, samsung30, samsung31, samsung32, samsung33, samsung34,
-        samsung35, samsung36);
+    var samsungList = new this.Array(
+        samsungS20FE, samsungS20Ultra, samsungS21, samsungS21plus, samsungS21Ultra,
+        samsungNote10_Note10plus, samsungNote20, samsungNote20Ultra);
     //小型号手机题库； iphone, ipad, 三星主流型号题库， 以及小型号手机题库 共同组成主页上的 “phone/ipad model identification” ；可加入型号
-    var otherPhoneList = new this.Array(otherPhone1, otherPhone2, otherPhone3, otherPhone4, otherPhone5, otherPhone6, otherPhone7, otherPhone8,
-        otherPhone9, otherPhone10, otherPhone11, otherPhone12, otherPhone13, otherPhone14, otherPhone15, otherPhone16, otherPhone17, otherPhone18, otherPhone19, otherPhone20,
-        otherPhone21, otherPhone22, otherPhone23, otherPhone24, otherPhone25, otherPhone26, otherPhone27, otherPhone28);
+    var otherPhoneList = new this.Array(
+        pixel1, pixelXL, pixel2, pixel2XL, pixel3_3XL, pixel3a_3aXL, pixel4,
+        oppoA57, oppoAx5, 
+        oppoR11, oppoR11plus, oppoR11s, oppoR11splus, oppoR15, oppoR17, oppoR17pro);
     //店内产品题库， 也就是主页上的"case and accessaries identification" ；可加入产品
-    var caseList=new Array(case1, case2, case3, case6, case7, case8, case10, case12, case14, case15, 
-        case16, case17, case18, case19, case20, case21, case23, case24, case25, case26, case27, case28, case29, case30,
+    var caseList=new Array(case8, case10, case12, case14, case20, case21, case23, case24, case25, case26, case27, case28, case29, case30,
         case32, case33, case34, case35, case36, case39, case40, case41, case42, case45, case46, case49,
         case54, case58, case59, case60, case61, case62, case64, case65, case69, case70, case71, case72, case73,
         case74, case77, case78, case79, case80, case83, case85, case88, case89, case90, case94,
