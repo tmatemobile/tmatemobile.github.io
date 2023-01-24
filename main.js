@@ -1,4 +1,4 @@
-window.onload = function(){
+window.onload = function() {
     //更新时间的注释
     console.log('updated 23/01/2023, 16:00')
 
@@ -117,13 +117,13 @@ window.onload = function(){
     var iphonexr = {name:"Iphone XR ", desc:"[6.1 inches, one camera and one flashlight, rounded edge]", images:"images/iphones/iphonexr.png"};
     var iphonexsmax = {name:"Iphone XS MAX", desc:"[6.5 inches, two cameras and one flashlight, rounded edge]", images:"images/iphones/iphonexsmax.png"};
     var iphone11 = {name:"Iphone11", desc:"[6.1 inches, two rear cameras, rounded edge]", images:"images/iphones/iphone11.png"};
-    var iphone11pro = {name:"Iphone11 Pro", desc:"[5.8 inches, triple rear cameras, rounded edge]", images:"images/iphones/iphon11pro.png"};
+    var iphone11pro = {name:"Iphone11 Pro", desc:"[5.8 inches, triple rear cameras, rounded edge]", images:"images/iphones/iphone11pro.png"};
     var iphone11promax = {name:"Iphone11 Pro Max", desc:"[6.5 inches, triple rear cameras, rounded edge]", images:"images/iphones/iphone11promax.png"};
     var iphone12mini = {name:"Iphone 12 mini", desc:"[5.4 inches, two rear cameras, vertical edge]", images:"images/iphones/iphone12mini.png"};
     var iphone12 = {name:"Iphone 12", desc:"[6.1 inches, two rear cameras align vertically, vertical edge]", images:"images/iphones/iphone12.png"};
     var iphone12pro = {name:"Iphone 12 Pro", desc:"[6.1 inches, triple rear cameras, vertical edge]", images:"images/iphones/iphone12pro.png"};
     var iphone12promax = {name:"Iphone 12 Pro Max", desc:"[6.7 inches, triple rear cameras, vertical edge]", images:"images/iphones/iphone12promax.png"};
-    var iphone13mini = {name:"Iphone 13 mini", desc:"[5.4 inches, two rear cameras, vertical edge]", images:"images/iphones/iphone15.png"};
+    var iphone13mini = {name:"Iphone 13 mini", desc:"[5.4 inches, two rear cameras, vertical edge]", images:"images/iphones/iphone13mini.png"};
     var iphone13_14 = {name:"Iphone 13/14", desc:"[6.1 inches, two rear cameras aligned diagonally, vertical edge]", images:"images/iphones/iphone13_14.png"};
     var iphone13pro = {name:"Iphone 13 Pro", desc:"[6.1 inches, triple rear cameras, top speaker is touching the edge, vertical edge]", images:"images/iphones/iphone13pro.png"};
     var iphone13promax = {name:"Iphone 13 Pro Max", desc:"[6.7 inches, triple rear cameras, top speaker is touching the edge, vertical edge]", images:"images/iphones/iphone13promax.png"};
@@ -187,7 +187,12 @@ window.onload = function(){
     var samsungJ5prime = {name:"Samsung J5 Prime (2016)", desc:"[5 inches, Single Camera in the middle with flash on the right]", images:"images/samsung34.png"};
     var samsungA51 = {name:"Samsung A51 (2019)", desc:"[6.5 inches, 4 Camera with flash light]", images:"images/samsung35.png"};
     var samsungA70 = {name:"Samsung A70 (2019)", desc:"[6.7 inches, Three cameras + one singled out flash light, no fingerprint access at the back]", images:"images/samsung36.png"};
-    
+    var samsungS20 = {name:"Samsung Galaxy S20", desc:"[6.2 inches]", images:"images/samsung39.png"}; // Missing description
+    var samsungS20plus = {name:"Samsung Galaxy S20 Plus", desc:"[6.7 inches]", images:"images/samsung38.png"}; // Missing description
+    var samsungS21FE = {name:"Samsung Galaxy S21 FE", desc:"[6.4 inches, flat screen, 2022]", images:"images/samsung40.png"}; // Missing description
+    var samsungS22 = {name:"Samsung Galaxy S22", desc:"[6.1 inches, flat screen, 2022]", images:"images/samsung41.png"}; // Missing description
+    var samsungS22plus = {name:"Samsung Galaxy S22 Plus", desc:"[6.6 inches, flat screen, 2022]", images:"images/samsung42.png"}; // Missing description
+    var samsungS22Ultra = {name:"Samsung Galaxy S22 Ultra", desc:"[6.7 inches, 5 cameras, curved screen, with S Pen avaliable]", images:"images/samsung43.png"};
     //其它小型号手机
     //var otherPhone1 = {name:"HUAWEI P30", desc:"[6.15 inches，one dot camera front, oval round shape of fingerprint access on back, three cameras and one singled out  flash light, log at the left bottom corner]", images:"images/otherPhone1.png"};
     //var otherPhone2 = {name:"HUAWEI P30 Pro", desc:"[6.47 inches，one dot camera front, three cameras framed on one island, bottom left logo]", images:"images/otherPhone2.png"};
@@ -233,12 +238,7 @@ window.onload = function(){
     var otherTablet12 = {name:"S3 9.7” T820 (2017)", desc:"[Square camera on the middle top Flash light just under the camera]", images:"images/otherTab12.png"};
     var otherTablet13 = {name:"S2 8” T710 (2015)", desc:"[One single camera on the back]", images:"images/otherTab13.png"};
     
-    //day1 多选题题库(day1默认包含所有iPhone型号，即iphoneList的内容)； 可加入型号
-    var day1List = new Array(samsungS10_S10plus, samsungS21, samsungS21plus, samsungS21Ultra, samsungS20FE, samsungS20Ultra, samsungNote20, samsungNote20Ultra, samsungNote10_Note10plus);
-    //day2 默认为ipad题库
-    //day3 多选题题库；可加入产品
-    var day3List = new Array(case77, case78, case79, case80, case83, case85, case88, case89, case90,
-        case94, case97, case98, case100, case101, case102, case103, case104);
+    
     //iphone 题库； iphone, ipad, 三星主流型号题库， 以及小型号手机题库 共同组成主页上的 “phone/ipad model identification” ；可加入型号
     var iphoneList = new this.Array(iphone6_6plus, iphone7_8, iphone7plus_8plus, 
         iphonex_xs, iphonexr, iphonexsmax, 
@@ -256,8 +256,10 @@ window.onload = function(){
         ipadpro_129inch_2015, ipadpro_129inch_2017, ipadpro_129inch_2018,  ipadpro_129inch_2020_2021_2022);
     //三星主流手机型号题库； iphone, ipad, 三星主流型号题库， 以及小型号手机题库 共同组成主页上的 “phone/ipad model identification” ；可加入型号
     var samsungList = new this.Array(
-        samsungS20FE, samsungS20Ultra, samsungS21, samsungS21plus, samsungS21Ultra,
-        samsungNote10_Note10plus, samsungNote20, samsungNote20Ultra);
+        samsungS20, samsungS20plus, samsungS20Ultra, samsungS20FE,
+        samsungS21, samsungS21plus, samsungS21Ultra, samsungS21FE,
+        samsungS22, samsungS22plus, samsungS22Ultra,
+        samsungNote20, samsungNote20Ultra, samsungNote10_Note10plus);
     //小型号手机题库； iphone, ipad, 三星主流型号题库， 以及小型号手机题库 共同组成主页上的 “phone/ipad model identification” ；可加入型号
     var otherPhoneList = new this.Array(
         pixel1, pixelXL, pixel2, pixel2XL, pixel3_3XL, pixel3a_3aXL, pixel4,
@@ -272,6 +274,15 @@ window.onload = function(){
     //三星平板题库，也就是主页上的 “samsung tablet model identification”；可加入型号
     var otherTabList=new Array(otherTablet1, otherTablet2, otherTablet3, otherTablet4, otherTablet5, otherTablet6, otherTablet7, otherTablet8, otherTablet9, otherTablet10, otherTablet11,
         otherTablet12, otherTablet13);
+    //day1 多选题题库(day1默认包含所有iPhone型号，即iphoneList的内容)； 可加入型号
+    //day1: 先问完Samsung再问iPhone型号
+    var day1List = samsungList;
+    var day1bList = iphoneList;
+    //day2 默认为ipad题库
+    var day2List = ipadList;
+    //day3 多选题题库；可加入产品
+    var day3List = new Array(case77, case78, case79, case80, case83, case85, case88, case89, case90,
+        case94, case97, case98, case100, case101, case102, case103, case104);
     
     //以下18行不建议修改
     var caseI = 1;
@@ -366,7 +377,7 @@ window.onload = function(){
             //题目是关于手机型号时，题目说明的内容是 “what is this model”，选项是型号名称
             //题目时关于店内产品时，题目说明的内容是 “what is this and how much is it?”, 选项是产品名称和价格；复用代码时需注意
             //！！复用代码时注意修改id "..Contiunue" ！！
-            newQuestion = "<h3 style='text-align: center;'>" + rightAnswer.desc + "; what is this mode? </h3><div class='flex_center_row row'><div class='image-box'><img src='" + rightAnswer.images + "'class='col'></div></div><div class='flex_center_row row' style='margin-top: 10px;'>" +
+            newQuestion = "<h3 style='text-align: center;'>" + rightAnswer.desc + "; what is this model? </h3><div class='flex_center_row row'><div class='image-box'><img src='" + rightAnswer.images + "'class='col'></div></div><div class='flex_center_row row' style='margin-top: 10px;'>" +
             answerButtons + "</div><div class='flex_center_row row' id='modelContinue' style='margin-top: 40px;'><button type='button' class='btn btn-primary col-8 continue-button' style='display: none;'>Continue</button></div>";
             phoneQuestionList.push(newQuestion);
         }
@@ -431,7 +442,7 @@ window.onload = function(){
     }
 
     var day1bGen = function(){
-        var arr = iphoneList.slice();
+        var arr = day1bList.slice();
         var loopNum = Math.min(5, samsungList.length);
         
         for(var i = 1; i <= loopNum; i++){
@@ -1130,6 +1141,74 @@ window.onload = function(){
         }
     })
     
+    // 缩短程式码行数用
+    var generateMultipleChoiceQuestions = function(maxQuestions, questionsInList, answerClassName, continueIDName) {
+        var arr = otherPhoneList.slice();
+        var loopNum = Math.min(maxQuestions, questionsInList); //生成题目的数量，通常情況下至多有5题或10题(maxQuestions),若题库太小则取题库的大小(questionsInList)
+        
+        for(var i = 1; i <= loopNum; i++){
+            var arr2 = arr.slice();
+            var randomNumber = Math.floor((Math.random()*arr.length)); //随机生成正确答案的index
+            var rightAnswerPlace = Math.floor((Math.random()*4)); //正确答案在题目中的位置
+            rightAnswer = arr[randomNumber]; //从出题范围中获取正确答案的具体信息
+            arr.splice(randomNumber,1); //从arr1中剔除正确答案避免重复出题
+            arr2.splice(randomNumber,1); //从arr2中剔除正确答案避免正确答案的选项重复出现
+
+            //生成错误答案
+            var wrongAnswer1Place = Math.floor((Math.random()*arr2.length)); //随机生成错误答案1 的index
+            var wrongAnswer1 = arr2[wrongAnswer1Place]; //根据上一行随机生成的index获取错误答案1 的具体信息
+            arr2.splice(wrongAnswer1Place,1); //将错误答案从arr2中剔除，避免错误答案重复出现，下同
+
+            var wrongAnswer2Place = Math.floor((Math.random()*arr2.length));
+            var wrongAnswer2 = arr2[wrongAnswer2Place];
+            arr2.splice(wrongAnswer2Place,1);
+
+            var wrongAnswer3Place = Math.floor((Math.random()*arr2.length));
+            var wrongAnswer3 = arr2[wrongAnswer3Place]
+            arr2.splice(wrongAnswer3Place,1);
+           
+            //一道选择题有四个选项，正确答案的位置由变量rightAnswerPlace决定，根据正确答案在题目中位置的不同生成不同的html； 
+            //！！复用代码时注意修改class name "answer-?" (有answer-phone, answer-case, answer-stab,)！！
+            if(rightAnswerPlace == 1){
+                var answerButtons = 
+                "<button type='button' class='btn btn-secondary col-xl-2 col-sm-6 " + answerClassName + " right-answer'>" +rightAnswer.name + 
+                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 " + answerClassName + " wrong-answer'>" + wrongAnswer1.name +
+                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 " + answerClassName + " wrong-answer'>" + wrongAnswer2.name + 
+                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 " + answerClassName + " wrong-answer'>"
+                + wrongAnswer3.name + "</button>";
+            }
+            else if(rightAnswerPlace == 2){
+                var answerButtons = "<button type='button' class='btn btn-secondary col-xl-2 col-sm-6 " + answerClassName + " wrong-answer'>" +
+                wrongAnswer1.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 " + answerClassName + " right-answer'>" + rightAnswer.name +
+                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 " + answerClassName + " wrong-answer'>" + wrongAnswer2.name + 
+                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 " + answerClassName + " wrong-answer'>"
+                + wrongAnswer3.name + "</button>";
+            }
+            else if(rightAnswerPlace == 3){
+                var answerButtons = "<button type='button' class='btn btn-secondary col-xl-2 col-sm-6 " + answerClassName + " wrong-answer'>" + wrongAnswer1.name + 
+                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 " + answerClassName + " wrong-answer'>" + wrongAnswer2.name +
+                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 " + answerClassName + " right-answer'>" + rightAnswer.name + 
+                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 " + answerClassName + " wrong-answer'>"
+                + wrongAnswer3.name + "</button>";
+            }
+            else{
+                var answerButtons = "<button type='button' class='btn btn-secondary col-xl-2 col-sm-6 " + answerClassName + " wrong-answer'>" +wrongAnswer1.name + 
+                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 " + answerClassName + " wrong-answer'>" + wrongAnswer2.name +
+                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 " + answerClassName + " wrong-answer'>" + wrongAnswer3.name + 
+                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 " + answerClassName + " right-answer'>"
+                + rightAnswer.name + "</button>";
+            }
+
+            //将刚才生成的（关于题目选项）html和下列（关于题目说明的）html一起加入...QuestionList，每当需要在页面上显示一道新题目时，就从这个list中抛出一道；具体详见文件底部的一系列click function 
+            //题目是关于手机型号时，题目说明的内容是 “what is this model”，选项是型号名称
+            //题目时关于店内产品时，题目说明的内容是 “what is this and how much is it?”, 选项是产品名称和价格；复用代码时需注意
+            //！！复用代码时注意修改id "..Contiunue" ！！
+            // day1Continue, day2Continue, day3Continue, modelContinue, caseContinue, stabContinue
+            newQuestion = "<h3 style='text-align: center;'>" + rightAnswer.desc + "; what is this model? </h3><div class='flex_center_row row'><div class='image-box'><img src='" + rightAnswer.images + "'class='col'></div></div><div class='flex_center_row row' style='margin-top: 10px;'>" +
+            answerButtons + "</div><div class='flex_center_row row' id='" + continueIDName + "' style='margin-top: 40px;'><button type='button' class='btn btn-primary col-8 continue-button' style='display: none;'>Continue</button></div>";
+            phoneQuestionList.push(newQuestion);
+       }
+
     //call 题目生成函数
     caseQuestionGen();
     phoneQuestionGen();
@@ -1240,4 +1319,5 @@ window.onload = function(){
         }
     });
 
+    }
 }
