@@ -57,39 +57,50 @@ a:link {
     text-decoration: none;
   }
   
-  a:visited {
-    text-decoration: none;
-  }
-  
-  a:hover {
-    text-decoration: none;
-  }
-  
-  a:active {
-    text-decoration: none;
-  }
+a:visited {
+  text-decoration: none;
+}
 
-  #learnDiv{
-      text-align: center;
-  }
+a:hover {
+  text-decoration: none;
+}
 
-  #learnDiv h3{
-        margin: 10px;
-  }
+a:active {
+  text-decoration: none;
+}
 
-  .form-group{
+#learnDiv{
     text-align: center;
-    font-size: 32px;
-  }
+}
 
-  #password_check_button{
-    height: 5vh;
-    line-height: 5vh;
-    font-size: 24px;
-    color: aliceblue;
-    background-color: #007BFF;
-    border:  transparent 1px solid;
+#learnDiv h3{
+      margin: 10px;
+}
+
+#databaseDiv{
+  text-align: center;
+}
+
+#databaseDiv h3{
     margin: 10px;
-    border-radius: .25rem;
+}
 
-  }
+.form-group{
+  text-align: center;
+  font-size: 32px;
+}
+
+#password_check_button{
+  height: 5vh;
+  line-height: 5vh;
+  font-size: 24px;
+  color: aliceblue;
+  background-color: #007BFF;
+  border:  transparent 1px solid;
+  margin: 10px;
+  border-radius: .25rem;
+}
+
+.nav-link:hover {
+  background-color: #92c7ff;
+}

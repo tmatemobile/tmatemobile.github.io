@@ -303,6 +303,50 @@ window.onload = function() {
     var day1QuestionList = [];
     var day2QuestionList = [];
     var day3QuestionList = [];
+    
+    // Called at the beginning
+    var initializeDisplay = function() {
+        document.getElementById("learnDiv").style.display = "block";
+    }
+    // Called at the beginning
+    var initializeDatabase = function() {
+        iphoneList.forEach(element => {
+            document.getElementById('iphoneDatabase').insertAdjacentHTML(
+                'beforeend',
+                '<div class="grid-item">' + element.name + '</div>'      
+            )
+        });
+        ipadList.forEach(element => {
+            document.getElementById('ipadDatabase').insertAdjacentHTML(
+                'beforeend',
+                '<div class="grid-item">' + element.name + '</div>'      
+            )
+        });
+        samsungList.forEach(element => {
+            document.getElementById('samsungDatabase').insertAdjacentHTML(
+                'beforeend',
+                '<div class="grid-item">' + element.name + '</div>'      
+            )
+        });
+        otherTabList.forEach(element => {
+            document.getElementById('samsungTabletDatabase').insertAdjacentHTML(
+                'beforeend',
+                '<div class="grid-item">' + element.name + '</div>'      
+            )
+        });
+        otherPhoneList.forEach(element => {
+            document.getElementById('otherPhoneDatabase').insertAdjacentHTML(
+                'beforeend',
+                '<div class="grid-item">' + element.name + '</div>'      
+            )
+        });
+        caseList.forEach(element => {
+            document.getElementById('accessoriesDatabase').insertAdjacentHTML(
+                'beforeend',
+                '<div class="grid-item">' + element.name + '</div>'      
+            )
+        });
+    }
 
     //hide all page for showing the right page
     var resetDisplay = function(){
@@ -311,6 +355,7 @@ window.onload = function() {
         document.getElementById("phoneDiv").style.display = "none";
         document.getElementById("generalDiv").style.display = "none";
         document.getElementById("stabDiv").style.display = "none";
+        document.getElementById("databaseDiv").style.display = "none";
         document.getElementById("day1MultiDiv").style.display = "none";
         document.getElementById("day2MultiDiv").style.display = "none";
         document.getElementById("day3MultiDiv").style.display = "none";
@@ -361,7 +406,7 @@ window.onload = function() {
     }
 
     var caseQuestionGen = function(){
-        // 與generateMultipleChoiceQuestions() 大同小異, 但須注意裡面問題的問法和引用的JSON reference有分別
+        // 與generateMultipleChoiceQuestions() 大同小異, 但須注意裡面問題的text和JSON reference有分別
         generateMultipleChoiceQuestionsForCase(caseList, 10, 10, 'answer-case', 'caseContinue', caseQuestionList);
     }
 
@@ -384,6 +429,11 @@ window.onload = function() {
     this.document.getElementById("stabTestButton").onclick = function(){
         resetDisplay();
         document.getElementById("stabDiv").style.display = "block";
+    }
+
+    this.document.getElementById("databaseButton").onclick = function(){
+        resetDisplay();
+        document.getElementById("databaseDiv").style.display = "block";
     }
 
     this.document.getElementById("day1Multi").onclick = function(){
@@ -684,7 +734,7 @@ window.onload = function() {
        }
     }
 
-    // 與generateMultipleChoiceQuestions() 大同小異, 但須注意裡面問題的問法和引用的JSON reference有分別
+    // 與generateMultipleChoiceQuestions() 大同小異, 但須注意裡面問題的text和JSON reference有分別
     var generateMultipleChoiceQuestionsForCase = function(caseList, maxQuestions, questionsInListLength, answerClassName, continueIDName, whereToPush) {
         var arr = caseList.slice();
         var loopNum = Math.min(maxQuestions, questionsInListLength);
@@ -740,7 +790,9 @@ window.onload = function() {
             whereToPush.push(newQuestion);
         }
     }
-
+    
+    initializeDisplay();
+    initializeDatabase();
     //call 题目生成函数
     caseQuestionGen();
     phoneQuestionGen();
@@ -752,6 +804,7 @@ window.onload = function() {
     day1bGen();
     day2Gen();
     day3Gen();
+    
 
     //点击多选题页面的continue按键时触发的函数，索引id要与生成时的匹配
     var totalday1QueNum = day1QuestionList.length; //题目数量，用于核对此题是否是最后一题并告诉用户现在做的是第几题
@@ -850,5 +903,4 @@ window.onload = function() {
             $("#stabQuestion").html("<h2>Your score for 'Samsung tablet test' is " + stabScore + "/" + totalStabQueNum + "</h2>");
         }
     });
-
 }

@@ -6,6 +6,7 @@
     <title>T-Mate Self Traning System</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css" >
+    <link rel="stylesheet" href="database.css" >
 </head>
 <body>
 <div class="container height-100">
@@ -35,10 +36,13 @@
         <a class="dropdown-item" id="stabTestButton">Samsung Tablet Model Identification</a>
       </div>
     </li>
+    <li class="nav-item">
+      <a class="nav-link" id="databaseButton">Database</a>
+    </li>
   </ul>
   
   
-  <div class="flex_center_col" id="learnDiv" >
+  <div class="flex_center_col" id="learnDiv" style="display: none;">
       <h3><a href="https://docs.google.com/document/d/1Cezcgg5q0E1dhUtiWu4GBBkmisuY_vX08y9uHycfSdE/edit?usp=sharing">Phone/Tablet Models</a></h3>
       <h3><a href="https://docs.google.com/document/d/1lI6YAAMYovBv6VNgo5h68UYH_18a4acI7SlV26dNZ3E/edit">Phone/Tablet Case and accesaries</a></h3>
       <h3><a href="https://docs.google.com/document/d/1iJcCNckkEwSum43xMUPY8QfSAW9EYV_GaOpPAThcpD8/edit?usp=sharing">Other</a></h3>
@@ -301,6 +305,29 @@
 
   <div class="width-80 flex_center_col" id="generalDiv" style="display: none;">
     <div class="width-80 flex_center_row">General</div>
+  </div>
+
+  <div class="flex_center_col" id="databaseDiv" style="display: none;" >
+    <h3>These are all the models and accessories included in the mock test.</h3>
+    <h4>iPhone</h4>
+    <div class="grid-container" id="iphoneDatabase">
+    </div>
+    <h4>iPad</h4>
+    <div class="grid-container" id="ipadDatabase">
+    </div>
+    <h4>Samsung phones (S series, Note series)</h4>
+    <div class="grid-container" id="samsungDatabase">
+    </div>
+    <h4>Samsung tablets</h4>
+    <div class="grid-container" id="samsungTabletDatabase">
+    </div>
+    <h4>Other phone models</h4>
+    <div class="grid-container" id="otherPhoneDatabase">
+    </div>
+    <h4>Phone case and accessories</h4>
+    <div class="grid-container" id="accessoriesDatabase">
+    </div>
+    
   </div>
     
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
