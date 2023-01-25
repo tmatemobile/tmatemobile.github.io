@@ -1,6 +1,6 @@
 window.onload = function() {
     //更新时间的注释
-    console.log('updated 23/01/2023, 16:00')
+    console.log('updated 25/01/2023, 13:10')
 
     //店内产品
     var case1={name:"Soft jelly case",price:"15",image:"images/case1.png"};
@@ -97,146 +97,146 @@ window.onload = function() {
     var case94={name:"Bluetooth selfie stick with stand",price:"35",image:"images/case94.png"};
     //var case95={name:"Mini selfie stick",price:"35",image:"images/case95.png"};
     //var case96={name:"Cord car charger",price:"20",image:"images/case96.png"};
-    var case97={name:"3sixt 3.4A car charger set (with cable)",price:"30",image:"images/case97.png"};
-    var case98={name:"3sixt 5.4A quick car charger",price:"30",image:"images/case98.png"}; // needs image update
+    var carcharger1={name:"3sixt 3.4A car charger set (with cable)",price:"30",image:"images/case97.png"};
+    var carcharger2={name:"3sixt 5.4A quick car charger",price:"30",image:"images/case98.png"}; // needs image update
     //var case99={name:"3sixt 5.4A quick car charger set (with cable)",price:"40",image:"images/case99.png"};
-    var case100={name:"Airpods / Airpods pro rubber cover",price:"30",image:"images/case100.png"}; // needs image update
-    var case101={name:"Airpods pro leather looking cover",price:"25",image:"images/case101.png"}; // needs image update
-    var case102={name:"Nylon watch bands",price:"25",image:"images/case102.png"};
-    var case103={name:"Milane watch bands",price:"40",image:"images/case103.png"};
-    var case104={name:"Stainless steel watch bands",price:"60",image:"images/case104.png"};
+    var airpodcover1={name:"Airpods / Airpods pro rubber cover",price:"30",image:"images/case100.png"}; // needs image update
+    var airpodcover2={name:"Airpods pro leather looking cover",price:"25",image:"images/case101.png"}; // needs image update
+    var watchband1={name:"Nylon watch bands",price:"25",image:"images/case102.png"};
+    var watchband2={name:"Milane watch bands",price:"40",image:"images/case103.png"};
+    var watchband3={name:"Stainless steel watch bands",price:"60",image:"images/case104.png"};
     //var case105={name:"Stainless steel premium watch bands",price:"70",image:"images/case105.png"};
     var case106={name:"Soft 拉丝",price:"20",image:"images/case106.png"}; 
 
     //Iphone
-    var iphone5c = {name:"Iphone 5c", desc:"[bright color]", images:"images/iphones/iphone5c.png"};
-    var iphone6_6plus = {name:"Iphone 6/6s/6 Plus/6s Plus", desc:"[4.7/5.5 inches, round edge, have earphone plug]", images:"images/iphones/iphone6_6plus.png"};
-    var iphone7_8 = {name:"Iphone 7/8", desc:"[4.7 inches, bottom speakers are symmetrical, no earphone plug]", images:"images/iphones/iphone7_8.png"};
-    var iphone7plus_8plus = {name:"Iphone 7/8 plus", desc:"[5.5 inches, bottom speakers are symmetrical, no earphone plug]", images:"images/iphones/iphone7plus_8plus.png"};
-    var iphonex_xs = {name:"Iphone X/XS", desc:"[5.8 inches,Two rear cameras, rounded edge]", images:"images/iphones/iphonex_xs.png"};
-    var iphonexr = {name:"Iphone XR ", desc:"[6.1 inches, one camera and one flashlight, rounded edge]", images:"images/iphones/iphonexr.png"};
-    var iphonexsmax = {name:"Iphone XS MAX", desc:"[6.5 inches, two cameras and one flashlight, rounded edge]", images:"images/iphones/iphonexsmax.png"};
-    var iphone11 = {name:"Iphone11", desc:"[6.1 inches, two rear cameras, rounded edge]", images:"images/iphones/iphone11.png"};
-    var iphone11pro = {name:"Iphone11 Pro", desc:"[5.8 inches, triple rear cameras, rounded edge]", images:"images/iphones/iphone11pro.png"};
-    var iphone11promax = {name:"Iphone11 Pro Max", desc:"[6.5 inches, triple rear cameras, rounded edge]", images:"images/iphones/iphone11promax.png"};
-    var iphone12mini = {name:"Iphone 12 mini", desc:"[5.4 inches, two rear cameras, vertical edge]", images:"images/iphones/iphone12mini.png"};
-    var iphone12 = {name:"Iphone 12", desc:"[6.1 inches, two rear cameras align vertically, vertical edge]", images:"images/iphones/iphone12.png"};
-    var iphone12pro = {name:"Iphone 12 Pro", desc:"[6.1 inches, triple rear cameras, vertical edge]", images:"images/iphones/iphone12pro.png"};
-    var iphone12promax = {name:"Iphone 12 Pro Max", desc:"[6.7 inches, triple rear cameras, vertical edge]", images:"images/iphones/iphone12promax.png"};
-    var iphone13mini = {name:"Iphone 13 mini", desc:"[5.4 inches, two rear cameras, vertical edge]", images:"images/iphones/iphone13mini.png"};
-    var iphone13_14 = {name:"Iphone 13/14", desc:"[6.1 inches, two rear cameras aligned diagonally, vertical edge]", images:"images/iphones/iphone13_14.png"};
-    var iphone13pro = {name:"Iphone 13 Pro", desc:"[6.1 inches, triple rear cameras, top speaker is touching the edge, vertical edge]", images:"images/iphones/iphone13pro.png"};
-    var iphone13promax = {name:"Iphone 13 Pro Max", desc:"[6.7 inches, triple rear cameras, top speaker is touching the edge, vertical edge]", images:"images/iphones/iphone13promax.png"};
-    var iphone14plus = {name:"Iphone 14 plus", desc:"[6.7 inches, two rear cameras aligned diagonally, vertical edge]", images:"images/iphones/iphone14plus.png"};
-    var iphone14pro = {name:"Iphone 14 Pro", desc:"[6.1 inches, triple rear cameras, vertical edge]", images:"images/iphones/iphone14pro.png"};
-    var iphone14promax = {name:"Iphone 14 Pro Max", desc:"[6.7 inches, triple rear cameras, vertical edge]", images:"images/iphones/iphone14promax.png"};
+    var iphone5c = {name:"Iphone 5c", desc:"[bright color]", image:"images/iphones/iphone5c.png"};
+    var iphone6_6plus = {name:"Iphone 6/6s/6 Plus/6s Plus", desc:"[4.7/5.5 inches, round edge, have earphone plug]", image:"images/iphones/iphone6_6plus.png"};
+    var iphone7_8 = {name:"Iphone 7/8", desc:"[4.7 inches, bottom speakers are symmetrical, no earphone plug]", image:"images/iphones/iphone7_8.png"};
+    var iphone7plus_8plus = {name:"Iphone 7/8 plus", desc:"[5.5 inches, bottom speakers are symmetrical, no earphone plug]", image:"images/iphones/iphone7plus_8plus.png"};
+    var iphonex_xs = {name:"Iphone X/XS", desc:"[5.8 inches,Two rear cameras, rounded edge]", image:"images/iphones/iphonex_xs.png"};
+    var iphonexr = {name:"Iphone XR ", desc:"[6.1 inches, one camera and one flashlight, rounded edge]", image:"images/iphones/iphonexr.png"};
+    var iphonexsmax = {name:"Iphone XS MAX", desc:"[6.5 inches, two cameras and one flashlight, rounded edge]", image:"images/iphones/iphonexsmax.png"};
+    var iphone11 = {name:"Iphone11", desc:"[6.1 inches, two rear cameras, rounded edge]", image:"images/iphones/iphone11.png"};
+    var iphone11pro = {name:"Iphone11 Pro", desc:"[5.8 inches, triple rear cameras, rounded edge]", image:"images/iphones/iphone11pro.png"};
+    var iphone11promax = {name:"Iphone11 Pro Max", desc:"[6.5 inches, triple rear cameras, rounded edge]", image:"images/iphones/iphone11promax.png"};
+    var iphone12mini = {name:"Iphone 12 mini", desc:"[5.4 inches, two rear cameras, vertical edge]", image:"images/iphones/iphone12mini.png"};
+    var iphone12 = {name:"Iphone 12", desc:"[6.1 inches, two rear cameras align vertically, vertical edge]", image:"images/iphones/iphone12.png"};
+    var iphone12pro = {name:"Iphone 12 Pro", desc:"[6.1 inches, triple rear cameras, vertical edge]", image:"images/iphones/iphone12pro.png"};
+    var iphone12promax = {name:"Iphone 12 Pro Max", desc:"[6.7 inches, triple rear cameras, vertical edge]", image:"images/iphones/iphone12promax.png"};
+    var iphone13mini = {name:"Iphone 13 mini", desc:"[5.4 inches, two rear cameras, vertical edge]", image:"images/iphones/iphone13mini.png"};
+    var iphone13_14 = {name:"Iphone 13/14", desc:"[6.1 inches, two rear cameras aligned diagonally, vertical edge]", image:"images/iphones/iphone13_14.png"};
+    var iphone13pro = {name:"Iphone 13 Pro", desc:"[6.1 inches, triple rear cameras, top speaker is touching the edge, vertical edge]", image:"images/iphones/iphone13pro.png"};
+    var iphone13promax = {name:"Iphone 13 Pro Max", desc:"[6.7 inches, triple rear cameras, top speaker is touching the edge, vertical edge]", image:"images/iphones/iphone13promax.png"};
+    var iphone14plus = {name:"Iphone 14 plus", desc:"[6.7 inches, two rear cameras aligned diagonally, vertical edge]", image:"images/iphones/iphone14plus.png"};
+    var iphone14pro = {name:"Iphone 14 Pro", desc:"[6.1 inches, triple rear cameras, vertical edge]", image:"images/iphones/iphone14pro.png"};
+    var iphone14promax = {name:"Iphone 14 Pro Max", desc:"[6.7 inches, triple rear cameras, vertical edge]", image:"images/iphones/iphone14promax.png"};
 
     //Ipad
-    var ipadmini3 = {name:"IPAD mini 3", desc:"[Microphone hole in the middle, touch ID unlock, single camera, slient button]", images:"images/ipad1.png"};
-    var ipadmini1_2 = {name:"IPAD mini/mini 2", desc:"[Microphone hole in the middle, no Touch ID unlock, single camera, slient button]", images:"images/ipad2.png"};
-    var ipadmini4 = {name:"IPAD mini 4", desc:"[Touch ID unlock, no silence button, microphone hole on the right of camera]", images:"images/ipad3.png"};
-    var ipadmini5 = {name:"IPAD mini5(2019)", desc:"[Touch ID unlock, no silence button, one microphone hole on the back middle]", images:"images/ipad4.png"};
-    var ipad2_3_4 = {name:"IPAD 2/3/4th generation", desc:"[Wide bezel on the front, large charge port, 9.7 inches]", images:"images/ipad5.png"};
-    var ipadair1 = {name:"IPAD Air1", desc:"[9.7 inches, No finger print access, single camera, microphone in the middle]", images:"images/ipad6.png"};
-    var ipadair2 = {name:"IPAD Air2", desc:"[9.7 inches, Finger print access, no silent button, tiny microphone on the right of rear camera, ]", images:"images/ipad7.png"};
-    var ipadair3 = {name:"IPAD Pro 10.5 inch", desc:"[10.5 inches, Vertical shape, camera on top, no flash light, has home button]", images:"images/ipad20.png"};
-    var ipad5_6 = {name:"IPAD 5/6th Generation", desc:"[9.7 inches, Camera only, no flash light, touch ID home button, no silent button, microphone at the middle]", images:"images/ipad8.png"};
-    var ipadpro_11inch_2018 = {name:"IPAD Pro 11(2018)", desc:"[Many pin holes on top, no home button]", images:"images/ipad9.png"};
-    var ipadpro_129inch_2015 = {name:"IPAD Pro 12.9inch(2015)", desc:"[12.9 inches, camera and flash light beside each other, has home button]", images:"images/ipad10.png"};
-    var ipadpro_129inch_2017 = {name:"IPAD Pro 12.9inch(2017)", desc:"[12.9 inches, vertical shape, camera on top and flash light under, has home button]", images:"images/ipad11.png"};
-    var ipadpro_105inch = {name:"IPAD Pro 10.5 inch", desc:"[Vertical shape, camera on top and flash light under, has home button]", images:"images/ipad12.png"};
-    var ipadpro_97inch = {name:"IPAD Pro 9.7 inch(2016)", desc:"[Camera above the flash light]", images:"images/ipad13.png"};
-    var ipadair4_5 = {name:"IPAD Air 4/5", desc:"[Touch ID, no silent button & no home button, no flash light, microphone on the middle, square edge]", images:"images/ipad14.jpg"};
-    var ipadpro_129inch_2020_2021_2022 = {name:"IPAD Pro 12.9(2020/2021/2022)", desc:"[12.9 inches, back island camera, no home button, square edge]", images:"images/ipad15.png"};
-    var ipadpro_11inch_2020_2021_2022 = {name:"iPad Pro 11 (2020/2021/2022)", desc:"[11 inches, back island camera, no home button, square edge]", images:"images/ipad16.png"};
-    var ipadpro_129inch_2018 = {name:"iPad Pro 12.9 (2018)", desc:"[12.9 inches, no home button, no framing on the rear camera, flash light right under, top and bottom both having speakers]", images:"images/ipad17.png"};
-    var ipad10 = {name:"iPad 10th Generation", desc:"[10.9 inches, Touch ID unlock, no home button, support 1st Gen Apple Pencil only]", images:"images/ipad18.png"};
-    var ipad7_8_9 = {name:"iPad 7/8/9th Generation", desc:"[10.2 inches, has home button, rounded edge]", images:"images/ipad19.png"};
+    var ipadmini3 = {name:"IPAD mini 3", desc:"[Microphone hole in the middle, touch ID unlock, single camera, slient button]", image:"images/ipad1.png"};
+    var ipadmini1_2 = {name:"IPAD mini/mini 2", desc:"[Microphone hole in the middle, no Touch ID unlock, single camera, slient button]", image:"images/ipad2.png"};
+    var ipadmini4 = {name:"IPAD mini 4", desc:"[Touch ID unlock, no silence button, microphone hole on the right of camera]", image:"images/ipad3.png"};
+    var ipadmini5 = {name:"IPAD mini5(2019)", desc:"[Touch ID unlock, no silence button, one microphone hole on the back middle]", image:"images/ipad4.png"};
+    var ipad2_3_4 = {name:"IPAD 2/3/4th generation", desc:"[Wide bezel on the front, large charge port, 9.7 inches]", image:"images/ipad5.png"};
+    var ipadair1 = {name:"IPAD Air1", desc:"[9.7 inches, No finger print access, single camera, microphone in the middle]", image:"images/ipad6.png"};
+    var ipadair2 = {name:"IPAD Air2", desc:"[9.7 inches, Finger print access, no silent button, tiny microphone on the right of rear camera, ]", image:"images/ipad7.png"};
+    var ipadair3 = {name:"IPAD Pro 10.5 inch", desc:"[10.5 inches, Vertical shape, camera on top, no flash light, has home button]", image:"images/ipad20.png"};
+    var ipad5_6 = {name:"IPAD 5/6th Generation", desc:"[9.7 inches, Camera only, no flash light, touch ID home button, no silent button, microphone at the middle]", image:"images/ipad8.png"};
+    var ipadpro_11inch_2018 = {name:"IPAD Pro 11(2018)", desc:"[Many pin holes on top, no home button]", image:"images/ipad9.png"};
+    var ipadpro_129inch_2015 = {name:"IPAD Pro 12.9inch(2015)", desc:"[12.9 inches, camera and flash light beside each other, has home button]", image:"images/ipad10.png"};
+    var ipadpro_129inch_2017 = {name:"IPAD Pro 12.9inch(2017)", desc:"[12.9 inches, vertical shape, camera on top and flash light under, has home button]", image:"images/ipad11.png"};
+    var ipadpro_105inch = {name:"IPAD Pro 10.5 inch", desc:"[Vertical shape, camera on top and flash light under, has home button]", image:"images/ipad12.png"};
+    var ipadpro_97inch = {name:"IPAD Pro 9.7 inch(2016)", desc:"[Camera above the flash light]", image:"images/ipad13.png"};
+    var ipadair4_5 = {name:"IPAD Air 4/5", desc:"[Touch ID, no silent button & no home button, no flash light, microphone on the middle, square edge]", image:"images/ipad14.jpg"};
+    var ipadpro_129inch_2020_2021_2022 = {name:"IPAD Pro 12.9(2020/2021/2022)", desc:"[12.9 inches, back island camera, no home button, square edge]", image:"images/ipad15.png"};
+    var ipadpro_11inch_2020_2021_2022 = {name:"iPad Pro 11 (2020/2021/2022)", desc:"[11 inches, back island camera, no home button, square edge]", image:"images/ipad16.png"};
+    var ipadpro_129inch_2018 = {name:"iPad Pro 12.9 (2018)", desc:"[12.9 inches, no home button, no framing on the rear camera, flash light right under, top and bottom both having speakers]", image:"images/ipad17.png"};
+    var ipad10 = {name:"iPad 10th Generation", desc:"[10.9 inches, Touch ID unlock, no home button, support 1st Gen Apple Pencil only]", image:"images/ipad18.png"};
+    var ipad7_8_9 = {name:"iPad 7/8/9th Generation", desc:"[10.2 inches, has home button, rounded edge]", image:"images/ipad19.png"};
 
     //三星手机
-    var samsungS10_S10plus = {name:"Samsung S10/S10+", desc:"[6.4/6.7 inches, three camera lens with flash light]", images:"images/samsung1.png"};
-    var samsungS8_S8plus = {name:"Samsung S8/S8+", desc:"[5.8/6.2 inches, three objects on the back, flash light, square camera, fingerprint unlock]", images:"images/samsung2.png"};
-    var samsungS9_S9plus = {name:"Samsung S9/S9+", desc:"[5.8/6.2 inches, camera above fingerprint, fingerprint recognition on the back, small rectangle glass lense beside]", images:"images/samsung3.png"};
-    var samsungS7 = {name:"Samsung S7", desc:"[5.1 inches, home button, square framed camera, flash light on the right, single hole at the top]", images:"images/samsung4.png"};
-    var samsungS7edge = {name:"Samsung S7 Edge", desc:"[5.5 inches, edge curved screen, home button, square framed camera on back, flash light on the right]", images:"images/samsung5.png"};
-    var samsungNote10_Note10plus = {name:"Samsung Note 10/10Plus", desc:"[6.3/6.8 inches, long thin cameras frame]", images:"images/samsung7.png"};
-    var samsungNote9 = {name:"Samsung Note9", desc:"[6.4 inches, back is the shape of “丅”]", images:"images/samsung8.png"};
-    var samsungNote8 = {name:"Samsung Note8", desc:"[6.3 inches]", images:"images/samsung9.png"};
-    var samsungS3 = {name:"Samsung S3", desc:"[4.8 inches, round corner, 3 objects at the back in the layout of 'left, middle, and right']", images:"images/samsung10.png"};
-    var samsungS4 = {name:"Samsung S4", desc:"[5 inches, ertically laid camera and flash light, linear speaker on the bottom left up]", images:"images/samsung11.png"};
-    var samsungS6 = {name:"Samsung S6", desc:"[5.1 inches, camera is at the left, two holes at the top]", images:"images/samsung12.png"};
-    var samsungS6edge = {name:"Samsung S6 Edge", desc:"[5.1 inches, curved screen, two holes at the top]", images:"images/samsung13.png"};
-    var samsungNote3 = {name:"Samsung Note3", desc:"[5.7 inches, has home button, pen hole at bottom left]", images:"images/samsung14.png"};
-    var samsungNote4 = {name:"Samsung Note4", desc:"[5.7 inches, pen hole and linear speaker on the bottom left part]", images:"images/samsung15.png"};
-    var samsungNote5 = {name:"Samsung Note5", desc:"[5.7 inches, has home button, camera and flash light from left to right, pen hole on the bottom left]", images:"images/samsung16.png"};
-    var samsungJ2pro = {name:"Samsung J2 Pro(2018)", desc:"[5 inches, round corners all around, thin linear shape beside the camera island]", images:"images/samsung17.png"};
-    var samsungJ8 = {name:"Samsung J8", desc:"[6 inches, two cameras, fingerprint unlock, no home button]", images:"images/samsung19.png"};
-    var samsungA8 = {name:"Samsung A8", desc:"[5.7 inches]", images:"images/samsung20.png"}
-    var samsungA20_A30 = {name:"Samsung A20/30", desc:"[6.4 inches, one dot camera front, fingerprint access at the back, two camers on back, one singled out flash light below]", images:"images/samsung22.png"};
-    var samsungA50 = {name:"Samsung A50", desc:"[One dot camera front, three cameras + one singled out flash light, no fingerprint access on back]", images:"images/samsung23.png"};
-    var samsungS21 = {name:"Samsung Galaxy S21", desc:"[6.2 inches, three outstanding eyes recessed into metal module, stand alone flash light beside Matte Glass front and glass back]", images:"images/samsung24.jpg"};
-    var samsungS21plus = {name:"Samsung Galaxy S21 plus", desc:"[6.7 inches, three cameras lined up vertically and one flash light set alone.]", images:"images/samsung25.jpg"};
-    var samsungS21Ultra = {name:"Samsung Galaxy S21 Ultra", desc:"[6.8 inches, glass front and glass back with S PEN A slightly wide island module on the back 4 cameras]", images:"images/samsung26.jpg"};
-    var samsungS20FE = {name:"Samsung Galaxy S20 FE", desc:"[6.5 inches, phone body is bigger than s20. Plastic back. S20  flagship is with glass back. S20 FE front screen flat, s20 curved screen.]", images:"images/samsung27.jpg"};
-    var samsungS20Ultra = {name:"Samsung Galaxy S20 ultra", desc:"[6.9 inches, 4 cameras One stand out telephoto camera below]", images:"images/samsung28.jpg"};
-    var samsungNote20 = {name:"Samsung Galaxy Note 20", desc:"[6.7 inches, glass front / plastic back]", images:"images/samsung29.jpg"};
-    var samsungNote20Ultra = {name:"Samsung Galaxy Note 20 ultra", desc:"[6.9 inches, glass front / glass back, laser auto focus sensor under flash]", images:"images/samsung30.jpg"};
-    var samsungJ7pro = {name:"Samsung J7 Pro 2017", desc:"[5.5 inches, camera and flashlight cover by straight black outline]", images:"images/samsung31.png"};
-    var samsungJ5pro = {name:"Samsung J5 Pro 2017", desc:"[5.2 inches, camera and flashlight cover by straight black outline]", images:"images/samsung32.png"};
-    var samsungJ7prime = {name:"Samsung J7 Prime (2016)", desc:"[5.5 inches, Single Camera in the middle with flash on the right]", images:"images/samsung33.png"};
-    var samsungJ5prime = {name:"Samsung J5 Prime (2016)", desc:"[5 inches, Single Camera in the middle with flash on the right]", images:"images/samsung34.png"};
-    var samsungA51 = {name:"Samsung A51 (2019)", desc:"[6.5 inches, 4 Camera with flash light]", images:"images/samsung35.png"};
-    var samsungA70 = {name:"Samsung A70 (2019)", desc:"[6.7 inches, Three cameras + one singled out flash light, no fingerprint access at the back]", images:"images/samsung36.png"};
-    var samsungS20 = {name:"Samsung Galaxy S20", desc:"[6.2 inches]", images:"images/samsung39.png"}; // Missing description
-    var samsungS20plus = {name:"Samsung Galaxy S20 Plus", desc:"[6.7 inches]", images:"images/samsung38.png"}; // Missing description
-    var samsungS21FE = {name:"Samsung Galaxy S21 FE", desc:"[6.4 inches, flat screen, 2022]", images:"images/samsung40.png"}; // Missing description
-    var samsungS22 = {name:"Samsung Galaxy S22", desc:"[6.1 inches, flat screen, 2022]", images:"images/samsung41.png"}; // Missing description
-    var samsungS22plus = {name:"Samsung Galaxy S22 Plus", desc:"[6.6 inches, flat screen, 2022]", images:"images/samsung42.png"}; // Missing description
-    var samsungS22Ultra = {name:"Samsung Galaxy S22 Ultra", desc:"[6.7 inches, 5 cameras, curved screen, with S Pen avaliable]", images:"images/samsung43.png"};
+    var samsungS10_S10plus = {name:"Samsung S10/S10+", desc:"[6.4/6.7 inches, three camera lens with flash light]", image:"images/samsung1.png"};
+    var samsungS8_S8plus = {name:"Samsung S8/S8+", desc:"[5.8/6.2 inches, three objects on the back, flash light, square camera, fingerprint unlock]", image:"images/samsung2.png"};
+    var samsungS9_S9plus = {name:"Samsung S9/S9+", desc:"[5.8/6.2 inches, camera above fingerprint, fingerprint recognition on the back, small rectangle glass lense beside]",image:"images/samsung3.png"};
+    var samsungS7 = {name:"Samsung S7", desc:"[5.1 inches, home button, square framed camera, flash light on the right, single hole at the top]", image:"images/samsung4.png"};
+    var samsungS7edge = {name:"Samsung S7 Edge", desc:"[5.5 inches, edge curved screen, home button, square framed camera on back, flash light on the right]", image:"images/samsung5.png"};
+    var samsungNote10_Note10plus = {name:"Samsung Note 10/10Plus", desc:"[6.3/6.8 inches, long thin cameras frame]", image:"images/samsung7.png"};
+    var samsungNote9 = {name:"Samsung Note9", desc:"[6.4 inches, back is the shape of “丅”]", image:"images/samsung8.png"};
+    var samsungNote8 = {name:"Samsung Note8", desc:"[6.3 inches]", image:"images/samsung9.png"};
+    var samsungS3 = {name:"Samsung S3", desc:"[4.8 inches, round corner, 3 objects at the back in the layout of 'left, middle, and right']", image:"images/samsung10.png"};
+    var samsungS4 = {name:"Samsung S4", desc:"[5 inches, ertically laid camera and flash light, linear speaker on the bottom left up]", image:"images/samsung11.png"};
+    var samsungS6 = {name:"Samsung S6", desc:"[5.1 inches, camera is at the left, two holes at the top]", image:"images/samsung12.png"};
+    var samsungS6edge = {name:"Samsung S6 Edge", desc:"[5.1 inches, curved screen, two holes at the top]", image:"images/samsung13.png"};
+    var samsungNote3 = {name:"Samsung Note3", desc:"[5.7 inches, has home button, pen hole at bottom left]", image:"images/samsung14.png"};
+    var samsungNote4 = {name:"Samsung Note4", desc:"[5.7 inches, pen hole and linear speaker on the bottom left part]", image:"images/samsung15.png"};
+    var samsungNote5 = {name:"Samsung Note5", desc:"[5.7 inches, has home button, camera and flash light from left to right, pen hole on the bottom left]", image:"images/samsung16.png"};
+    var samsungJ2pro = {name:"Samsung J2 Pro(2018)", desc:"[5 inches, round corners all around, thin linear shape beside the camera island]", image:"images/samsung17.png"};
+    var samsungJ8 = {name:"Samsung J8", desc:"[6 inches, two cameras, fingerprint unlock, no home button]", image:"images/samsung19.png"};
+    var samsungA8 = {name:"Samsung A8", desc:"[5.7 inches]", image:"images/samsung20.png"}
+    var samsungA20_A30 = {name:"Samsung A20/30", desc:"[6.4 inches, one dot camera front, fingerprint access at the back, two camers on back, one singled out flash light below]", image:"images/samsung22.png"};
+    var samsungA50 = {name:"Samsung A50", desc:"[One dot camera front, three cameras + one singled out flash light, no fingerprint access on back]", image:"images/samsung23.png"};
+    var samsungS21 = {name:"Samsung Galaxy S21", desc:"[6.2 inches, three outstanding eyes recessed into metal module, stand alone flash light beside Matte Glass front and glass back]", image:"images/samsung24.jpg"};
+    var samsungS21plus = {name:"Samsung Galaxy S21 plus", desc:"[6.7 inches, three cameras lined up vertically and one flash light set alone.]", image:"images/samsung25.jpg"};
+    var samsungS21Ultra = {name:"Samsung Galaxy S21 Ultra", desc:"[6.8 inches, glass front and glass back with S PEN A slightly wide island module on the back 4 cameras]", image:"images/samsung26.jpg"};
+    var samsungS20FE = {name:"Samsung Galaxy S20 FE", desc:"[6.5 inches, phone body is bigger than s20. Plastic back. S20  flagship is with glass back. S20 FE front screen flat, s20 curved screen.]", image:"images/samsung27.jpg"};
+    var samsungS20Ultra = {name:"Samsung Galaxy S20 ultra", desc:"[6.9 inches, 4 cameras One stand out telephoto camera below]", image:"images/samsung28.jpg"};
+    var samsungNote20 = {name:"Samsung Galaxy Note 20", desc:"[6.7 inches, glass front / plastic back]", image:"images/samsung29.jpg"};
+    var samsungNote20Ultra = {name:"Samsung Galaxy Note 20 ultra", desc:"[6.9 inches, glass front / glass back, laser auto focus sensor under flash]", image:"images/samsung30.jpg"};
+    var samsungJ7pro = {name:"Samsung J7 Pro 2017", desc:"[5.5 inches, camera and flashlight cover by straight black outline]", image:"images/samsung31.png"};
+    var samsungJ5pro = {name:"Samsung J5 Pro 2017", desc:"[5.2 inches, camera and flashlight cover by straight black outline]", image:"images/samsung32.png"};
+    var samsungJ7prime = {name:"Samsung J7 Prime (2016)", desc:"[5.5 inches, Single Camera in the middle with flash on the right]", image:"images/samsung33.png"};
+    var samsungJ5prime = {name:"Samsung J5 Prime (2016)", desc:"[5 inches, Single Camera in the middle with flash on the right]", image:"images/samsung34.png"};
+    var samsungA51 = {name:"Samsung A51 (2019)", desc:"[6.5 inches, 4 Camera with flash light]", image:"images/samsung35.png"};
+    var samsungA70 = {name:"Samsung A70 (2019)", desc:"[6.7 inches, Three cameras + one singled out flash light, no fingerprint access at the back]", image:"images/samsung36.png"};
+    var samsungS20 = {name:"Samsung Galaxy S20", desc:"[6.2 inches]", image:"images/samsung39.png"}; // Missing description
+    var samsungS20plus = {name:"Samsung Galaxy S20 Plus", desc:"[6.7 inches]", image:"images/samsung38.png"}; // Missing description
+    var samsungS21FE = {name:"Samsung Galaxy S21 FE", desc:"[6.4 inches, flat screen, 2022]", image:"images/samsung40.png"}; // Missing description
+    var samsungS22 = {name:"Samsung Galaxy S22", desc:"[6.1 inches, flat screen, 2022]", image:"images/samsung41.png"}; // Missing description
+    var samsungS22plus = {name:"Samsung Galaxy S22 Plus", desc:"[6.6 inches, flat screen, 2022]", image:"images/samsung42.png"}; // Missing description
+    var samsungS22Ultra = {name:"Samsung Galaxy S22 Ultra", desc:"[6.7 inches, 5 cameras, curved screen, with S Pen avaliable]", image:"images/samsung43.png"};
     //其它小型号手机
-    //var otherPhone1 = {name:"HUAWEI P30", desc:"[6.15 inches，one dot camera front, oval round shape of fingerprint access on back, three cameras and one singled out  flash light, log at the left bottom corner]", images:"images/otherPhone1.png"};
-    //var otherPhone2 = {name:"HUAWEI P30 Pro", desc:"[6.47 inches，one dot camera front, three cameras framed on one island, bottom left logo]", images:"images/otherPhone2.png"};
-    //var otherPhone3 = {name:"HUAWEI Mate20", desc:"[6.53 inches，square island on the back with 3 cameras and one flash light, fingerprint access on the back]", images:"images/otherPhone3.png"};
-    //var otherPhone4 = {name:"HUAWEI Mate20 Pro", desc:"[6.39 inches，square framed rear cameras, left top is flash light, no fingerprint access]", images:"images/otherPhone4.png"};
-    //var otherPhone5 = {name:"HUAWEI Mate30 Pro", desc:"[6.53 inches，three cameras front, four cameras back on round swirl shape]", images:"images/otherPhone5.png"};
-    //var otherPhone6 = {name:"HUAWEI P20", desc:"[5.8 inches]", images:"images/otherPhone6.png"};
-    //var otherPhone7 = {name:"HUAWEI Nova 3i", desc:"[6.3 inches，a straight recessed line front ( camera and other stuff ); two cameras, flash light and touch ID at the back side]", images:"images/otherPhone7.png"};
-    var pixel4 = {name:"Google Pixel 4", desc:"[5.7 inches，square island top left on back, flash light on the bottom of the island, Front one single line black]", images:"images/otherPhone8.png"};
-    var pixel3_3XL = {name:"Google Pixel 3/3 XL", desc:"[5.5/6.3 inches]", images:"images/otherPhone9.png"};
-    var pixel3a_3aXL = {name:"Google Pixel 3a/ 3a XL", desc:"[5.6/6 inches]", images:"images/otherPhone10.png"};
-    var pixel2 = {name:"Google Pixel 2", desc:"[5 inches，top and bottom linear speaker on front, flash light before camera, two pin holes microphone below]", images:"images/otherPhone11.png"};
-    var oppoA57 = {name:"OPPO A57", desc:"[One camera, microphone in between, flash light]", images:"images/otherPhone12.png"};
-    var oppoR17pro = {name:"OPPO R17 Pro", desc:"[6.4 inches, three cameras on the middle top]", images:"images/otherPhone13.png"};
-    var oppoAx5 = {name:"OPPO Ax5", desc:"[6.2 inches, two camera lens and flash light on the back]", images:"images/otherPhone14.png"};
-    //var otherPhone15 = {name:"HUAWEI P20 Pro (2018)", desc:"[6.1 inches, home button in the front side, three cameras and flash light at the back]", images:"images/otherPhone15.png"};
-    //var otherPhone16 = {name:"HUAWEI P20 Lite / Nova 3e", desc:"[5.84 inches, no home button, has fingerprint access on the back, two cameras with flash, no speaking on the back]", images:"images/otherPhone16.png"};
-    //var otherPhone17 = {name:"HUAWEI Mate 10 (2017)", desc:"[5.9 inches, Have Home Button]", images:"images/otherPhone17.png"};
-    //var otherPhone18 = {name:"HUAWEI Mate 10 Lite/ Nova 2i (2017)", desc:"[5.9 inches, two camera in one slot, flash on top of the camera, fingerprint access on the back, no home button]", images:"images/otherPhone18.png"};
-    //var otherPhone19 = {name:"HUAWEI Mate 9 (2016)", desc:"[5.9 inches]", images:"images/otherPhone19.png"};
-    var pixel2XL = {name:"Pixel 2 XL (2017)", desc:"[6 inches, front speaker on the very top of the screen]", images:"images/otherPhone20.png"};
-    var pixel1 = {name:"Pixel  (2016)", desc:"[5 inches, fingerprint access on the back, Flash -> Camera -> Speaker on the top]", images:"images/otherPhone21.png"};
-    var pixelXL = {name:"Pixel  XL (2016)", desc:"[5.5 inches, Fingerprint access on the back, Flash -> Camera -> Speaker on the top, Cases normally (Camera Part) have a long hole]", images:"images/otherPhone22.png"};
-    var oppoR17 = {name:"R17 (2018)", desc:"[6.4 inches, two camera lens with flash light, only one front camera]", images:"images/otherPhone23.png"};
-    var oppoR15 = {name:"R15 (2018)", desc:"[6.28 inches, two camera lens with flash light located on the right (similar to ip8 plus), fingerprint access on the back]", images:"images/otherPhone24.png"};
-    var oppoR11 = {name:"R11(2017)", desc:"[5.5 inches, two camera lens with flash light located on the right (similar to ip8 plus), has Home button, no fingerprint access]", images:"images/otherPhone25.png"};
-    var oppoR11plus = {name:"R11 Plus (2017)", desc:"[6 inches, two camera lens with flash light located on the right (similar to ip8 plus), has Home button, no fingerprint access]", images:"images/otherPhone26.png"};
-    var oppoR11s = {name:"R11s (2017)", desc:"[6.01 inches, two camera lens with flash light located on the right (similar to ip8 plus), no home button, fingerprint access on the back]", images:"images/otherPhone27.png"};
-    var oppoR11splus = {name:"R11s Plus (2017)", desc:"[6.43 inches, two camera lens with flash light located on the right (similar to ip8 plus), no home button, fingerprint access on the back]", images:"images/otherPhone28.png"};
+    //var otherPhone1 = {name:"HUAWEI P30", desc:"[6.15 inches，one dot camera front, oval round shape of fingerprint access on back, three cameras and one singled out  flash light, log at the left bottom corner]", image:"images/otherPhone1.png"};
+    //var otherPhone2 = {name:"HUAWEI P30 Pro", desc:"[6.47 inches，one dot camera front, three cameras framed on one island, bottom left logo]", image:"images/otherPhone2.png"};
+    //var otherPhone3 = {name:"HUAWEI Mate20", desc:"[6.53 inches，square island on the back with 3 cameras and one flash light, fingerprint access on the back]", image:"images/otherPhone3.png"};
+    //var otherPhone4 = {name:"HUAWEI Mate20 Pro", desc:"[6.39 inches，square framed rear cameras, left top is flash light, no fingerprint access]", image:"images/otherPhone4.png"};
+    //var otherPhone5 = {name:"HUAWEI Mate30 Pro", desc:"[6.53 inches，three cameras front, four cameras back on round swirl shape]", image:"images/otherPhone5.png"};
+    //var otherPhone6 = {name:"HUAWEI P20", desc:"[5.8 inches]", image:"images/otherPhone6.png"};
+    //var otherPhone7 = {name:"HUAWEI Nova 3i", desc:"[6.3 inches，a straight recessed line front ( camera and other stuff ); two cameras, flash light and touch ID at the back side]", image:"images/otherPhone7.png"};
+    var pixel4 = {name:"Google Pixel 4", desc:"[5.7 inches，square island top left on back, flash light on the bottom of the island, Front one single line black]", image:"images/otherPhone8.png"};
+    var pixel3_3XL = {name:"Google Pixel 3/3 XL", desc:"[5.5/6.3 inches]", image:"images/otherPhone9.png"};
+    var pixel3a_3aXL = {name:"Google Pixel 3a/ 3a XL", desc:"[5.6/6 inches]", image:"images/otherPhone10.png"};
+    var pixel2 = {name:"Google Pixel 2", desc:"[5 inches，top and bottom linear speaker on front, flash light before camera, two pin holes microphone below]", image:"images/otherPhone11.png"};
+    var oppoA57 = {name:"OPPO A57", desc:"[One camera, microphone in between, flash light]", image:"images/otherPhone12.png"};
+    var oppoR17pro = {name:"OPPO R17 Pro", desc:"[6.4 inches, three cameras on the middle top]", image:"images/otherPhone13.png"};
+    var oppoAx5 = {name:"OPPO Ax5", desc:"[6.2 inches, two camera lens and flash light on the back]", image:"images/otherPhone14.png"};
+    //var otherPhone15 = {name:"HUAWEI P20 Pro (2018)", desc:"[6.1 inches, home button in the front side, three cameras and flash light at the back]", image:"images/otherPhone15.png"};
+    //var otherPhone16 = {name:"HUAWEI P20 Lite / Nova 3e", desc:"[5.84 inches, no home button, has fingerprint access on the back, two cameras with flash, no speaking on the back]", image:"images/otherPhone16.png"};
+    //var otherPhone17 = {name:"HUAWEI Mate 10 (2017)", desc:"[5.9 inches, Have Home Button]", image:"images/otherPhone17.png"};
+    //var otherPhone18 = {name:"HUAWEI Mate 10 Lite/ Nova 2i (2017)", desc:"[5.9 inches, two camera in one slot, flash on top of the camera, fingerprint access on the back, no home button]", image:"images/otherPhone18.png"};
+    //var otherPhone19 = {name:"HUAWEI Mate 9 (2016)", desc:"[5.9 inches]", image:"images/otherPhone19.png"};
+    var pixel2XL = {name:"Pixel 2 XL (2017)", desc:"[6 inches, front speaker on the very top of the screen]", image:"images/otherPhone20.png"};
+    var pixel1 = {name:"Pixel  (2016)", desc:"[5 inches, fingerprint access on the back, Flash -> Camera -> Speaker on the top]", image:"images/otherPhone21.png"};
+    var pixelXL = {name:"Pixel  XL (2016)", desc:"[5.5 inches, Fingerprint access on the back, Flash -> Camera -> Speaker on the top, Cases normally (Camera Part) have a long hole]", image:"images/otherPhone22.png"};
+    var oppoR17 = {name:"R17 (2018)", desc:"[6.4 inches, two camera lens with flash light, only one front camera]", image:"images/otherPhone23.png"};
+    var oppoR15 = {name:"R15 (2018)", desc:"[6.28 inches, two camera lens with flash light located on the right (similar to ip8 plus), fingerprint access on the back]", image:"images/otherPhone24.png"};
+    var oppoR11 = {name:"R11(2017)", desc:"[5.5 inches, two camera lens with flash light located on the right (similar to ip8 plus), has Home button, no fingerprint access]", image:"images/otherPhone25.png"};
+    var oppoR11plus = {name:"R11 Plus (2017)", desc:"[6 inches, two camera lens with flash light located on the right (similar to ip8 plus), has Home button, no fingerprint access]", image:"images/otherPhone26.png"};
+    var oppoR11s = {name:"R11s (2017)", desc:"[6.01 inches, two camera lens with flash light located on the right (similar to ip8 plus), no home button, fingerprint access on the back]", image:"images/otherPhone27.png"};
+    var oppoR11splus = {name:"R11s Plus (2017)", desc:"[6.43 inches, two camera lens with flash light located on the right (similar to ip8 plus), no home button, fingerprint access on the back]", image:"images/otherPhone28.png"};
 
     //小型号平板，三星平板
-    var otherTablet1 = {name:"OTab A 10.1” T510 (2019)", desc:"[Camera on the left corner in square shape]", images:"images/otherTab1.png"};
-    var otherTablet2 = {name:"Tab A 8” T290 (2019)", desc:"[Camera on the left corner in square shape Same as Tab A 10.1” T510, just in smaller size]", images:"images/otherTab2.png"};
-    var otherTablet3 = {name:"Tab A 10.5” T590 (2018)", desc:"[Camera located in the top middle part Flash light just under the camera]", images:"images/otherTab3.png"};
-    var otherTablet4 = {name:"Tab A 8” T380 (2017)", desc:"[Camera located in the top middle part Flash light just under the camera]", images:"images/otherTab4.png"};
-    var otherTablet5 = {name:"Tab A 7” T280 (2016)", desc:"[Speaker on the left, Camera in the top middle part, *Only this tablet has the speaker on the left]", images:"images/otherTab5.png"};
-    var otherTablet6 = {name:"Tab A 10.1” P580 (2016)", desc:"[*Tablet with a pen, *Case have a extra pen space for it]", images:"images/otherTab6.png"};
-    var otherTablet7 = {name:"Tab A 10.1” T580 (2016)", desc:"[Camera located in the top middle part Flash, light located on the right size, no pen]", images:"images/otherTab7.png"};
-    var otherTablet8 = {name:"Tab A 8” T350 (2015)", desc:"[Single square camera]", images:"images/otherTab8.png"};
-    var otherTablet9 = {name:"S6 10.5” T860 (2019)", desc:"[The only one table which has two camera lens in one slot, Pen located on the back below camera]", images:"images/otherTab9.png"};
-    var otherTablet10 = {name:"S5e 10.5” T720 (2019)", desc:"[Square camera on the top left]", images:"images/otherTab10.png"};
-    var otherTablet11 = {name:"S4 10.5” T830 (2018)", desc:"[Square camera on the middle top, Flash light just under the camera]", images:"images/otherTab11.png"};
-    var otherTablet12 = {name:"S3 9.7” T820 (2017)", desc:"[Square camera on the middle top Flash light just under the camera]", images:"images/otherTab12.png"};
-    var otherTablet13 = {name:"S2 8” T710 (2015)", desc:"[One single camera on the back]", images:"images/otherTab13.png"};
+    var otherTablet1 = {name:"OTab A 10.1” T510 (2019)", desc:"[Camera on the left corner in square shape]", image:"images/otherTab1.png"};
+    var otherTablet2 = {name:"Tab A 8” T290 (2019)", desc:"[Camera on the left corner in square shape Same as Tab A 10.1” T510, just in smaller size]", image:"images/otherTab2.png"};
+    var otherTablet3 = {name:"Tab A 10.5” T590 (2018)", desc:"[Camera located in the top middle part Flash light just under the camera]", image:"images/otherTab3.png"};
+    var otherTablet4 = {name:"Tab A 8” T380 (2017)", desc:"[Camera located in the top middle part Flash light just under the camera]", image:"images/otherTab4.png"};
+    var otherTablet5 = {name:"Tab A 7” T280 (2016)", desc:"[Speaker on the left, Camera in the top middle part, *Only this tablet has the speaker on the left]", image:"images/otherTab5.png"};
+    var otherTablet6 = {name:"Tab A 10.1” P580 (2016)", desc:"[*Tablet with a pen, *Case have a extra pen space for it]", image:"images/otherTab6.png"};
+    var otherTablet7 = {name:"Tab A 10.1” T580 (2016)", desc:"[Camera located in the top middle part Flash, light located on the right size, no pen]", image:"images/otherTab7.png"};
+    var otherTablet8 = {name:"Tab A 8” T350 (2015)", desc:"[Single square camera]", image:"images/otherTab8.png"};
+    var otherTablet9 = {name:"S6 10.5” T860 (2019)", desc:"[The only one table which has two camera lens in one slot, Pen located on the back below camera]", image:"images/otherTab9.png"};
+    var otherTablet10 = {name:"S5e 10.5” T720 (2019)", desc:"[Square camera on the top left]", image:"images/otherTab10.png"};
+    var otherTablet11 = {name:"S4 10.5” T830 (2018)", desc:"[Square camera on the middle top, Flash light just under the camera]", image:"images/otherTab11.png"};
+    var otherTablet12 = {name:"S3 9.7” T820 (2017)", desc:"[Square camera on the middle top Flash light just under the camera]", image:"images/otherTab12.png"};
+    var otherTablet13 = {name:"S2 8” T710 (2015)", desc:"[One single camera on the back]", image:"images/otherTab13.png"};
     
     
     //iphone 题库； iphone, ipad, 三星主流型号题库， 以及小型号手机题库 共同组成主页上的 “phone/ipad model identification” ；可加入型号
@@ -270,7 +270,7 @@ window.onload = function() {
         case32, case33, case34, case35, case36, case39, case40, case41, case42, case45, case46, case49,
         case54, case58, case59, case60, case61, case62, case64, case65, case69, case70, case71, case72, case73,
         case74, case77, case78, case79, case80, case83, case85, case88, case89, case90, case94,
-        case97, case98, case100, case101, case102, case103, case104, case106);
+        carcharger1, carcharger2, airpodcover1, airpodcover2, watchband1, watchband2, watchband3, case106);
     //三星平板题库，也就是主页上的 “samsung tablet model identification”；可加入型号
     var otherTabList=new Array(otherTablet1, otherTablet2, otherTablet3, otherTablet4, otherTablet5, otherTablet6, otherTablet7, otherTablet8, otherTablet9, otherTablet10, otherTablet11,
         otherTablet12, otherTablet13);
@@ -282,7 +282,7 @@ window.onload = function() {
     var day2List = ipadList;
     //day3 多选题题库；可加入产品
     var day3List = new Array(case77, case78, case79, case80, case83, case85, case88, case89, case90,
-        case94, case97, case98, case100, case101, case102, case103, case104);
+        case94, carcharger1, carcharger2, airpodcover1, airpodcover2, watchband1, watchband2, watchband3);
     
     //以下18行不建议修改
     var caseI = 1;
@@ -319,587 +319,50 @@ window.onload = function() {
         document.getElementById("day3FillDiv").style.display = "none";
     }
 
-    //所有...Gen 函数的功能和实现逻辑都类似，设置一个list arr以及一个list arr2, arr和arr2在初始状态下相等，即出题范围；每生成一个正确答案为i的题目，则i从arr中被剔除（即可避免重复出题）；
-    //生成每个单一题目的过程中，每生成一个错误答案m,则m从arr2中被剔除（避免正确答案被混入错误答案），并在生成下一道题目时重置
     var otherPhoneQuestionGen = function(){
-        var arr = otherPhoneList.slice();
-        var loopNum = Math.min(10, otherPhoneList.length); //生成题目的数量
-        
-        for(var i = 1; i <= loopNum; i++){
-            var arr2 = arr.slice();
-            var randomNumber = Math.floor((Math.random()*arr.length)); //随机生成正确答案的index
-            var rightAnswerPlace = Math.floor((Math.random()*4)); //正确答案在题目中的位置
-            rightAnswer = arr[randomNumber]; //从出题范围中获取正确答案的具体信息
-            arr.splice(randomNumber,1); //从arr1中剔除正确答案避免重复出题
-            arr2.splice(randomNumber,1); //从arr2中剔除正确答案避免正确答案的选项重复出现
-
-            //生成错误答案
-            var wrongAnswer1Place = Math.floor((Math.random()*arr2.length)); //随机生成错误答案1 的index
-            var wrongAnswer1 = arr2[wrongAnswer1Place]; //根据上一行随机生成的index获取错误答案1 的具体信息
-            arr2.splice(wrongAnswer1Place,1); //将错误答案从arr2中剔除，避免错误答案重复出现，下同
-
-            var wrongAnswer2Place = Math.floor((Math.random()*arr2.length));
-            var wrongAnswer2 = arr2[wrongAnswer2Place];
-            arr2.splice(wrongAnswer2Place,1);
-
-            var wrongAnswer3Place = Math.floor((Math.random()*arr2.length));
-            var wrongAnswer3 = arr2[wrongAnswer3Place]
-            arr2.splice(wrongAnswer3Place,1);
-           
-            //一道选择题有四个选项，正确答案的位置由变量rightAnswerPlace决定，根据正确答案在题目中位置的不同生成不同的html； 
-            //！！复用代码时注意修改class name "answer-?" ！！
-            if(rightAnswerPlace == 1){
-                var answerButtons = "<button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-phone right-answer'>" +
-                rightAnswer.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-phone wrong-answer'>" + wrongAnswer1.name +
-                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-phone wrong-answer'>" + wrongAnswer2.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-phone wrong-answer'>"
-                + wrongAnswer3.name + "</button>";
-            }
-            else if(rightAnswerPlace == 2){
-                var answerButtons = "<button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-phone wrong-answer'>" +
-                wrongAnswer1.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-phone right-answer'>" + rightAnswer.name +
-                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-phone wrong-answer'>" + wrongAnswer2.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-phone wrong-answer'>"
-                + wrongAnswer3.name + "</button>";
-            }
-            else if(rightAnswerPlace == 3){
-                var answerButtons = "<button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-phone wrong-answer'>" +
-                wrongAnswer1.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-phone wrong-answer'>" + wrongAnswer2.name +
-                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-phone right-answer'>" + rightAnswer.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-phone wrong-answer'>"
-                + wrongAnswer3.name + "</button>";
-            }
-            else{
-                var answerButtons = "<button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-phone wrong-answer'>" +
-                wrongAnswer1.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-phone wrong-answer'>" + wrongAnswer2.name +
-                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-phone wrong-answer'>" + wrongAnswer3.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-phone right-answer'>"
-                + rightAnswer.name + "</button>";
-            }
-
-            //将刚才生成的（关于题目选项）html和下列（关于题目说明的）html一起加入...QuestionList，每当需要在页面上显示一道新题目时，就从这个list中抛出一道；具体详见文件底部的一系列click function 
-            //题目是关于手机型号时，题目说明的内容是 “what is this model”，选项是型号名称
-            //题目时关于店内产品时，题目说明的内容是 “what is this and how much is it?”, 选项是产品名称和价格；复用代码时需注意
-            //！！复用代码时注意修改id "..Contiunue" ！！
-            newQuestion = "<h3 style='text-align: center;'>" + rightAnswer.desc + "; what is this model? </h3><div class='flex_center_row row'><div class='image-box'><img src='" + rightAnswer.images + "'class='col'></div></div><div class='flex_center_row row' style='margin-top: 10px;'>" +
-            answerButtons + "</div><div class='flex_center_row row' id='modelContinue' style='margin-top: 40px;'><button type='button' class='btn btn-primary col-8 continue-button' style='display: none;'>Continue</button></div>";
-            phoneQuestionList.push(newQuestion);
-        }
+        // 6個parameter作用如下:
+        // 1: 需要引用的題庫
+        // 2, 3: 決定問題的數量,於此兩個變數中取最小值(例子: 若otherPhoneList小於10, 則取otherPhoneList的length, 否則取10)
+        // 4, 5: HTML class reference, 用來正確顯示排版 (詳見generateMultipleChoiceQuestions() 裡的註解)
+        // 6: 将刚才生成的（关于题目选项）html和下列（关于题目说明的）html一起加入...QuestionList，每当需要在页面上显示一道新题目时，就从这个list中抛出一道；具体详见文件底部的一系列click function 
+        generateMultipleChoiceQuestions(otherPhoneList, 10, otherPhoneList.length, 'answer-phone', 'modelContinue', phoneQuestionList);
     }
 
     var day1Gen = function(){
-        var arr = day1List.slice();
-        var loopNum = Math.min(5, samsungList.length);
-        
-        for(var i = 1; i <= loopNum; i++){
-            var arr2 = arr.slice();
-            var randomNumber = Math.floor((Math.random()*arr.length));
-            var rightAnswerPlace = Math.floor((Math.random()*4));
-            rightAnswer = arr[randomNumber];
-            arr.splice(randomNumber,1);
-            arr2.splice(randomNumber,1);
-
-            var wrongAnswer1Place = Math.floor((Math.random()*arr2.length));
-            var wrongAnswer1 = arr2[wrongAnswer1Place];
-            // arr2.remove(wrongAnswer1Place);
-            arr2.splice(wrongAnswer1Place,1);
-
-            var wrongAnswer2Place = Math.floor((Math.random()*arr2.length));
-            var wrongAnswer2 = arr2[wrongAnswer2Place];
-            // arr2.remove(wrongAnswer2Place);
-            arr2.splice(wrongAnswer2Place,1);
-
-            var wrongAnswer3Place = Math.floor((Math.random()*arr2.length));
-            var wrongAnswer3 = arr2[wrongAnswer3Place]
-            // arr2.remove(wrongAnswer3Place);
-            arr2.splice(wrongAnswer3Place,1);
-           
-            if(rightAnswerPlace == 1){
-                var answerButtons = "<button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day1 right-answer'>" +
-                rightAnswer.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day1 wrong-answer'>" + wrongAnswer1.name +
-                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day1 wrong-answer'>" + wrongAnswer2.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day1 wrong-answer'>"
-                + wrongAnswer3.name + "</button>";
-            }
-            else if(rightAnswerPlace == 2){
-                var answerButtons = "<button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day1 wrong-answer'>" +
-                wrongAnswer1.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day1 right-answer'>" + rightAnswer.name +
-                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day1 wrong-answer'>" + wrongAnswer2.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day1 wrong-answer'>"
-                + wrongAnswer3.name + "</button>";
-            }
-            else if(rightAnswerPlace == 3){
-                var answerButtons = "<button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day1 wrong-answer'>" +
-                wrongAnswer1.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day1 wrong-answer'>" + wrongAnswer2.name +
-                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day1 right-answer'>" + rightAnswer.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day1 wrong-answer'>"
-                + wrongAnswer3.name + "</button>";
-            }
-            else{
-                var answerButtons = "<button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day1 wrong-answer'>" +
-                wrongAnswer1.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day1 wrong-answer'>" + wrongAnswer2.name +
-                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day1 wrong-answer'>" + wrongAnswer3.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day1 right-answer'>"
-                + rightAnswer.name + "</button>";
-            }
-
-            newQuestion = "<h3 style='text-align: center;'>" + rightAnswer.desc + "; What is this model? </h3><div class='flex_center_row row'><div class='image-box'><img src='" + rightAnswer.images + "'class='col'></div></div><div class='flex_center_row row' style='margin-top: 10px;'>" +
-            answerButtons + "</div><div class='flex_center_row row' id='day1Continue' style='margin-top: 40px;'><button type='button' class='btn btn-primary col-8 continue-button' style='display: none;'>Continue</button></div>";
-            day1QuestionList.push(newQuestion);
-        }
+        generateMultipleChoiceQuestions(day1List, 5, day1List.length, 'answer-day1', 'day1Continue', day1QuestionList);
     }
 
     var day1bGen = function(){
-        var arr = day1bList.slice();
-        var loopNum = Math.min(5, samsungList.length);
-        
-        for(var i = 1; i <= loopNum; i++){
-            var arr2 = arr.slice();
-            var randomNumber = Math.floor((Math.random()*arr.length));
-            var rightAnswerPlace = Math.floor((Math.random()*4));
-            rightAnswer = arr[randomNumber];
-            arr.splice(randomNumber,1);
-            arr2.splice(randomNumber,1);
-
-            var wrongAnswer1Place = Math.floor((Math.random()*arr2.length));
-            var wrongAnswer1 = arr2[wrongAnswer1Place];
-            // arr2.remove(wrongAnswer1Place);
-            arr2.splice(wrongAnswer1Place,1);
-
-            var wrongAnswer2Place = Math.floor((Math.random()*arr2.length));
-            var wrongAnswer2 = arr2[wrongAnswer2Place];
-            // arr2.remove(wrongAnswer2Place);
-            arr2.splice(wrongAnswer2Place,1);
-
-            var wrongAnswer3Place = Math.floor((Math.random()*arr2.length));
-            var wrongAnswer3 = arr2[wrongAnswer3Place]
-            // arr2.remove(wrongAnswer3Place);
-            arr2.splice(wrongAnswer3Place,1);
-           
-            if(rightAnswerPlace == 1){
-                var answerButtons = "<button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day1 right-answer'>" +
-                rightAnswer.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day1 wrong-answer'>" + wrongAnswer1.name +
-                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day1 wrong-answer'>" + wrongAnswer2.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day1 wrong-answer'>"
-                + wrongAnswer3.name + "</button>";
-            }
-            else if(rightAnswerPlace == 2){
-                var answerButtons = "<button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day1 wrong-answer'>" +
-                wrongAnswer1.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day1 right-answer'>" + rightAnswer.name +
-                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day1 wrong-answer'>" + wrongAnswer2.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day1 wrong-answer'>"
-                + wrongAnswer3.name + "</button>";
-            }
-            else if(rightAnswerPlace == 3){
-                var answerButtons = "<button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day1 wrong-answer'>" +
-                wrongAnswer1.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day1 wrong-answer'>" + wrongAnswer2.name +
-                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day1 right-answer'>" + rightAnswer.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day1 wrong-answer'>"
-                + wrongAnswer3.name + "</button>";
-            }
-            else{
-                var answerButtons = "<button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day1 wrong-answer'>" +
-                wrongAnswer1.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day1 wrong-answer'>" + wrongAnswer2.name +
-                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day1 wrong-answer'>" + wrongAnswer3.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day1 right-answer'>"
-                + rightAnswer.name + "</button>";
-            }
-
-            newQuestion = "<h3 style='text-align: center;'>" + rightAnswer.desc + "; What is this model? </h3><div class='flex_center_row row'><div class='image-box'><img src='" + rightAnswer.images + "'class='col'></div></div><div class='flex_center_row row' style='margin-top: 10px;'>" +
-            answerButtons + "</div><div class='flex_center_row row' id='day1Continue' style='margin-top: 40px;'><button type='button' class='btn btn-primary col-8 continue-button' style='display: none;'>Continue</button></div>";
-            day1QuestionList.push(newQuestion);
-        }
+        generateMultipleChoiceQuestions(day1bList, 5, day1bList.length, 'answer-day1', 'day1Continue', day1QuestionList);
     }
 
     var day2Gen = function(){
-        var arr = ipadList.slice();
-        var loopNum = Math.min(5, ipadList.length);
-        
-        for(var i = 1; i <= loopNum; i++){
-            var arr2 = arr.slice();
-            var randomNumber = Math.floor((Math.random()*arr.length));
-            var rightAnswerPlace = Math.floor((Math.random()*4));
-            rightAnswer = arr[randomNumber];
-            arr.splice(randomNumber,1);
-            arr2.splice(randomNumber,1);
-
-            var wrongAnswer1Place = Math.floor((Math.random()*arr2.length));
-            var wrongAnswer1 = arr2[wrongAnswer1Place];
-            // arr2.remove(wrongAnswer1Place);
-            arr2.splice(wrongAnswer1Place,1);
-
-            var wrongAnswer2Place = Math.floor((Math.random()*arr2.length));
-            var wrongAnswer2 = arr2[wrongAnswer2Place];
-            // arr2.remove(wrongAnswer2Place);
-            arr2.splice(wrongAnswer2Place,1);
-
-            var wrongAnswer3Place = Math.floor((Math.random()*arr2.length));
-            var wrongAnswer3 = arr2[wrongAnswer3Place]
-            // arr2.remove(wrongAnswer3Place);
-            arr2.splice(wrongAnswer3Place,1);
-           
-            if(rightAnswerPlace == 1){
-                var answerButtons = "<button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day2 right-answer'>" +
-                rightAnswer.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day2 wrong-answer'>" + wrongAnswer1.name +
-                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day2 wrong-answer'>" + wrongAnswer2.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day2 wrong-answer'>"
-                + wrongAnswer3.name + "</button>";
-            }
-            else if(rightAnswerPlace == 2){
-                var answerButtons = "<button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day2 wrong-answer'>" +
-                wrongAnswer1.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day2 right-answer'>" + rightAnswer.name +
-                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day2 wrong-answer'>" + wrongAnswer2.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day2 wrong-answer'>"
-                + wrongAnswer3.name + "</button>";
-            }
-            else if(rightAnswerPlace == 3){
-                var answerButtons = "<button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day2 wrong-answer'>" +
-                wrongAnswer1.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day2 wrong-answer'>" + wrongAnswer2.name +
-                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day2 right-answer'>" + rightAnswer.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day2 wrong-answer'>"
-                + wrongAnswer3.name + "</button>";
-            }
-            else{
-                var answerButtons = "<button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day2 wrong-answer'>" +
-                wrongAnswer1.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day2 wrong-answer'>" + wrongAnswer2.name +
-                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day2 wrong-answer'>" + wrongAnswer3.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day2 right-answer'>"
-                + rightAnswer.name + "</button>";
-            }
-
-            newQuestion = "<h3 style='text-align: center;'>" + rightAnswer.desc + "; What is this model? </h3><div class='flex_center_row row'><div class='image-box'><img src='" + rightAnswer.images + "'class='col'></div></div><div class='flex_center_row row' style='margin-top: 10px;'>" +
-            answerButtons + "</div><div class='flex_center_row row' id='day2Continue' style='margin-top: 40px;'><button type='button' class='btn btn-primary col-8 continue-button' style='display: none;'>Continue</button></div>";
-            day2QuestionList.push(newQuestion);
-        }
+        generateMultipleChoiceQuestions(day2List, 10, day2List.length, 'answer-day2', 'day2Continue', day2QuestionList);
     }
 
     var day3Gen = function(){
-        var arr = day3List.slice();
-        var loopNum = Math.min(10, day3List.length);
-        
-        for(var i = 1; i <= loopNum; i++){
-            var arr2 = arr.slice();
-            var randomNumber = Math.floor((Math.random()*arr.length));
-            var rightAnswerPlace = Math.floor((Math.random()*4));
-            rightAnswer = arr[randomNumber];
-            arr.splice(randomNumber,1);
-            arr2.splice(randomNumber,1);
-
-            var wrongAnswer1Place = Math.floor((Math.random()*arr2.length));
-            var wrongAnswer1 = arr2[wrongAnswer1Place];
-            // arr2.remove(wrongAnswer1Place);
-            arr2.splice(wrongAnswer1Place,1);
-
-            var wrongAnswer2Place = Math.floor((Math.random()*arr2.length));
-            var wrongAnswer2 = arr2[wrongAnswer2Place];
-            // arr2.remove(wrongAnswer2Place);
-            arr2.splice(wrongAnswer2Place,1);
-
-            var wrongAnswer3Place = Math.floor((Math.random()*arr2.length));
-            var wrongAnswer3 = arr2[wrongAnswer3Place]
-            // arr2.remove(wrongAnswer3Place);
-            arr2.splice(wrongAnswer3Place,1);
-           
-            if(rightAnswerPlace == 1){
-                var answerButtons = "<button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day3 right-answer'>" +
-                rightAnswer.name + " , $" + rightAnswer.price + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day3 wrong-answer'>" + wrongAnswer1.name + " , $" + wrongAnswer1.price +
-                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day3 wrong-answer'>" + wrongAnswer2.name + " , $" + wrongAnswer2.price + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day3 wrong-answer'>"
-                + wrongAnswer3.name + " , $" + wrongAnswer3.price + "</button>";
-            }
-            else if(rightAnswerPlace == 2){
-                var answerButtons = "<button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day3 wrong-answer'>" +
-                wrongAnswer1.name + " , $" + wrongAnswer1.price + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day3 right-answer'>" + rightAnswer.name + " , $" + rightAnswer.price +
-                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day3 wrong-answer'>" + wrongAnswer2.name + " , $" + wrongAnswer2.price + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day3 wrong-answer'>"
-                + wrongAnswer3.name + " , $" + wrongAnswer3.price + "</button>";
-            }
-            else if(rightAnswerPlace == 3){
-                var answerButtons = "<button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day3 wrong-answer'>" +
-                wrongAnswer1.name + " , $" + wrongAnswer1.price + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day3 wrong-answer'>" + wrongAnswer2.name + " , $" + wrongAnswer2.price +
-                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day3 right-answer'>" + rightAnswer.name + " , $" + rightAnswer.price + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day3 wrong-answer'>"
-                + wrongAnswer3.name + " , $" + wrongAnswer3.price + "</button>";
-            }
-            else{
-                var answerButtons = "<button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day3 wrong-answer'>" +
-                wrongAnswer1.name + " , $" + wrongAnswer1.price + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day3 wrong-answer'>" + wrongAnswer2.name + " , $" + wrongAnswer2.price +
-                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day3 wrong-answer'>" + wrongAnswer3.name + " , $" + wrongAnswer3.price + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day3 right-answer'>"
-                + rightAnswer.name + " , $" + rightAnswer.price + "</button>";
-            }
-
-            newQuestion = "<h3 style='text-align: center;'> what is this and how much is it?</h3><div class='flex_center_row row'><div class='image-box'><img src='" + rightAnswer.image + "'class='col'></div></div><div class='flex_center_row row' style='margin-top: 10px;'>" +
-            answerButtons + "</div><div class='flex_center_row row' id='day3Continue' style='margin-top: 40px;'><button type='button' class='btn btn-primary col-8 continue-button' style='display: none;'>Continue</button></div>";
-            day3QuestionList.push(newQuestion);
-        }
+        generateMultipleChoiceQuestions(day3List, 10, day3List.length, 'answer-day3', 'day3Continue', day3QuestionList);
     }
 
     var samsungQuestionGen = function(){
-        var arr = samsungList.slice();
-        var loopNum = Math.min(10, samsungList.length);
-        
-        for(var i = 1; i <= loopNum; i++){
-            var arr2 = arr.slice();
-            var randomNumber = Math.floor((Math.random()*arr.length));
-            var rightAnswerPlace = Math.floor((Math.random()*4));
-            rightAnswer = arr[randomNumber];
-            arr.splice(randomNumber,1);
-            arr2.splice(randomNumber,1);
-
-            var wrongAnswer1Place = Math.floor((Math.random()*arr2.length));
-            var wrongAnswer1 = arr2[wrongAnswer1Place];
-            // arr2.remove(wrongAnswer1Place);
-            arr2.splice(wrongAnswer1Place,1);
-
-            var wrongAnswer2Place = Math.floor((Math.random()*arr2.length));
-            var wrongAnswer2 = arr2[wrongAnswer2Place];
-            // arr2.remove(wrongAnswer2Place);
-            arr2.splice(wrongAnswer2Place,1);
-
-            var wrongAnswer3Place = Math.floor((Math.random()*arr2.length));
-            var wrongAnswer3 = arr2[wrongAnswer3Place]
-            // arr2.remove(wrongAnswer3Place);
-            arr2.splice(wrongAnswer3Place,1);
-           
-            if(rightAnswerPlace == 1){
-                var answerButtons = "<button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-phone right-answer'>" +
-                rightAnswer.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-phone wrong-answer'>" + wrongAnswer1.name +
-                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-phone wrong-answer'>" + wrongAnswer2.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-phone wrong-answer'>"
-                + wrongAnswer3.name + "</button>";
-            }
-            else if(rightAnswerPlace == 2){
-                var answerButtons = "<button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-phone wrong-answer'>" +
-                wrongAnswer1.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-phone right-answer'>" + rightAnswer.name +
-                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-phone wrong-answer'>" + wrongAnswer2.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-phone wrong-answer'>"
-                + wrongAnswer3.name + "</button>";
-            }
-            else if(rightAnswerPlace == 3){
-                var answerButtons = "<button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-phone wrong-answer'>" +
-                wrongAnswer1.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-phone wrong-answer'>" + wrongAnswer2.name +
-                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-phone right-answer'>" + rightAnswer.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-phone wrong-answer'>"
-                + wrongAnswer3.name + "</button>";
-            }
-            else{
-                var answerButtons = "<button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-phone wrong-answer'>" +
-                wrongAnswer1.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-phone wrong-answer'>" + wrongAnswer2.name +
-                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-phone wrong-answer'>" + wrongAnswer3.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-phone right-answer'>"
-                + rightAnswer.name + "</button>";
-            }
-
-            newQuestion = "<h3 style='text-align: center;'>" + rightAnswer.desc + "; What is this model? </h3><div class='flex_center_row row'><div class='image-box'><img src='" + rightAnswer.images + "'class='col'></div></div><div class='flex_center_row row' style='margin-top: 10px;'>" +
-            answerButtons + "</div><div class='flex_center_row row' id='modelContinue' style='margin-top: 40px;'><button type='button' class='btn btn-primary col-8 continue-button' style='display: none;'>Continue</button></div>";
-            phoneQuestionList.push(newQuestion);
-        }
+        generateMultipleChoiceQuestions(samsungList, 10, samsungList.length, 'answer-phone', 'modelContinue', phoneQuestionList);
     }
 
     var samsungTabQuestionGen = function(){
-        var arr = otherTabList.slice();
-        var loopNum = Math.min(10, otherTabList.length);
-        for(var i = 1; i <= loopNum; i++){
-            var arr2 = arr.slice();
-            var randomNumber = Math.floor((Math.random()*arr.length));
-            var rightAnswerPlace = Math.floor((Math.random()*4));
-            rightAnswer = arr[randomNumber];
-            arr.splice(randomNumber,1);
-            arr2.splice(randomNumber,1);
-
-            var wrongAnswer1Place = Math.floor((Math.random()*arr2.length));
-            var wrongAnswer1 = arr2[wrongAnswer1Place];
-            // arr2.remove(wrongAnswer1Place);
-            arr2.splice(wrongAnswer1Place,1);
-
-            var wrongAnswer2Place = Math.floor((Math.random()*arr2.length));
-            var wrongAnswer2 = arr2[wrongAnswer2Place];
-            // arr2.remove(wrongAnswer2Place);
-            arr2.splice(wrongAnswer2Place,1);
-
-            var wrongAnswer3Place = Math.floor((Math.random()*arr2.length));
-            var wrongAnswer3 = arr2[wrongAnswer3Place]
-            // arr2.remove(wrongAnswer3Place);
-            arr2.splice(wrongAnswer3Place,1);
-           
-            if(rightAnswerPlace == 1){
-                var answerButtons = "<button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-stab right-answer'>" +
-                rightAnswer.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-stab wrong-answer'>" + wrongAnswer1.name +
-                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-stab wrong-answer'>" + wrongAnswer2.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-stab wrong-answer'>"
-                + wrongAnswer3.name + "</button>";
-            }
-            else if(rightAnswerPlace == 2){
-                var answerButtons = "<button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-stab wrong-answer'>" +
-                wrongAnswer1.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-stab right-answer'>" + rightAnswer.name +
-                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-stab wrong-answer'>" + wrongAnswer2.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-stab wrong-answer'>"
-                + wrongAnswer3.name + "</button>";
-            }
-            else if(rightAnswerPlace == 3){
-                var answerButtons = "<button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-stab wrong-answer'>" +
-                wrongAnswer1.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-stab wrong-answer'>" + wrongAnswer2.name +
-                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-stab right-answer'>" + rightAnswer.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-stab wrong-answer'>"
-                + wrongAnswer3.name + "</button>";
-            }
-            else{
-                var answerButtons = "<button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-stab wrong-answer'>" +
-                wrongAnswer1.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-stab wrong-answer'>" + wrongAnswer2.name +
-                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-stab wrong-answer'>" + wrongAnswer3.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-stab right-answer'>"
-                + rightAnswer.name + "</button>";
-            }
-
-            newQuestion = "<h3 style='text-align: center;'>" + rightAnswer.desc + "; what is this model?</h3><div class='flex_center_row row'><div class='image-box'><img src='" + rightAnswer.images + "'class='col'></div></div><div class='flex_center_row row' style='margin-top: 10px;'>" +
-            answerButtons + "</div><div class='flex_center_row row' id='stabContinue' style='margin-top: 40px;'><button type='button' class='btn btn-primary col-8 continue-button' style='display: none;'>Continue</button></div>";
-            stabQuestionList.push(newQuestion);
-        }
+        generateMultipleChoiceQuestions(otherTabList, 10, otherTabList.length, 'answer-stab', 'stabContinue', stabQuestionList);
     }
 
     var ipadQuestionGen = function(){
-        var arr = ipadList.slice();
-        var loopNum = Math.min(10, ipadList.length);
-        
-        for(var i = 1; i <= loopNum; i++){
-            var arr2 = arr.slice();
-            var randomNumber = Math.floor((Math.random()*arr.length));
-            var rightAnswerPlace = Math.floor((Math.random()*4));
-            rightAnswer = arr[randomNumber];
-            arr.splice(randomNumber,1);
-            arr2.splice(randomNumber,1);
-
-            var wrongAnswer1Place = Math.floor((Math.random()*arr2.length));
-            var wrongAnswer1 = arr2[wrongAnswer1Place];
-            // arr2.remove(wrongAnswer1Place);
-            arr2.splice(wrongAnswer1Place,1);
-
-            var wrongAnswer2Place = Math.floor((Math.random()*arr2.length));
-            var wrongAnswer2 = arr2[wrongAnswer2Place];
-            // arr2.remove(wrongAnswer2Place);
-            arr2.splice(wrongAnswer2Place,1);
-
-            var wrongAnswer3Place = Math.floor((Math.random()*arr2.length));
-            var wrongAnswer3 = arr2[wrongAnswer3Place]
-            // arr2.remove(wrongAnswer3Place);
-            arr2.splice(wrongAnswer3Place,1);
-           
-            if(rightAnswerPlace == 1){
-                var answerButtons = "<button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-phone right-answer'>" +
-                rightAnswer.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-phone wrong-answer'>" + wrongAnswer1.name +
-                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-phone wrong-answer'>" + wrongAnswer2.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-phone wrong-answer'>"
-                + wrongAnswer3.name + "</button>";
-            }
-            else if(rightAnswerPlace == 2){
-                var answerButtons = "<button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-phone wrong-answer'>" +
-                wrongAnswer1.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-phone right-answer'>" + rightAnswer.name +
-                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-phone wrong-answer'>" + wrongAnswer2.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-phone wrong-answer'>"
-                + wrongAnswer3.name + "</button>";
-            }
-            else if(rightAnswerPlace == 3){
-                var answerButtons = "<button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-phone wrong-answer'>" +
-                wrongAnswer1.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-phone wrong-answer'>" + wrongAnswer2.name +
-                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-phone right-answer'>" + rightAnswer.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-phone wrong-answer'>"
-                + wrongAnswer3.name + "</button>";
-            }
-            else{
-                var answerButtons = "<button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-phone wrong-answer'>" +
-                wrongAnswer1.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-phone wrong-answer'>" + wrongAnswer2.name +
-                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-phone wrong-answer'>" + wrongAnswer3.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-phone right-answer'>"
-                + rightAnswer.name + "</button>";
-            }
-
-            newQuestion = "<h3 style='text-align: center;'>" + rightAnswer.desc + "; what is this model? </h3><div class='flex_center_row row'><div class='image-box'><img src='" + rightAnswer.images + "'class='col'></div></div><div class='flex_center_row row' style='margin-top: 10px;'>" +
-            answerButtons + "</div><div class='flex_center_row row' id='modelContinue' style='margin-top: 40px;'><button type='button' class='btn btn-primary col-8 continue-button' style='display: none;'>Continue</button></div>";
-            phoneQuestionList.push(newQuestion);
-        }
+        generateMultipleChoiceQuestions(ipadList, 10, ipadList.length, 'answer-phone', 'modelContinue', phoneQuestionList);
     }
 
     var phoneQuestionGen = function(){
-        var arr = iphoneList.slice();
-        var loopNum = Math.min(10, iphoneList.length);
-        
-        for(var i = 1; i <= loopNum; i++){
-            var arr2 = arr.slice();
-            var randomNumber = Math.floor((Math.random()*arr.length));
-            var rightAnswerPlace = Math.floor((Math.random()*4));
-            rightAnswer = arr[randomNumber];
-            arr.splice(randomNumber,1);
-            arr2.splice(randomNumber,1);
-
-            var wrongAnswer1Place = Math.floor((Math.random()*arr2.length));
-            var wrongAnswer1 = arr2[wrongAnswer1Place];
-            // arr2.remove(wrongAnswer1Place);
-            arr2.splice(wrongAnswer1Place,1);
-
-            var wrongAnswer2Place = Math.floor((Math.random()*arr2.length));
-            var wrongAnswer2 = arr2[wrongAnswer2Place];
-            // arr2.remove(wrongAnswer2Place);
-            arr2.splice(wrongAnswer2Place,1);
-
-            var wrongAnswer3Place = Math.floor((Math.random()*arr2.length));
-            var wrongAnswer3 = arr2[wrongAnswer3Place]
-            // arr2.remove(wrongAnswer3Place);
-            arr2.splice(wrongAnswer3Place,1);
-           
-            if(rightAnswerPlace == 1){
-                var answerButtons = "<button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-phone right-answer'>" +
-                rightAnswer.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-phone wrong-answer'>" + wrongAnswer1.name +
-                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-phone wrong-answer'>" + wrongAnswer2.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-phone wrong-answer'>"
-                + wrongAnswer3.name + "</button>";
-            }
-            else if(rightAnswerPlace == 2){
-                var answerButtons = "<button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-phone wrong-answer'>" +
-                wrongAnswer1.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-phone right-answer'>" + rightAnswer.name +
-                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-phone wrong-answer'>" + wrongAnswer2.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-phone wrong-answer'>"
-                + wrongAnswer3.name + "</button>";
-            }
-            else if(rightAnswerPlace == 3){
-                var answerButtons = "<button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-phone wrong-answer'>" +
-                wrongAnswer1.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-phone wrong-answer'>" + wrongAnswer2.name +
-                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-phone right-answer'>" + rightAnswer.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-phone wrong-answer'>"
-                + wrongAnswer3.name + "</button>";
-            }
-            else{
-                var answerButtons = "<button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-phone wrong-answer'>" +
-                wrongAnswer1.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-phone wrong-answer'>" + wrongAnswer2.name +
-                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-phone wrong-answer'>" + wrongAnswer3.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-phone right-answer'>"
-                + rightAnswer.name + "</button>";
-            }
-
-            newQuestion = "<h3 style='text-align: center;'>" + rightAnswer.desc + "; what is this model? </h3><div class='flex_center_row row'><div class='image-box'><img src='" + rightAnswer.images + "'class='col'></div></div><div class='flex_center_row row' style='margin-top: 10px;'>" +
-            answerButtons + "</div><div class='flex_center_row row' id='modelContinue' style='margin-top: 40px;'><button type='button' class='btn btn-primary col-8 continue-button' style='display: none;'>Continue</button></div>";
-            phoneQuestionList.push(newQuestion);
-        }
+        generateMultipleChoiceQuestions(iphoneList, 10, iphoneList.length, 'answer-phone', 'modelContinue', phoneQuestionList);
     }
 
     var caseQuestionGen = function(){
-        var arr = caseList.slice();
-        var loopNum = 10;
-        
-        for(var i = 1; i <= loopNum; i++){
-            var arr2 = arr.slice();
-            var randomNumber = Math.floor((Math.random()*arr.length));
-            var rightAnswerPlace = Math.floor((Math.random()*4));
-            rightAnswer = arr[randomNumber];
-
-            arr.splice(randomNumber,1);
-            arr2.splice(randomNumber,1);
-
-            var wrongAnswer1Place = Math.floor((Math.random()*arr2.length));
-            var wrongAnswer1 = arr2[wrongAnswer1Place];
-            arr2.splice(wrongAnswer1Place,1);
-
-            var wrongAnswer2Place = Math.floor((Math.random()*arr2.length));
-            var wrongAnswer2 = arr2[wrongAnswer2Place];
-            arr2.splice(wrongAnswer2Place,1);
-
-            var wrongAnswer3Place = Math.floor((Math.random()*arr2.length));
-            var wrongAnswer3 = arr2[wrongAnswer3Place]
-            arr2.splice(wrongAnswer3Place,1);
-           
-            if(rightAnswerPlace == 1){
-                var answerButtons = "<button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-case right-answer'>" +
-                rightAnswer.name + " , $" + rightAnswer.price + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-case wrong-answer'>" + wrongAnswer1.name + " , $" + wrongAnswer1.price +
-                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-case wrong-answer'>" + wrongAnswer2.name + " , $" + wrongAnswer2.price + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-case wrong-answer'>"
-                + wrongAnswer3.name + " , $" + wrongAnswer3.price + "</button>";
-            }
-            else if(rightAnswerPlace == 2){
-                var answerButtons = "<button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-case wrong-answer'>" +
-                wrongAnswer1.name + " , $" + wrongAnswer1.price + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-case right-answer'>" + rightAnswer.name + " , $" + rightAnswer.price +
-                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-case wrong-answer'>" + wrongAnswer2.name + " , $" + wrongAnswer2.price + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-case wrong-answer'>"
-                + wrongAnswer3.name + " , $" + wrongAnswer3.price + "</button>";
-            }
-            else if(rightAnswerPlace == 3){
-                var answerButtons = "<button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-case wrong-answer'>" +
-                wrongAnswer1.name + " , $" + wrongAnswer1.price + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-case wrong-answer'>" + wrongAnswer2.name + " , $" + wrongAnswer2.price +
-                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-case right-answer'>" + rightAnswer.name + " , $" + rightAnswer.price + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-case wrong-answer'>"
-                + wrongAnswer3.name + " , $" + wrongAnswer3.price + "</button>";
-            }
-            else{
-                var answerButtons = "<button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-case wrong-answer'>" +
-                wrongAnswer1.name + " , $" + wrongAnswer1.price + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-case wrong-answer'>" + wrongAnswer2.name + " , $" + wrongAnswer2.price +
-                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-case wrong-answer'>" + wrongAnswer3.name + " , $" + wrongAnswer3.price + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-case right-answer'>"
-                + rightAnswer.name + " , $" + rightAnswer.price + "</button>";
-            }
-
-            newQuestion = "<h3 style='text-align: center;'> what is this and how much is it?</h3><div class='flex_center_row row'><div class='image-box'><img src='" + rightAnswer.image + "'class='col'></div></div><div class='flex_center_row row' style='margin-top: 10px;'>" +
-            answerButtons + "</div><div class='flex_center_row row' id='caseContinue' style='margin-top: 40px;'><button type='button' class='btn btn-primary col-8 continue-button' style='display: none;'>Continue</button></div>";
-            caseQuestionList.push(newQuestion);
-        }
+        // 與generateMultipleChoiceQuestions() 大同小異, 但須注意裡面問題的問法和引用的JSON reference有分別
+        generateMultipleChoiceQuestionsForCase(caseList, 10, 10, 'answer-case', 'caseContinue', caseQuestionList);
     }
 
     //下列50行均为导航栏点击函数，每当一个导航栏按键被点击，触发resetDisplay函数隐藏页面上所有内容，然后让特定内容重新显示；复用代码时注意id要与html文件中的id相匹配
@@ -1141,10 +604,11 @@ window.onload = function() {
         }
     })
     
-    // 缩短程式码行数用
-    var generateMultipleChoiceQuestions = function(maxQuestions, questionsInList, answerClassName, continueIDName) {
-        var arr = otherPhoneList.slice();
-        var loopNum = Math.min(maxQuestions, questionsInList); //生成题目的数量，通常情況下至多有5题或10题(maxQuestions),若题库太小则取题库的大小(questionsInList)
+    //所有...Gen 函数的功能和实现逻辑都类似，设置一个list arr以及一个list arr2, arr和arr2在初始状态下相等，即出题范围；每生成一个正确答案为i的题目，则i从arr中被剔除（即可避免重复出题）；
+    //生成每个单一题目的过程中，每生成一个错误答案m,则m从arr2中被剔除（避免正确答案被混入错误答案），并在生成下一道题目时重置
+    var generateMultipleChoiceQuestions = function(phoneList, maxQuestions, questionsInListLength, answerClassName, continueIDName, whereToPush) {
+        var arr = phoneList.slice();
+        var loopNum = Math.min(maxQuestions, questionsInListLength); //生成题目的数量，通常情況下至多有5题或10题(maxQuestions),若题库太小则取题库的大小(questionsInListLength)
         
         for(var i = 1; i <= loopNum; i++){
             var arr2 = arr.slice();
@@ -1168,7 +632,8 @@ window.onload = function() {
             arr2.splice(wrongAnswer3Place,1);
            
             //一道选择题有四个选项，正确答案的位置由变量rightAnswerPlace决定，根据正确答案在题目中位置的不同生成不同的html； 
-            //！！复用代码时注意修改class name "answer-?" (有answer-phone, answer-case, answer-stab,)！！
+            //！！复用代码时注意修改class name "answer-?",即變數名稱 "answerClassName" 裡的string
+            // 分別有: answer-day1, answer-day2, answer-day3, answer-phone, answer-case, answer-stab)！！
             if(rightAnswerPlace == 1){
                 var answerButtons = 
                 "<button type='button' class='btn btn-secondary col-xl-2 col-sm-6 " + answerClassName + " right-answer'>" +rightAnswer.name + 
@@ -1202,12 +667,79 @@ window.onload = function() {
             //将刚才生成的（关于题目选项）html和下列（关于题目说明的）html一起加入...QuestionList，每当需要在页面上显示一道新题目时，就从这个list中抛出一道；具体详见文件底部的一系列click function 
             //题目是关于手机型号时，题目说明的内容是 “what is this model”，选项是型号名称
             //题目时关于店内产品时，题目说明的内容是 “what is this and how much is it?”, 选项是产品名称和价格；复用代码时需注意
-            //！！复用代码时注意修改id "..Contiunue" ！！
-            // day1Continue, day2Continue, day3Continue, modelContinue, caseContinue, stabContinue
-            newQuestion = "<h3 style='text-align: center;'>" + rightAnswer.desc + "; what is this model? </h3><div class='flex_center_row row'><div class='image-box'><img src='" + rightAnswer.images + "'class='col'></div></div><div class='flex_center_row row' style='margin-top: 10px;'>" +
+            //！！复用代码时注意修改id "..Contiunue" ！！ 即變數名稱 "continueIDName" 裡的string
+            // 分別有:day1Continue, day2Continue, day3Continue, modelContinue, caseContinue, stabContinue
+
+            var productDescription;
+            if(rightAnswer.desc != null) {
+                productDescription = rightAnswer.desc + "; ";
+            }
+            else if(rightAnswer.desc == null) {
+                productDescription = "";
+            }
+
+            newQuestion = "<h3 style='text-align: center;'>" + productDescription + "what is this model? </h3><div class='flex_center_row row'><div class='image-box'><img src='" + rightAnswer.image + "'class='col'></div></div><div class='flex_center_row row' style='margin-top: 10px;'>" +
             answerButtons + "</div><div class='flex_center_row row' id='" + continueIDName + "' style='margin-top: 40px;'><button type='button' class='btn btn-primary col-8 continue-button' style='display: none;'>Continue</button></div>";
-            phoneQuestionList.push(newQuestion);
+            whereToPush.push(newQuestion);
        }
+    }
+
+    // 與generateMultipleChoiceQuestions() 大同小異, 但須注意裡面問題的問法和引用的JSON reference有分別
+    var generateMultipleChoiceQuestionsForCase = function(caseList, maxQuestions, questionsInListLength, answerClassName, continueIDName, whereToPush) {
+        var arr = caseList.slice();
+        var loopNum = Math.min(maxQuestions, questionsInListLength);
+        
+        for(var i = 1; i <= loopNum; i++){
+            var arr2 = arr.slice();
+            var randomNumber = Math.floor((Math.random()*arr.length));
+            var rightAnswerPlace = Math.floor((Math.random()*4));
+            rightAnswer = arr[randomNumber];
+
+            arr.splice(randomNumber,1);
+            arr2.splice(randomNumber,1);
+
+            var wrongAnswer1Place = Math.floor((Math.random()*arr2.length));
+            var wrongAnswer1 = arr2[wrongAnswer1Place];
+            arr2.splice(wrongAnswer1Place,1);
+
+            var wrongAnswer2Place = Math.floor((Math.random()*arr2.length));
+            var wrongAnswer2 = arr2[wrongAnswer2Place];
+            arr2.splice(wrongAnswer2Place,1);
+
+            var wrongAnswer3Place = Math.floor((Math.random()*arr2.length));
+            var wrongAnswer3 = arr2[wrongAnswer3Place]
+            arr2.splice(wrongAnswer3Place,1);
+           
+            if(rightAnswerPlace == 1){
+                var answerButtons = "<button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-case right-answer'>" +
+                rightAnswer.name + " , $" + rightAnswer.price + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-case wrong-answer'>" + wrongAnswer1.name + " , $" + wrongAnswer1.price +
+                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 " + answerClassName + " wrong-answer'>" + wrongAnswer2.name + " , $" + wrongAnswer2.price + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-case wrong-answer'>"
+                + wrongAnswer3.name + " , $" + wrongAnswer3.price + "</button>";
+            }
+            else if(rightAnswerPlace == 2){
+                var answerButtons = "<button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-case wrong-answer'>" +
+                wrongAnswer1.name + " , $" + wrongAnswer1.price + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-case right-answer'>" + rightAnswer.name + " , $" + rightAnswer.price +
+                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 " + answerClassName + " wrong-answer'>" + wrongAnswer2.name + " , $" + wrongAnswer2.price + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-case wrong-answer'>"
+                + wrongAnswer3.name + " , $" + wrongAnswer3.price + "</button>";
+            }
+            else if(rightAnswerPlace == 3){
+                var answerButtons = "<button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-case wrong-answer'>" +
+                wrongAnswer1.name + " , $" + wrongAnswer1.price + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-case wrong-answer'>" + wrongAnswer2.name + " , $" + wrongAnswer2.price +
+                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 " + answerClassName + " right-answer'>" + rightAnswer.name + " , $" + rightAnswer.price + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-case wrong-answer'>"
+                + wrongAnswer3.name + " , $" + wrongAnswer3.price + "</button>";
+            }
+            else{
+                var answerButtons = "<button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-case wrong-answer'>" +
+                wrongAnswer1.name + " , $" + wrongAnswer1.price + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-case wrong-answer'>" + wrongAnswer2.name + " , $" + wrongAnswer2.price +
+                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 " + answerClassName + " wrong-answer'>" + wrongAnswer3.name + " , $" + wrongAnswer3.price + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-case right-answer'>"
+                + rightAnswer.name + " , $" + rightAnswer.price + "</button>";
+            }
+
+            newQuestion = "<h3 style='text-align: center;'> what is this and how much is it?</h3><div class='flex_center_row row'><div class='image-box'><img src='" + rightAnswer.image + "'class='col'></div></div><div class='flex_center_row row' style='margin-top: 10px;'>" +
+            answerButtons + "</div><div class='flex_center_row row' id='" + continueIDName + "' style='margin-top: 40px;'><button type='button' class='btn btn-primary col-8 continue-button' style='display: none;'>Continue</button></div>";
+            whereToPush.push(newQuestion);
+        }
+    }
 
     //call 题目生成函数
     caseQuestionGen();
@@ -1319,5 +851,4 @@ window.onload = function() {
         }
     });
 
-    }
 }
