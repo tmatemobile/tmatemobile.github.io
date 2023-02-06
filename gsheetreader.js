@@ -1,4 +1,5 @@
-import GSheetReader from 'g-sheets-api';
+import GSheetReader from "g-sheets-api";
+
   // ************ You need a Google Cloud Project with Google Sheet API enabled, as well as a API key.
 
   // apiKey (required) - the API key you generated in the steps above. It will look something like this: 'BIfqSyD4ZoTrXMfF2mhAMVNNiensNsWL4XC6Sxc'
@@ -31,37 +32,31 @@ import GSheetReader from 'g-sheets-api';
     }
   }
 
+console.log("Working");
   // Because we're dealing with JavaScript Promises, 
 //in order to call and use the reader, you'll need to pass in an options object (explained below)
 // and a callback function that will be passed the returned results from your Sheet.
 
-GSheetReader(page1, results => {
-    // do something with the results here
-    const table = document.createElement('table');
-    const header = table.createTHead();
-    const headerRow = header.insertRow(0);
-    const tbody = table.createTBody();
-
-    // First, create a header row
-    Object.getOwnPropertyNames(results[0]).forEach(colName => {
-        const cell = headerRow.insertCell(-1);
-        cell.innerHTML = colName;
+GSheetReader(
+  {
+    sheetId: "1_IpENDkoujmWr-B0M2ZVcyvgPQGeKwYxfHX_JYTDtRc",
+    sheetNumber: 1,
+    returnAllResults: false,
+    // Note: this API Key is locked to this demo, it can't be
+    // used in your own projects.
+    apiKey: "AIzaSyD4ZoTrXMfF7mhAMVNNiensNsWL5XC6Sqo",
+    filter: {
+      department: "archaeology"
+    }
+  },
+  (results) => {
+    results.forEach((result) => {
+      document.getElementById(
+        "app"
+      ).innerHTML += `<p>${result["Module Description"]}</p>`;
     });
-
-    // Next, fill the rest of the rows with the lovely data
-    results.forEach(result => {
-        const row = tbody.insertRow(-1);
-
-        Object.keys(result).forEach(key => {
-        const cell = row.insertCell(-1);
-        cell.innerHTML = result[key];
-        })
-    });
-
-    const main = document.getElementById('googleSheetTest');
-    main.innerHTML = "";
-    main.append(table);
-  }).catch(err => {
-    console.log("Cannot obtain data from google sheet");
-    // do something with the error message here
-  });
+  },
+  (error) => {
+    document.getElementById("app").innerHTML += `<p>error: ${error}</p>`;
+  }
+);
