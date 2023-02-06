@@ -1,4 +1,9 @@
 window.onload = function() {
+    // API Key: AIzaSyAb8fdJjnhKwj0LlZWz3kcC0Uz7kxyIQXc
+    // Public link: https://docs.google.com/spreadsheets/d/e/2PACX-1vTWPg4HLfk7Sn3rgvnQTimIkspS1phKsDR27BZIHJnqILg5eKP3MGp2Zx95ZV9QMHakbWNEWz68AsKN/pubhtml
+    // Shareable link: https://docs.google.com/spreadsheets/d/1hb2XiLriTd_RzLYDDxsQwSmflKVDJCdSnY-5VNqYR68/edit#gid=0
+    // Sheet ID: 1hb2XiLriTd_RzLYDDxsQwSmflKVDJCdSnY-5VNqYR68
+
     //更新时间的注释
     console.log('updated 25/01/2023, 13:10')
 
