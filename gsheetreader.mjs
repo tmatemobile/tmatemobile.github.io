@@ -1,4 +1,4 @@
-import GSheetReader from "g-sheets-api";
+//import GSheetReader from "g-sheets-api";
 
   // ************ You need a Google Cloud Project with Google Sheet API enabled, as well as a API key.
 
@@ -37,26 +37,26 @@ console.log("Working");
 //in order to call and use the reader, you'll need to pass in an options object (explained below)
 // and a callback function that will be passed the returned results from your Sheet.
 
-GSheetReader(
-  {
-    sheetId: "1_IpENDkoujmWr-B0M2ZVcyvgPQGeKwYxfHX_JYTDtRc",
-    sheetNumber: 1,
-    returnAllResults: false,
-    // Note: this API Key is locked to this demo, it can't be
-    // used in your own projects.
-    apiKey: "AIzaSyD4ZoTrXMfF7mhAMVNNiensNsWL5XC6Sqo",
-    filter: {
-      department: "archaeology"
-    }
-  },
-  (results) => {
-    results.forEach((result) => {
-      document.getElementById(
-        "app"
-      ).innerHTML += `<p>${result["Module Description"]}</p>`;
-    });
-  },
-  (error) => {
-    document.getElementById("app").innerHTML += `<p>error: ${error}</p>`;
-  }
-);
+// GSheetReader(
+//   {
+//     sheetId: "1_IpENDkoujmWr-B0M2ZVcyvgPQGeKwYxfHX_JYTDtRc",
+//     sheetNumber: 1,
+//     returnAllResults: false,
+//     // Note: this API Key is locked to this demo, it can't be
+//     // used in your own projects.
+//     apiKey: "AIzaSyD4ZoTrXMfF7mhAMVNNiensNsWL5XC6Sqo",
+//     filter: {
+//       department: "archaeology"
+//     }
+//   },
+//   (results) => {
+//     results.forEach((result) => {
+//       document.getElementById(
+//         "app"
+//       ).innerHTML += `<p>${result["Module Description"]}</p>`;
+//     });
+//   },
+//   (error) => {
+//     document.getElementById("app").innerHTML += `<p>error: ${error}</p>`;
+//   }
+// );
