@@ -1,5 +1,3 @@
-//import GSheetReader from "g-sheets-api";
-
   // ************ You need a Google Cloud Project with Google Sheet API enabled, as well as a API key.
 
   // apiKey (required) - the API key you generated in the steps above. It will look something like this: 'BIfqSyD4ZoTrXMfF2mhAMVNNiensNsWL4XC6Sxc'
@@ -16,6 +14,8 @@
   // you can supply 'loose', which offers a fuzzy search, or 'strict' which is more picky. 
   // For example, 'loose' would match 'introduction' in the following sentence, 
   // 'introduction to mathematatics', but 'strict' would not.
+  import GSheetReader from "./node_modules/g-sheets-api";
+  
   const page1 = {
     apiKey: 'BIfqSyD4ZoTrXMfF2mhAMVNNiensNsWL4XC6Sxc',
     sheetId: '1hb2XiLriTd_RzLYDDxsQwSmflKVDJCdSnY-5VNqYR68',
@@ -37,26 +37,30 @@ console.log("Working");
 //in order to call and use the reader, you'll need to pass in an options object (explained below)
 // and a callback function that will be passed the returned results from your Sheet.
 
-// GSheetReader(
-//   {
-//     sheetId: "1_IpENDkoujmWr-B0M2ZVcyvgPQGeKwYxfHX_JYTDtRc",
-//     sheetNumber: 1,
-//     returnAllResults: false,
-//     // Note: this API Key is locked to this demo, it can't be
-//     // used in your own projects.
-//     apiKey: "AIzaSyD4ZoTrXMfF7mhAMVNNiensNsWL5XC6Sqo",
-//     filter: {
-//       department: "archaeology"
-//     }
-//   },
-//   (results) => {
-//     results.forEach((result) => {
-//       document.getElementById(
-//         "app"
-//       ).innerHTML += `<p>${result["Module Description"]}</p>`;
-//     });
-//   },
-//   (error) => {
-//     document.getElementById("app").innerHTML += `<p>error: ${error}</p>`;
-//   }
-// );
+GSheetReader(page1, results => {
+
+  const table = document.createElement('table');
+  const header = table.createTHead();
+  const headerRow = header.insertRow(0);
+  const tbody = table.createTBody();
+
+  // First, create a header row
+  Object.getOwnPropertyNames(results[0]).forEach(colName => {
+    const cell = headerRow.insertCell(-1);
+    cell.innerHTML = colName;
+  });
+
+  // Next, fill the rest of the rows with the lovely data
+  results.forEach(result => {
+    const row = tbody.insertRow(-1);
+
+    Object.keys(result).forEach(key => {
+      const cell = row.insertCell(-1);
+      cell.innerHTML = result[key];
+    })
+  });
+
+  const main = document.querySelector('#googleSheetTest');
+  main.innerHTML = "";
+  main.append(table);
+});
