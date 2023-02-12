@@ -1,7 +1,7 @@
 window.onload = function(){
     $(document).on('click','#password_check_button',function(){
          //密码
-       if(document.getElementById("exampleInputPassword1").value == "3333"){
+       if(document.getElementById("exampleInputPassword1").value == "8118"){
             window.location.href="homepage.html"  
        }
        else{
