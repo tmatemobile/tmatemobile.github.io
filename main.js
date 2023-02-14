@@ -247,7 +247,7 @@ window.onload = function() {
     
     //iphone 题库； iphone, ipad, 三星主流型号题库， 以及小型号手机题库 共同组成主页上的 “phone/ipad model identification” ；可加入型号
     // getiPhoneSheetValues() return的值為一個JSON檔案
-    var iphoneList = new Array();
+    var iphoneList = new this.Array();
     
     // var iphoneList = new this.Array(iphone6_6plus, iphone7_8, iphone7plus_8plus, 
     //     iphonex_xs, iphonexr, iphonexsmax, 
@@ -318,7 +318,7 @@ window.onload = function() {
     // getiPhoneSheetValues() return的值為一個JSON檔案
     var fetchDataFromGoogleSheet = async function() {
         var iphoneData = await getiPhoneSheetValues();
-        for (let i = 0; i < 6; i++) {
+        for (let i = 0; i < iphoneData.values.length; i++) {
             iphoneList.push(
                 {
                     name: iphoneData.values[i][0],
@@ -327,7 +327,6 @@ window.onload = function() {
                 }
             );
         }
-        console.log(iphoneList);
     }
 
     // Called at the beginning
@@ -427,9 +426,8 @@ window.onload = function() {
         generateMultipleChoiceQuestions(ipadList, 10, ipadList.length, 'answer-phone', 'modelContinue', phoneQuestionList);
     }
 
-    var phoneQuestionGen = function(){
-        //generateMultipleChoiceQuestions(iphoneList, 10, iphoneList.length, 'answer-phone', 'modelContinue', phoneQuestionList);
-        generateMultipleChoiceQuestions(iphoneList, 5, iphoneList.length, 'answer-phone', 'modelContinue', phoneQuestionList);
+    var phoneQuestionGen = async function(){
+        generateMultipleChoiceQuestions(iphoneList, 10, iphoneList.length, 'answer-phone', 'modelContinue', phoneQuestionList);
     }
 
     var caseQuestionGen = function(){
@@ -684,8 +682,9 @@ window.onload = function() {
     //所有...Gen 函数的功能和实现逻辑都类似，设置一个list arr以及一个list arr2, arr和arr2在初始状态下相等，即出题范围；每生成一个正确答案为i的题目，则i从arr中被剔除（即可避免重复出题）；
     //生成每个单一题目的过程中，每生成一个错误答案m,则m从arr2中被剔除（避免正确答案被混入错误答案），并在生成下一道题目时重置
     var generateMultipleChoiceQuestions = async function(phoneList, maxQuestions, questionsInListLength, answerClassName, continueIDName, whereToPush) {
+        console.log(phoneList);
         var arr = phoneList.slice();
-        console.log("phoneList.length: " + phoneList.length);
+        console.log(arr);
         var loopNum = Math.min(maxQuestions, questionsInListLength); //生成题目的数量，通常情況下至多有5题或10题(maxQuestions),若题库太小则取题库的大小(questionsInListLength)
         
         for(var i = 1; i <= loopNum; i++){
@@ -819,30 +818,110 @@ window.onload = function() {
         }
     }
     
+    var test = function() {
+        console.log(iphoneList);
+        var arr = iphoneList.slice();
+        console.log(arr);
+        var loopNum = Math.min(10, arr.length); //生成题目的数量，通常情況下至多有5题或10题(maxQuestions),若题库太小则取题库的大小(questionsInListLength)
+        console.log(loopNum);
+        for(var i = 1; i <= loopNum; i++){
+            var arr2 = arr.slice();
+            var randomNumber = Math.floor((Math.random()*arr.length)); //随机生成正确答案的index
+            var rightAnswerPlace = Math.floor((Math.random()*4)); //正确答案在题目中的位置
+            var rightAnswer = arr[randomNumber]; //从出题范围中获取正确答案的具体信息
+            arr.splice(randomNumber,1); //从arr1中剔除正确答案避免重复出题
+            arr2.splice(randomNumber,1); //从arr2中剔除正确答案避免正确答案的选项重复出现
+
+            //生成错误答案
+            var wrongAnswer1Place = Math.floor((Math.random()*arr2.length)); //随机生成错误答案1 的index
+            var wrongAnswer1 = arr2[wrongAnswer1Place]; //根据上一行随机生成的index获取错误答案1 的具体信息
+            arr2.splice(wrongAnswer1Place,1); //将错误答案从arr2中剔除，避免错误答案重复出现，下同
+
+            var wrongAnswer2Place = Math.floor((Math.random()*arr2.length));
+            var wrongAnswer2 = arr2[wrongAnswer2Place];
+            arr2.splice(wrongAnswer2Place,1);
+
+            var wrongAnswer3Place = Math.floor((Math.random()*arr2.length));
+            var wrongAnswer3 = arr2[wrongAnswer3Place]
+            arr2.splice(wrongAnswer3Place,1);
+           
+            //一道选择题有四个选项，正确答案的位置由变量rightAnswerPlace决定，根据正确答案在题目中位置的不同生成不同的html； 
+            //！！复用代码时注意修改class name "answer-?",即變數名稱 "answerClassName" 裡的string
+            // 分別有: answer-day1, answer-day2, answer-day3, answer-phone, answer-case, answer-stab)！！
+            if(rightAnswerPlace == 1){
+                var answerButtons = 
+                "<button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day1 right-answer'>" +rightAnswer.name + 
+                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day1 wrong-answer'>" + wrongAnswer1.name +
+                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day1 wrong-answer'>" + wrongAnswer2.name + 
+                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day1 wrong-answer'>"
+                + wrongAnswer3.name + "</button>";
+            }
+            else if(rightAnswerPlace == 2){
+                var answerButtons = 
+                "<button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day1 wrong-answer'>" +
+                wrongAnswer1.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day1 right-answer'>" + rightAnswer.name +
+                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day1 wrong-answer'>" + wrongAnswer2.name + 
+                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day1 wrong-answer'>"
+                + wrongAnswer3.name + "</button>";
+            }
+            else if(rightAnswerPlace == 3){
+                var answerButtons = 
+                "<button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day1 wrong-answer'>" + wrongAnswer1.name + 
+                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day1 wrong-answer'>" + wrongAnswer2.name +
+                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day1 right-answer'>" + rightAnswer.name + 
+                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day1 wrong-answer'>"
+                + wrongAnswer3.name + "</button>";
+            }
+            else{
+                var answerButtons = "<button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day1 wrong-answer'>" +wrongAnswer1.name + 
+                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day1 wrong-answer'>" + wrongAnswer2.name +
+                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day1 wrong-answer'>" + wrongAnswer3.name + 
+                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 answer-day1 right-answer'>"
+                + rightAnswer.name + "</button>";
+            }
+
+            //将刚才生成的（关于题目选项）html和下列（关于题目说明的）html一起加入...QuestionList，每当需要在页面上显示一道新题目时，就从这个list中抛出一道；具体详见文件底部的一系列click function 
+            //题目是关于手机型号时，题目说明的内容是 “what is this model”，选项是型号名称
+            //题目时关于店内产品时，题目说明的内容是 “what is this and how much is it?”, 选项是产品名称和价格；复用代码时需注意
+            //！！复用代码时注意修改id "..Contiunue" ！！ 即變數名稱 "continueIDName" 裡的string
+            // 分別有:day1Continue, day2Continue, day3Continue, modelContinue, caseContinue, stabContinue
+
+            var productDescription;
+            if(rightAnswer.desc != null) {
+                productDescription = rightAnswer.desc + "; ";
+            }
+            else if(rightAnswer.desc == null) {
+                productDescription = "";
+            }
+
+            var newQuestion = "<h3 style='text-align: center;'>" + productDescription + "what is this model? </h3><div class='flex_center_row row'><div class='image-box'><img src='" + rightAnswer.image + "'class='col'></div></div><div class='flex_center_row row' style='margin-top: 10px;'>" +
+            answerButtons + "</div><div class='flex_center_row row' id='day1Continue' style='margin-top: 40px;'><button type='button' class='btn btn-primary col-8 continue-button' style='display: none;'>Continue</button></div>";
+            day1QuestionList.push(newQuestion);
+        }
+    }
     var generateAllQuestions = async function() {
         await fetchDataFromGoogleSheet();
+        test();
         //generateMultipleChoiceQuestions(iphoneList, 10, iphoneList.length, 'answer-phone', 'modelContinue', phoneQuestionList);
-        phoneQuestionGen();
+        //phoneQuestionGen();
     }
     
     initializeDisplay();
     initializeDatabase();
+    //day1Gen();
     generateAllQuestions();
-
+    
     //call 题目生成函数
     //caseQuestionGen();
     //phoneQuestionGen();
     // ipadQuestionGen();
-    // samsungQuestionGen();
+    //samsungQuestionGen();
     // otherPhoneQuestionGen();
     // samsungTabQuestionGen();
     // day1Gen();
     // day1bGen();
     // day2Gen();
     // day3Gen();
-
-    
-    
 
     //点击多选题页面的continue按键时触发的函数，索引id要与生成时的匹配
     var totalday1QueNum = day1QuestionList.length; //题目数量，用于核对此题是否是最后一题并告诉用户现在做的是第几题
