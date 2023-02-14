@@ -1,3 +1,5 @@
+import {getiPhoneSheetValues} from "./gsheetreader.js";
+
 window.onload = function() {
     // API Key: AIzaSyAb8fdJjnhKwj0LlZWz3kcC0Uz7kxyIQXc
     // Public link: https://docs.google.com/spreadsheets/d/e/2PACX-1vTWPg4HLfk7Sn3rgvnQTimIkspS1phKsDR27BZIHJnqILg5eKP3MGp2Zx95ZV9QMHakbWNEWz68AsKN/pubhtml
@@ -5,8 +7,8 @@ window.onload = function() {
     // Sheet ID: 1hb2XiLriTd_RzLYDDxsQwSmflKVDJCdSnY-5VNqYR68
 
     //更新时间的注释
-    console.log('updated 25/01/2023, 13:10')
-
+    console.log('updated 14/02/2023')
+    
     //店内产品
     var case1={name:"Soft jelly case",price:"15",image:"images/case1.png"};
     var case2={name:"Mercury soft",price:"20",image:"images/case2.png"};
@@ -243,14 +245,17 @@ window.onload = function() {
     var otherTablet12 = {name:"S3 9.7” T820 (2017)", desc:"[Square camera on the middle top Flash light just under the camera]", image:"images/otherTab12.png"};
     var otherTablet13 = {name:"S2 8” T710 (2015)", desc:"[One single camera on the back]", image:"images/otherTab13.png"};
     
-    
     //iphone 题库； iphone, ipad, 三星主流型号题库， 以及小型号手机题库 共同组成主页上的 “phone/ipad model identification” ；可加入型号
-    var iphoneList = new this.Array(iphone6_6plus, iphone7_8, iphone7plus_8plus, 
-        iphonex_xs, iphonexr, iphonexsmax, 
-        iphone11, iphone11pro, iphone11promax,
-        iphone12mini, iphone12, iphone12pro, iphone12promax, 
-        iphone13mini, iphone13_14, iphone13pro, iphone13promax, 
-        iphone14plus, iphone14pro, iphone14promax);
+    // getiPhoneSheetValues() return的值為一個JSON檔案
+    var iphoneList = new Array();
+    
+    // var iphoneList = new this.Array(iphone6_6plus, iphone7_8, iphone7plus_8plus, 
+    //     iphonex_xs, iphonexr, iphonexsmax, 
+    //     iphone11, iphone11pro, iphone11promax,
+    //     iphone12mini, iphone12, iphone12pro, iphone12promax, 
+    //     iphone13mini, iphone13_14, iphone13pro, iphone13promax, 
+    //     iphone14plus, iphone14pro, iphone14promax);
+
     //ipad 题库，同时也是day2 题库； 此外， iphone, ipad, 三星主流型号题库， 以及小型号手机题库 共同组成主页上的 “phone/ipad model identification” ；可加入型号
     var ipadList = new this.Array(
         ipadmini1_2, ipadmini3, ipadmini4, ipadmini5,
@@ -309,6 +314,22 @@ window.onload = function() {
     var day2QuestionList = [];
     var day3QuestionList = [];
     
+    //iphone 题库； iphone, ipad, 三星主流型号题库， 以及小型号手机题库 共同组成主页上的 “phone/ipad model identification” ；可加入型号
+    // getiPhoneSheetValues() return的值為一個JSON檔案
+    var fetchDataFromGoogleSheet = async function() {
+        var iphoneData = await getiPhoneSheetValues();
+        for (let i = 0; i < 6; i++) {
+            iphoneList.push(
+                {
+                    name: iphoneData.values[i][0],
+                    desc: iphoneData.values[i][1],
+                    image: iphoneData.values[i][2]
+                }
+            );
+        }
+        console.log(iphoneList);
+    }
+
     // Called at the beginning
     var initializeDisplay = function() {
         document.getElementById("learnDiv").style.display = "block";
@@ -407,12 +428,13 @@ window.onload = function() {
     }
 
     var phoneQuestionGen = function(){
-        generateMultipleChoiceQuestions(iphoneList, 10, iphoneList.length, 'answer-phone', 'modelContinue', phoneQuestionList);
+        //generateMultipleChoiceQuestions(iphoneList, 10, iphoneList.length, 'answer-phone', 'modelContinue', phoneQuestionList);
+        generateMultipleChoiceQuestions(iphoneList, 5, iphoneList.length, 'answer-phone', 'modelContinue', phoneQuestionList);
     }
 
     var caseQuestionGen = function(){
         // 與generateMultipleChoiceQuestions() 大同小異, 但須注意裡面問題的text和JSON reference有分別
-        generateMultipleChoiceQuestionsForCase(caseList, 10, 10, 'answer-case', 'caseContinue', caseQuestionList);
+        //generateMultipleChoiceQuestionsForCase(caseList, 10, 10, 'answer-case', 'caseContinue', caseQuestionList);
     }
 
     //下列50行均为导航栏点击函数，每当一个导航栏按键被点击，触发resetDisplay函数隐藏页面上所有内容，然后让特定内容重新显示；复用代码时注意id要与html文件中的id相匹配
@@ -661,15 +683,16 @@ window.onload = function() {
     
     //所有...Gen 函数的功能和实现逻辑都类似，设置一个list arr以及一个list arr2, arr和arr2在初始状态下相等，即出题范围；每生成一个正确答案为i的题目，则i从arr中被剔除（即可避免重复出题）；
     //生成每个单一题目的过程中，每生成一个错误答案m,则m从arr2中被剔除（避免正确答案被混入错误答案），并在生成下一道题目时重置
-    var generateMultipleChoiceQuestions = function(phoneList, maxQuestions, questionsInListLength, answerClassName, continueIDName, whereToPush) {
+    var generateMultipleChoiceQuestions = async function(phoneList, maxQuestions, questionsInListLength, answerClassName, continueIDName, whereToPush) {
         var arr = phoneList.slice();
+        console.log("phoneList.length: " + phoneList.length);
         var loopNum = Math.min(maxQuestions, questionsInListLength); //生成题目的数量，通常情況下至多有5题或10题(maxQuestions),若题库太小则取题库的大小(questionsInListLength)
         
         for(var i = 1; i <= loopNum; i++){
             var arr2 = arr.slice();
             var randomNumber = Math.floor((Math.random()*arr.length)); //随机生成正确答案的index
             var rightAnswerPlace = Math.floor((Math.random()*4)); //正确答案在题目中的位置
-            rightAnswer = arr[randomNumber]; //从出题范围中获取正确答案的具体信息
+            var rightAnswer = arr[randomNumber]; //从出题范围中获取正确答案的具体信息
             arr.splice(randomNumber,1); //从arr1中剔除正确答案避免重复出题
             arr2.splice(randomNumber,1); //从arr2中剔除正确答案避免正确答案的选项重复出现
 
@@ -733,7 +756,7 @@ window.onload = function() {
                 productDescription = "";
             }
 
-            newQuestion = "<h3 style='text-align: center;'>" + productDescription + "what is this model? </h3><div class='flex_center_row row'><div class='image-box'><img src='" + rightAnswer.image + "'class='col'></div></div><div class='flex_center_row row' style='margin-top: 10px;'>" +
+            var newQuestion = "<h3 style='text-align: center;'>" + productDescription + "what is this model? </h3><div class='flex_center_row row'><div class='image-box'><img src='" + rightAnswer.image + "'class='col'></div></div><div class='flex_center_row row' style='margin-top: 10px;'>" +
             answerButtons + "</div><div class='flex_center_row row' id='" + continueIDName + "' style='margin-top: 40px;'><button type='button' class='btn btn-primary col-8 continue-button' style='display: none;'>Continue</button></div>";
             whereToPush.push(newQuestion);
        }
@@ -748,7 +771,7 @@ window.onload = function() {
             var arr2 = arr.slice();
             var randomNumber = Math.floor((Math.random()*arr.length));
             var rightAnswerPlace = Math.floor((Math.random()*4));
-            rightAnswer = arr[randomNumber];
+            var rightAnswer = arr[randomNumber];
 
             arr.splice(randomNumber,1);
             arr2.splice(randomNumber,1);
@@ -790,25 +813,35 @@ window.onload = function() {
                 + rightAnswer.name + " , $" + rightAnswer.price + "</button>";
             }
 
-            newQuestion = "<h3 style='text-align: center;'> what is this and how much is it?</h3><div class='flex_center_row row'><div class='image-box'><img src='" + rightAnswer.image + "'class='col'></div></div><div class='flex_center_row row' style='margin-top: 10px;'>" +
+            var newQuestion = "<h3 style='text-align: center;'> what is this and how much is it?</h3><div class='flex_center_row row'><div class='image-box'><img src='" + rightAnswer.image + "'class='col'></div></div><div class='flex_center_row row' style='margin-top: 10px;'>" +
             answerButtons + "</div><div class='flex_center_row row' id='" + continueIDName + "' style='margin-top: 40px;'><button type='button' class='btn btn-primary col-8 continue-button' style='display: none;'>Continue</button></div>";
             whereToPush.push(newQuestion);
         }
     }
     
+    var generateAllQuestions = async function() {
+        await fetchDataFromGoogleSheet();
+        //generateMultipleChoiceQuestions(iphoneList, 10, iphoneList.length, 'answer-phone', 'modelContinue', phoneQuestionList);
+        phoneQuestionGen();
+    }
+    
     initializeDisplay();
     initializeDatabase();
+    generateAllQuestions();
+
     //call 题目生成函数
-    caseQuestionGen();
-    phoneQuestionGen();
-    ipadQuestionGen();
-    samsungQuestionGen();
-    otherPhoneQuestionGen();
-    samsungTabQuestionGen();
-    day1Gen();
-    day1bGen();
-    day2Gen();
-    day3Gen();
+    //caseQuestionGen();
+    //phoneQuestionGen();
+    // ipadQuestionGen();
+    // samsungQuestionGen();
+    // otherPhoneQuestionGen();
+    // samsungTabQuestionGen();
+    // day1Gen();
+    // day1bGen();
+    // day2Gen();
+    // day3Gen();
+
+    
     
 
     //点击多选题页面的continue按键时触发的函数，索引id要与生成时的匹配
