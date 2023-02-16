@@ -284,6 +284,7 @@ window.onload = function() {
     //三星平板题库，也就是主页上的 “samsung tablet model identification”；可加入型号
     var otherTabList=new Array(otherTablet1, otherTablet2, otherTablet3, otherTablet4, otherTablet5, otherTablet6, otherTablet7, otherTablet8, otherTablet9, otherTablet10, otherTablet11,
         otherTablet12, otherTablet13);
+    var otherTabList;
     //day1 多选题题库(day1默认包含所有iPhone型号，即iphoneList的内容)； 可加入型号
     //day1: 先问完Samsung再问iPhone型号
     var day1List = samsungList;
@@ -313,22 +314,20 @@ window.onload = function() {
     var day1QuestionList = [];
     var day2QuestionList = [];
     var day3QuestionList = [];
-    
     //iphone 题库； iphone, ipad, 三星主流型号题库， 以及小型号手机题库 共同组成主页上的 “phone/ipad model identification” ；可加入型号
     // getiPhoneSheetValues() return的值為一個JSON檔案
-    var fetchDataFromGoogleSheet = async function() {
-        var iphoneData = await getiPhoneSheetValues();
-        for (let i = 0; i < iphoneData.values.length; i++) {
-            iphoneList.push(
-                {
-                    name: iphoneData.values[i][0],
-                    desc: iphoneData.values[i][1],
-                    image: iphoneData.values[i][2]
-                }
-            );
-        }
-    }
-
+    // var fetchiPhoneDataFromGoogleSheet = async function() {
+    //     var iphoneData = await getiPhoneSheetValues();
+    //     for (let i = 0; i < iphoneData.values.length; i++) {
+    //         iphoneList.push(
+    //             {
+    //                 name: iphoneData.values[i][0],
+    //                 desc: iphoneData.values[i][1],
+    //                 image: iphoneData.values[i][2]
+    //             }
+    //         );
+    //     }
+    // }
     // Called at the beginning
     var initializeDisplay = function() {
         document.getElementById("learnDiv").style.display = "block";
@@ -399,7 +398,7 @@ window.onload = function() {
     }
 
     var day1Gen = function(){
-        generateMultipleChoiceQuestions(day1List, 5, day1List.length, 'answer-day1', 'day1Continue', day1QuestionList);
+        generateMultipleChoiceQuestions(iphoneList, 5, iphoneList.length, 'answer-day1', 'day1Continue', day1QuestionList);
     }
 
     var day1bGen = function(){
@@ -426,13 +425,13 @@ window.onload = function() {
         generateMultipleChoiceQuestions(ipadList, 10, ipadList.length, 'answer-phone', 'modelContinue', phoneQuestionList);
     }
 
-    var phoneQuestionGen = async function(){
+    var phoneQuestionGen = function(){
         generateMultipleChoiceQuestions(iphoneList, 10, iphoneList.length, 'answer-phone', 'modelContinue', phoneQuestionList);
     }
 
     var caseQuestionGen = function(){
         // 與generateMultipleChoiceQuestions() 大同小異, 但須注意裡面問題的text和JSON reference有分別
-        //generateMultipleChoiceQuestionsForCase(caseList, 10, 10, 'answer-case', 'caseContinue', caseQuestionList);
+        generateMultipleChoiceQuestionsForCase(caseList, 10, 10, 'answer-case', 'caseContinue', caseQuestionList);
     }
 
     //下列50行均为导航栏点击函数，每当一个导航栏按键被点击，触发resetDisplay函数隐藏页面上所有内容，然后让特定内容重新显示；复用代码时注意id要与html文件中的id相匹配
@@ -682,9 +681,7 @@ window.onload = function() {
     //所有...Gen 函数的功能和实现逻辑都类似，设置一个list arr以及一个list arr2, arr和arr2在初始状态下相等，即出题范围；每生成一个正确答案为i的题目，则i从arr中被剔除（即可避免重复出题）；
     //生成每个单一题目的过程中，每生成一个错误答案m,则m从arr2中被剔除（避免正确答案被混入错误答案），并在生成下一道题目时重置
     var generateMultipleChoiceQuestions = async function(phoneList, maxQuestions, questionsInListLength, answerClassName, continueIDName, whereToPush) {
-        console.log(phoneList);
         var arr = phoneList.slice();
-        console.log(arr);
         var loopNum = Math.min(maxQuestions, questionsInListLength); //生成题目的数量，通常情況下至多有5题或10题(maxQuestions),若题库太小则取题库的大小(questionsInListLength)
         
         for(var i = 1; i <= loopNum; i++){
@@ -818,12 +815,12 @@ window.onload = function() {
         }
     }
     
-    var test = function() {
-        console.log(iphoneList);
+    var testQuestionGen = async function() {
         var arr = iphoneList.slice();
+        console.log(iphoneList.slice());
         console.log(arr);
-        var loopNum = Math.min(10, arr.length); //生成题目的数量，通常情況下至多有5题或10题(maxQuestions),若题库太小则取题库的大小(questionsInListLength)
-        console.log(loopNum);
+        var loopNum = Math.min(5, arr.length); //生成题目的数量，通常情況下至多有5题或10题(maxQuestions),若题库太小则取题库的大小(questionsInListLength)
+        
         for(var i = 1; i <= loopNum; i++){
             var arr2 = arr.slice();
             var randomNumber = Math.floor((Math.random()*arr.length)); //随机生成正确答案的index
@@ -898,47 +895,85 @@ window.onload = function() {
             answerButtons + "</div><div class='flex_center_row row' id='day1Continue' style='margin-top: 40px;'><button type='button' class='btn btn-primary col-8 continue-button' style='display: none;'>Continue</button></div>";
             day1QuestionList.push(newQuestion);
         }
+
     }
-    var generateAllQuestions = async function() {
-        await fetchDataFromGoogleSheet();
-        test();
-        //generateMultipleChoiceQuestions(iphoneList, 10, iphoneList.length, 'answer-phone', 'modelContinue', phoneQuestionList);
-        //phoneQuestionGen();
+
+    var main = async function() {
+        var iphoneData = await getiPhoneSheetValues();
+        for (let i = 0; i < iphoneData.values.length; i++) {
+            if(!iphoneData.values[i][0] ||
+                !iphoneData.values[i][1] ||
+                !iphoneData.values[i][2]) {
+                continue;
+            }
+            else {
+                var oldUrl = iphoneData.values[i][2].match(/\/d\/(.+)\//)[1];
+                console.log(oldUrl);
+                var newUrl = "https://drive.google.com/uc?id=" + oldUrl;
+
+                iphoneList.push(
+                    {
+                        name: iphoneData.values[i][0],
+                        desc: iphoneData.values[i][1],
+                        image: newUrl
+                    }
+                );
+            }
+        }
+        //await fetchiPhoneDataFromGoogleSheet();
+        //testQuestionGen();
+        // day1Gen();
+        generateMultipleChoiceQuestions(iphoneList, 5, iphoneList.length, 'answer-day1', 'day1Continue', day1QuestionList);
+        console.log(iphoneList);
+        initializeDisplay();
+        initializeDatabase();
+        console.log(day1QuestionList);
+
+        var totalday1QueNum = day1QuestionList.length; //题目数量，用于核对此题是否是最后一题并告诉用户现在做的是第几题
+        $("#day1Mul_question_num").html(day1I + "/" + totalday1QueNum);
+        $("#day1Question").html(day1QuestionList[0]); //初始题目
+            day1QuestionList.splice(0,1); //将初始题目从列表中删除
+        $(document).on('click','#day1Continue',function(){ 
+            if(day1I < totalday1QueNum){ //不是最后一题：
+                $("#day1Question").html(day1QuestionList[0]); //那么我们从列表抛出一题来显示
+                day1QuestionList.splice(0,1); //把刚刚抛出的题删掉
+                day1I++;
+                $("#day1Mul_question_num").html(day1I + "/" + totalday1QueNum); 
+            }
+            else{ //是最后一题，那么我们显示分数
+                $("#day1Question").html("<h2>Your score for 'Day 1 multiple choices question (popular models)' test is " + day1MultiScore + "/" + totalday1QueNum + "</h2>");
+            }     
+        });
     }
-    
-    initializeDisplay();
-    initializeDatabase();
-    //day1Gen();
-    generateAllQuestions();
-    
     //call 题目生成函数
-    //caseQuestionGen();
-    //phoneQuestionGen();
+    main();
+    // caseQuestionGen();
+    // phoneQuestionGen();
     // ipadQuestionGen();
-    //samsungQuestionGen();
+    // samsungQuestionGen();
     // otherPhoneQuestionGen();
-    // samsungTabQuestionGen();
-    // day1Gen();
-    // day1bGen();
-    // day2Gen();
-    // day3Gen();
+    //samsungTabQuestionGen();
+    //day1Gen();
+    //day1bGen();
+    //day2Gen();
+    //day3Gen();
 
     //点击多选题页面的continue按键时触发的函数，索引id要与生成时的匹配
-    var totalday1QueNum = day1QuestionList.length; //题目数量，用于核对此题是否是最后一题并告诉用户现在做的是第几题
-    $("#day1Mul_question_num").html(day1I + "/" + totalday1QueNum);
-    $("#day1Question").html(day1QuestionList[0]); //初始题目
-        day1QuestionList.splice(0,1); //将初始题目从列表中删除
-    $(document).on('click','#day1Continue',function(){ 
-        if(day1I < totalday1QueNum){ //不是最后一题：
-            $("#day1Question").html(day1QuestionList[0]); //那么我们从列表抛出一题来显示
-            day1QuestionList.splice(0,1); //把刚刚抛出的题删掉
-            day1I++;
-            $("#day1Mul_question_num").html(day1I + "/" + totalday1QueNum); 
-        }
-        else{ //是最后一题，那么我们显示分数
-            $("#day1Question").html("<h2>Your score for 'Day 1 multiple choices question (popular models)' test is " + day1MultiScore + "/" + totalday1QueNum + "</h2>");
-        }     
-    });
+    // var totalday1QueNum = day1QuestionList.length; //题目数量，用于核对此题是否是最后一题并告诉用户现在做的是第几题
+    // $("#day1Mul_question_num").html(day1I + "/" + totalday1QueNum);
+    // $("#day1Question").html(day1QuestionList[0]); //初始题目
+    //     day1QuestionList.splice(0,1); //将初始题目从列表中删除
+    // $(document).on('click','#day1Continue',function(){ 
+    //     if(day1I < totalday1QueNum){ //不是最后一题：
+    //         $("#day1Question").html(day1QuestionList[0]); //那么我们从列表抛出一题来显示
+    //         day1QuestionList.splice(0,1); //把刚刚抛出的题删掉
+    //         day1I++;
+    //         $("#day1Mul_question_num").html(day1I + "/" + totalday1QueNum); 
+    //     }
+    //     else{ //是最后一题，那么我们显示分数
+    //         $("#day1Question").html("<h2>Your score for 'Day 1 multiple choices question (popular models)' test is " + day1MultiScore + "/" + totalday1QueNum + "</h2>");
+    //     }     
+    // });
 
     var totalday2QueNum = day2QuestionList.length;
     $("#day2Mul_question_num").html(day2I + "/" + totalday2QueNum);

@@ -20,7 +20,7 @@ const PAGE2_NAME = '2 - Samsung';
 const PAGE3_NAME = '3 - iPad';
 
 //提取資料的範圍
-const PAGE1_RANGE = 'A2:C11';
+const PAGE1_RANGE = 'A2:C30';
 
 var getiPhoneSheetValues = async () => {
     const request = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${PAGE1_NAME}!${PAGE1_RANGE}?key=${API_KEY}`, 
@@ -33,10 +33,10 @@ var getiPhoneSheetValues = async () => {
     });
     const data = await request.json();
     console.log(data);
-    const url = data.values[0][2].match(/https?:\/\/[\w\S][^"]+/)[0];
+    //const url = data.values[0][2].match(/https?:\/\/[\w\S][^"]+/)[0];
+    const url = data.values[0][2].match(/\/d\/(.+)\//)[1];
     console.log(url);
     return data;
   }
-  console.log("gsheetreader.js is working");
 
   export {getiPhoneSheetValues};
