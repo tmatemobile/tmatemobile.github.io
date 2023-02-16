@@ -20,7 +20,7 @@ const PAGE2_NAME = '2 - Samsung';
 const PAGE3_NAME = '3 - iPad';
 
 //提取資料的範圍
-const PAGE1_RANGE = 'A2:C30';
+const PAGE1_RANGE = 'A2:C60';
 
 var getiPhoneSheetValues = async () => {
     const request = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${PAGE1_NAME}!${PAGE1_RANGE}?key=${API_KEY}`, 
