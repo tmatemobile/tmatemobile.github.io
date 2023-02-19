@@ -135,26 +135,26 @@ window.onload = function() {
     // var iphone14promax = {name:"Iphone 14 Pro Max", desc:"[6.7 inches, triple rear cameras, vertical edge]", image:"images/iphones/iphone14promax.png"};
 
     //Ipad
-    var ipadmini3 = {name:"IPAD mini 3", desc:"[Microphone hole in the middle, touch ID unlock, single camera, slient button]", image:"images/ipad1.png"};
-    var ipadmini1_2 = {name:"IPAD mini/mini 2", desc:"[Microphone hole in the middle, no Touch ID unlock, single camera, slient button]", image:"images/ipad2.png"};
-    var ipadmini4 = {name:"IPAD mini 4", desc:"[Touch ID unlock, no silence button, microphone hole on the right of camera]", image:"images/ipad3.png"};
-    var ipadmini5 = {name:"IPAD mini5(2019)", desc:"[Touch ID unlock, no silence button, one microphone hole on the back middle]", image:"images/ipad4.png"};
-    var ipad2_3_4 = {name:"IPAD 2/3/4th generation", desc:"[Wide bezel on the front, large charge port, 9.7 inches]", image:"images/ipad5.png"};
-    var ipadair1 = {name:"IPAD Air1", desc:"[9.7 inches, No finger print access, single camera, microphone in the middle]", image:"images/ipad6.png"};
-    var ipadair2 = {name:"IPAD Air2", desc:"[9.7 inches, Finger print access, no silent button, tiny microphone on the right of rear camera, ]", image:"images/ipad7.png"};
-    var ipadair3 = {name:"IPAD Pro 10.5 inch", desc:"[10.5 inches, Vertical shape, camera on top, no flash light, has home button]", image:"images/ipad20.png"};
-    var ipad5_6 = {name:"IPAD 5/6th Generation", desc:"[9.7 inches, Camera only, no flash light, touch ID home button, no silent button, microphone at the middle]", image:"images/ipad8.png"};
-    var ipadpro_11inch_2018 = {name:"IPAD Pro 11(2018)", desc:"[Many pin holes on top, no home button]", image:"images/ipad9.png"};
-    var ipadpro_129inch_2015 = {name:"IPAD Pro 12.9inch(2015)", desc:"[12.9 inches, camera and flash light beside each other, has home button]", image:"images/ipad10.png"};
-    var ipadpro_129inch_2017 = {name:"IPAD Pro 12.9inch(2017)", desc:"[12.9 inches, vertical shape, camera on top and flash light under, has home button]", image:"images/ipad11.png"};
-    var ipadpro_105inch = {name:"IPAD Pro 10.5 inch", desc:"[Vertical shape, camera on top and flash light under, has home button]", image:"images/ipad12.png"};
-    var ipadpro_97inch = {name:"IPAD Pro 9.7 inch(2016)", desc:"[Camera above the flash light]", image:"images/ipad13.png"};
-    var ipadair4_5 = {name:"IPAD Air 4/5", desc:"[Touch ID, no silent button & no home button, no flash light, microphone on the middle, square edge]", image:"images/ipad14.jpg"};
-    var ipadpro_129inch_2020_2021_2022 = {name:"IPAD Pro 12.9(2020/2021/2022)", desc:"[12.9 inches, back island camera, no home button, square edge]", image:"images/ipad15.png"};
-    var ipadpro_11inch_2020_2021_2022 = {name:"iPad Pro 11 (2020/2021/2022)", desc:"[11 inches, back island camera, no home button, square edge]", image:"images/ipad16.png"};
-    var ipadpro_129inch_2018 = {name:"iPad Pro 12.9 (2018)", desc:"[12.9 inches, no home button, no framing on the rear camera, flash light right under, top and bottom both having speakers]", image:"images/ipad17.png"};
-    var ipad10 = {name:"iPad 10th Generation", desc:"[10.9 inches, Touch ID unlock, no home button, support 1st Gen Apple Pencil only]", image:"images/ipad18.png"};
-    var ipad7_8_9 = {name:"iPad 7/8/9th Generation", desc:"[10.2 inches, has home button, rounded edge]", image:"images/ipad19.png"};
+    // var ipadmini3 = {name:"IPAD mini 3", desc:"[Microphone hole in the middle, touch ID unlock, single camera, slient button]", image:"images/ipad1.png"};
+    // var ipadmini1_2 = {name:"IPAD mini/mini 2", desc:"[Microphone hole in the middle, no Touch ID unlock, single camera, slient button]", image:"images/ipad2.png"};
+    // var ipadmini4 = {name:"IPAD mini 4", desc:"[Touch ID unlock, no silence button, microphone hole on the right of camera]", image:"images/ipad3.png"};
+    // var ipadmini5 = {name:"IPAD mini5(2019)", desc:"[Touch ID unlock, no silence button, one microphone hole on the back middle]", image:"images/ipad4.png"};
+    // var ipad2_3_4 = {name:"IPAD 2/3/4th generation", desc:"[Wide bezel on the front, large charge port, 9.7 inches]", image:"images/ipad5.png"};
+    // var ipadair1 = {name:"IPAD Air1", desc:"[9.7 inches, No finger print access, single camera, microphone in the middle]", image:"images/ipad6.png"};
+    // var ipadair2 = {name:"IPAD Air2", desc:"[9.7 inches, Finger print access, no silent button, tiny microphone on the right of rear camera, ]", image:"images/ipad7.png"};
+    // var ipadair3 = {name:"IPAD Pro 10.5 inch", desc:"[10.5 inches, Vertical shape, camera on top, no flash light, has home button]", image:"images/ipad20.png"};
+    // var ipad5_6 = {name:"IPAD 5/6th Generation", desc:"[9.7 inches, Camera only, no flash light, touch ID home button, no silent button, microphone at the middle]", image:"images/ipad8.png"};
+    // var ipadpro_11inch_2018 = {name:"IPAD Pro 11(2018)", desc:"[Many pin holes on top, no home button]", image:"images/ipad9.png"};
+    // var ipadpro_129inch_2015 = {name:"IPAD Pro 12.9inch(2015)", desc:"[12.9 inches, camera and flash light beside each other, has home button]", image:"images/ipad10.png"};
+    // var ipadpro_129inch_2017 = {name:"IPAD Pro 12.9inch(2017)", desc:"[12.9 inches, vertical shape, camera on top and flash light under, has home button]", image:"images/ipad11.png"};
+    // var ipadpro_105inch = {name:"IPAD Pro 10.5 inch", desc:"[Vertical shape, camera on top and flash light under, has home button]", image:"images/ipad12.png"};
+    // var ipadpro_97inch = {name:"IPAD Pro 9.7 inch(2016)", desc:"[Camera above the flash light]", image:"images/ipad13.png"};
+    // var ipadair4_5 = {name:"IPAD Air 4/5", desc:"[Touch ID, no silent button & no home button, no flash light, microphone on the middle, square edge]", image:"images/ipad14.jpg"};
+    // var ipadpro_129inch_2020_2021_2022 = {name:"IPAD Pro 12.9(2020/2021/2022)", desc:"[12.9 inches, back island camera, no home button, square edge]", image:"images/ipad15.png"};
+    // var ipadpro_11inch_2020_2021_2022 = {name:"iPad Pro 11 (2020/2021/2022)", desc:"[11 inches, back island camera, no home button, square edge]", image:"images/ipad16.png"};
+    // var ipadpro_129inch_2018 = {name:"iPad Pro 12.9 (2018)", desc:"[12.9 inches, no home button, no framing on the rear camera, flash light right under, top and bottom both having speakers]", image:"images/ipad17.png"};
+    // var ipad10 = {name:"iPad 10th Generation", desc:"[10.9 inches, Touch ID unlock, no home button, support 1st Gen Apple Pencil only]", image:"images/ipad18.png"};
+    // var ipad7_8_9 = {name:"iPad 7/8/9th Generation", desc:"[10.2 inches, has home button, rounded edge]", image:"images/ipad19.png"};
 
     //三星手机
     // var samsungS10_S10plus = {name:"Samsung S10/S10+", desc:"[6.4/6.7 inches, three camera lens with flash light]", image:"images/samsung1.png"};
@@ -243,7 +243,6 @@ window.onload = function() {
     var otherTablet13 = {name:"S2 8” T710 (2015)", desc:"[One single camera on the back]", image:"images/otherTab13.png"};
     
     //iphone 题库； iphone, ipad, 三星主流型号题库， 以及小型号手机题库 共同组成主页上的 “phone/ipad model identification” ；可加入型号
-    // getiPhoneSheetValues() return的值為一個JSON檔案
     var iphoneList = new this.Array();
     // var iphoneList = new this.Array(iphone6_6plus, iphone7_8, iphone7plus_8plus, 
     //     iphonex_xs, iphonexr, iphonexsmax, 
@@ -288,7 +287,6 @@ window.onload = function() {
     var otherTabList = new this.Array();
     // var otherTabList=new Array(otherTablet1, otherTablet2, otherTablet3, otherTablet4, otherTablet5, otherTablet6, otherTablet7, otherTablet8, otherTablet9, otherTablet10, otherTablet11,
     //     otherTablet12, otherTablet13);
-    
     //day1 多选题题库(day1默认包含所有iPhone型号，即iphoneList的内容)； 可加入型号
     //day1: 先问完Samsung再问iPhone型号
     //var day1List = samsungList;
@@ -298,9 +296,8 @@ window.onload = function() {
     //day2 默认为ipad题库
     //var day2List = ipadList;
     var day2List = new this.Array();
-
     //day3 多选题题库；可加入产品
-    var day3List = new Array(case77, case78, case79, case80, case83, case85, case88, case89, case90,
+    var day3List = new this.Array(case77, case78, case79, case80, case83, case85, case88, case89, case90,
         case94, carcharger1, carcharger2, airpodcover1, airpodcover2, watchband1, watchband2, watchband3);
 
     //以下18行不建议修改
@@ -669,7 +666,7 @@ window.onload = function() {
     
     //所有...Gen 函数的功能和实现逻辑都类似，设置一个list arr以及一个list arr2, arr和arr2在初始状态下相等，即出题范围；每生成一个正确答案为i的题目，则i从arr中被剔除（即可避免重复出题）；
     //生成每个单一题目的过程中，每生成一个错误答案m,则m从arr2中被剔除（避免正确答案被混入错误答案），并在生成下一道题目时重置
-    var generateMultipleChoiceQuestions = async function(phoneList, maxQuestions, questionsInListLength, answerClassName, continueIDName, whereToPush) {
+    var generateMultipleChoiceQuestions = function(phoneList, maxQuestions, questionsInListLength, answerClassName, continueIDName, whereToPush) {
         var arr = phoneList.slice();
         var loopNum = Math.min(maxQuestions, questionsInListLength); //生成题目的数量，通常情況下至多有5题或10题(maxQuestions),若题库太小则取题库的大小(questionsInListLength)
         
@@ -804,18 +801,30 @@ window.onload = function() {
 
     var main = async function() {
         // 1
+        //使用async/await等待完getiPhoneSheetValues()回傳JSON檔案後，才會執行剩下的指令
         var iphoneData = await getiPhoneSheetValues();
         for (let i = 0; i < iphoneData.values.length; i++) {
+            //只要name/description/image三項有一項為空，則跳過，防止因Google Sheet裡有空行而報錯
             if(!iphoneData.values[i][0] ||
                 !iphoneData.values[i][1] ||
                 !iphoneData.values[i][2]) {
                 continue;
             }
             else {
-                var oldUrl = iphoneData.values[i][2].match(/\/d\/(.+)\//)[1];
-                console.log(oldUrl);
-                var newUrl = "https://drive.google.com/uc?id=" + oldUrl;
+                //先前從gsheetreader.js裡提取的URL格式長這樣：https://drive.google.com/file/d/19FJQCi6StpJDIEZzagZ6pZHn1SOtVLCx/view?usp=share_link
+                //這條是Google Drive分享圖片用的連結，但這種格式會被CORS擋下，圖片會無法讀取。
 
+                //解決辦法是先用Regex獲取URL裡面的ID，
+                //注意這裡：＂match(/\/d\/(.+)\//)[1]＂這裡Regex會找到兩個結果，只有第二個值合適，填[1]取得第二個值。
+                var oldUrl = iphoneData.values[i][2].match(/\/d\/(.+)\//)[1];
+                //假設用上面的例子，獲取成功後的字串長這樣: 19FJQCi6StpJDIEZzagZ6pZHn1SOtVLCx
+                console.log(oldUrl);
+                
+                var newUrl = "https://drive.google.com/uc?id=" + oldUrl;
+                //沿用上面的例子，這裡newUrl的值會是：https://drive.google.com/uc?id=19FJQCi6StpJDIEZzagZ6pZHn1SOtVLCx
+                //這種格式不會被CORS影響，能夠正常使用
+
+                //把正確的值加到題庫裡
                 iphoneList.push(
                     {
                         name: iphoneData.values[i][0],
@@ -943,6 +952,10 @@ window.onload = function() {
         day1bList = iphoneList;
         //day2 默认为ipad题库
         day2List = ipadList;
+        //day3 多选题题库；可加入产品
+        // day3List = new this.Array(case77, case78, case79, case80, case83, case85, case88, case89, case90,
+        // case94, carcharger1, carcharger2, airpodcover1, airpodcover2, watchband1, watchband2, watchband3);
+        //顯示首頁
         initializeDisplay();
         //call 题目生成函数
         caseQuestionGen();
