@@ -297,8 +297,9 @@ window.onload = function() {
     //var day2List = ipadList;
     var day2List = new this.Array();
     //day3 多选题题库；可加入产品
-    var day3List = new this.Array(case77, case78, case79, case80, case83, case85, case88, case89, case90,
-        case94, carcharger1, carcharger2, airpodcover1, airpodcover2, watchband1, watchband2, watchband3);
+    var day3List = new this.Array();
+    // var day3List = new this.Array(case77, case78, case79, case80, case83, case85, case88, case89, case90,
+    //     case94, carcharger1, carcharger2, airpodcover1, airpodcover2, watchband1, watchband2, watchband3);
 
     //以下18行不建议修改
     var caseI = 1;
@@ -379,44 +380,6 @@ window.onload = function() {
         document.getElementById("day1FillDiv").style.display = "none";
         document.getElementById("day2FillDiv").style.display = "none";
         document.getElementById("day3FillDiv").style.display = "none";
-    }
-
-
-    var otherPhoneQuestionGen = function(){
-        // 6個parameter作用如下:
-        // 1: 需要引用的題庫
-        // 2, 3: 決定問題的數量,於此兩個變數中取最小值(例子: 若otherPhoneList小於10, 則取otherPhoneList的length, 否則取10)
-        // 4, 5: HTML class reference, 用來正確顯示排版 (詳見generateMultipleChoiceQuestions() 裡的註解)
-        // 6: 将刚才生成的（关于题目选项）html和下列（关于题目说明的）html一起加入...QuestionList，每当需要在页面上显示一道新题目时，就从这个list中抛出一道；具体详见文件底部的一系列click function 
-        generateMultipleChoiceQuestions(otherPhoneList, 10, otherPhoneList.length, 'answer-phone', 'modelContinue', phoneQuestionList);
-    }
-    var day1Gen = function(){
-        generateMultipleChoiceQuestions(day1List, 5, day1List.length, 'answer-day1', 'day1Continue', day1QuestionList);
-    }
-    var day1bGen = function(){
-        generateMultipleChoiceQuestions(day1bList, 5, day1bList.length, 'answer-day1', 'day1Continue', day1QuestionList);
-    }
-    var day2Gen = function(){
-        generateMultipleChoiceQuestions(day2List, 10, day2List.length, 'answer-day2', 'day2Continue', day2QuestionList);
-    }
-    var day3Gen = function(){
-        generateMultipleChoiceQuestions(day3List, 10, day3List.length, 'answer-day3', 'day3Continue', day3QuestionList);
-    }
-    var samsungQuestionGen = function(){
-        generateMultipleChoiceQuestions(samsungList, 10, samsungList.length, 'answer-phone', 'modelContinue', phoneQuestionList);
-    }
-    var samsungTabQuestionGen = function(){
-        generateMultipleChoiceQuestions(otherTabList, 10, otherTabList.length, 'answer-stab', 'stabContinue', stabQuestionList);
-    }
-    var ipadQuestionGen = function(){
-        generateMultipleChoiceQuestions(ipadList, 10, ipadList.length, 'answer-phone', 'modelContinue', phoneQuestionList);
-    }
-    var phoneQuestionGen = function(){
-        generateMultipleChoiceQuestions(iphoneList, 10, iphoneList.length, 'answer-phone', 'modelContinue', phoneQuestionList);
-    }
-    var caseQuestionGen = function(){
-        // 與generateMultipleChoiceQuestions() 大同小異
-        generateMultipleChoiceQuestionsForCase(caseList, 10, 10, 'answer-case', 'caseContinue', caseQuestionList);
     }
 
     //下列50行均为导航栏点击函数，每当一个导航栏按键被点击，触发resetDisplay函数隐藏页面上所有内容，然后让特定内容重新显示；复用代码时注意id要与html文件中的id相匹配
@@ -666,62 +629,65 @@ window.onload = function() {
     
     //所有...Gen 函数的功能和实现逻辑都类似，设置一个list arr以及一个list arr2, arr和arr2在初始状态下相等，即出题范围；每生成一个正确答案为i的题目，则i从arr中被剔除（即可避免重复出题）；
     //生成每个单一题目的过程中，每生成一个错误答案m,则m从arr2中被剔除（避免正确答案被混入错误答案），并在生成下一道题目时重置
-    var generateMultipleChoiceQuestions = function(phoneList, maxQuestions, questionsInListLength, answerClassName, continueIDName, whereToPush) {
+    var generateMultipleChoiceQuestions = function(phoneList, maxQuestions, answerClassName, continueIDName, whereToPush) {
         var arr = phoneList.slice();
-        var loopNum = Math.min(maxQuestions, questionsInListLength); //生成题目的数量，通常情況下至多有5题或10题(maxQuestions),若题库太小则取题库的大小(questionsInListLength)
-        
-        for(var i = 1; i <= loopNum; i++){
+        var loopNum = Math.min(maxQuestions, phoneList.length); //生成题目的数量，通常情況下至多有5题或10题(maxQuestions),若题库太小则取题库的大小(questionsInListLength)
+        console.log(loopNum);
+
+        for(var i = 0; i < loopNum; i++){
             var arr2 = arr.slice();
-            var randomNumber = Math.floor((Math.random()*arr.length)); //随机生成正确答案的index
+            var rightAnswerIndex = Math.floor((Math.random()*arr.length)); //随机生成正确答案的index
+            console.log("rightAnswerIndex: " + rightAnswerIndex);
             var rightAnswerPlace = Math.floor((Math.random()*4)); //正确答案在题目中的位置
-            var rightAnswer = arr[randomNumber]; //从出题范围中获取正确答案的具体信息
-            arr.splice(randomNumber,1); //从arr1中剔除正确答案避免重复出题
-            arr2.splice(randomNumber,1); //从arr2中剔除正确答案避免正确答案的选项重复出现
+            console.log("rightAnswerPlace: " + rightAnswerPlace);
+            var rightAnswerContent = arr[rightAnswerIndex]; //从出题范围中获取正确答案的具体信息
+            arr.splice(rightAnswerIndex,1); //从arr1中剔除正确答案避免重复出题
+            arr2.splice(rightAnswerIndex,1); //从arr2中剔除正确答案避免正确答案的选项重复出现
 
             //生成错误答案
-            var wrongAnswer1Place = Math.floor((Math.random()*arr2.length)); //随机生成错误答案1 的index
-            var wrongAnswer1 = arr2[wrongAnswer1Place]; //根据上一行随机生成的index获取错误答案1 的具体信息
-            arr2.splice(wrongAnswer1Place,1); //将错误答案从arr2中剔除，避免错误答案重复出现，下同
+            var wrongAnswer1Index = Math.floor((Math.random()*arr2.length)); //随机生成错误答案1 的index
+            var wrongAnswer1Content = arr2[wrongAnswer1Index]; //根据上一行随机生成的index获取错误答案1 的具体信息
+            arr2.splice(wrongAnswer1Index,1); //将错误答案从arr2中剔除，避免错误答案重复出现，下同
 
-            var wrongAnswer2Place = Math.floor((Math.random()*arr2.length));
-            var wrongAnswer2 = arr2[wrongAnswer2Place];
-            arr2.splice(wrongAnswer2Place,1);
+            var wrongAnswer2Index = Math.floor((Math.random()*arr2.length));
+            var wrongAnswer2Content = arr2[wrongAnswer2Index];
+            arr2.splice(wrongAnswer2Index,1);
 
-            var wrongAnswer3Place = Math.floor((Math.random()*arr2.length));
-            var wrongAnswer3 = arr2[wrongAnswer3Place]
-            arr2.splice(wrongAnswer3Place,1);
+            var wrongAnswer3Index = Math.floor((Math.random()*arr2.length));
+            var wrongAnswer3Content = arr2[wrongAnswer3Index]
+            arr2.splice(wrongAnswer3Index,1);
            
             //一道选择题有四个选项，正确答案的位置由变量rightAnswerPlace决定，根据正确答案在题目中位置的不同生成不同的html； 
             //！！复用代码时注意修改class name "answer-?",即變數名稱 "answerClassName" 裡的string
             // 分別有: answer-day1, answer-day2, answer-day3, answer-phone, answer-case, answer-stab)！！
             if(rightAnswerPlace == 1){
                 var answerButtons = 
-                "<button type='button' class='btn btn-secondary col-xl-2 col-sm-6 " + answerClassName + " right-answer'>" +rightAnswer.name + 
-                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 " + answerClassName + " wrong-answer'>" + wrongAnswer1.name +
-                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 " + answerClassName + " wrong-answer'>" + wrongAnswer2.name + 
+                "<button type='button' class='btn btn-secondary col-xl-2 col-sm-6 " + answerClassName + " right-answer'>" +rightAnswerContent.name + 
+                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 " + answerClassName + " wrong-answer'>" + wrongAnswer1Content.name +
+                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 " + answerClassName + " wrong-answer'>" + wrongAnswer2Content.name + 
                 "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 " + answerClassName + " wrong-answer'>"
-                + wrongAnswer3.name + "</button>";
+                + wrongAnswer3Content.name + "</button>";
             }
             else if(rightAnswerPlace == 2){
                 var answerButtons = "<button type='button' class='btn btn-secondary col-xl-2 col-sm-6 " + answerClassName + " wrong-answer'>" +
-                wrongAnswer1.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 " + answerClassName + " right-answer'>" + rightAnswer.name +
-                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 " + answerClassName + " wrong-answer'>" + wrongAnswer2.name + 
+                wrongAnswer1Content.name + "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 " + answerClassName + " right-answer'>" + rightAnswerContent.name +
+                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 " + answerClassName + " wrong-answer'>" + wrongAnswer2Content.name + 
                 "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 " + answerClassName + " wrong-answer'>"
-                + wrongAnswer3.name + "</button>";
+                + wrongAnswer3Content.name + "</button>";
             }
             else if(rightAnswerPlace == 3){
-                var answerButtons = "<button type='button' class='btn btn-secondary col-xl-2 col-sm-6 " + answerClassName + " wrong-answer'>" + wrongAnswer1.name + 
-                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 " + answerClassName + " wrong-answer'>" + wrongAnswer2.name +
-                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 " + answerClassName + " right-answer'>" + rightAnswer.name + 
+                var answerButtons = "<button type='button' class='btn btn-secondary col-xl-2 col-sm-6 " + answerClassName + " wrong-answer'>" + wrongAnswer1Content.name + 
+                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 " + answerClassName + " wrong-answer'>" + wrongAnswer2Content.name +
+                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 " + answerClassName + " right-answer'>" + rightAnswerContent.name + 
                 "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 " + answerClassName + " wrong-answer'>"
-                + wrongAnswer3.name + "</button>";
+                + wrongAnswer3Content.name + "</button>";
             }
             else{
-                var answerButtons = "<button type='button' class='btn btn-secondary col-xl-2 col-sm-6 " + answerClassName + " wrong-answer'>" +wrongAnswer1.name + 
-                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 " + answerClassName + " wrong-answer'>" + wrongAnswer2.name +
-                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 " + answerClassName + " wrong-answer'>" + wrongAnswer3.name + 
+                var answerButtons = "<button type='button' class='btn btn-secondary col-xl-2 col-sm-6 " + answerClassName + " wrong-answer'>" +wrongAnswer1Content.name + 
+                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 " + answerClassName + " wrong-answer'>" + wrongAnswer2Content.name +
+                "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 " + answerClassName + " wrong-answer'>" + wrongAnswer3Content.name + 
                 "</button><button type='button' class='btn btn-secondary col-xl-2 col-sm-6 " + answerClassName + " right-answer'>"
-                + rightAnswer.name + "</button>";
+                + rightAnswerContent.name + "</button>";
             }
 
             //将刚才生成的（关于题目选项）html和下列（关于题目说明的）html一起加入...QuestionList，每当需要在页面上显示一道新题目时，就从这个list中抛出一道；具体详见文件底部的一系列click function 
@@ -731,24 +697,24 @@ window.onload = function() {
             // 分別有:day1Continue, day2Continue, day3Continue, modelContinue, caseContinue, stabContinue
 
             var productDescription;
-            if(rightAnswer.desc != null) {
-                productDescription = rightAnswer.desc + "; ";
+            if(rightAnswerContent.desc != null) {
+                productDescription = rightAnswerContent.desc + "; ";
             }
-            else if(rightAnswer.desc == null) {
+            else if(rightAnswerContent.desc == null) {
                 productDescription = "";
             }
-            var newQuestion = "<h3 style='text-align: center;'>" + productDescription + "what is this model? </h3><div class='flex_center_row row'><div class='image-box'><img src='" + rightAnswer.image + "'class='col'></div></div><div class='flex_center_row row' style='margin-top: 10px;'>" +
+            var newQuestion = "<h3 style='text-align: center;'>" + productDescription + "what is this model? </h3><div class='flex_center_row row'><div class='image-box'><img src='" + rightAnswerContent.image + "'class='col'></div></div><div class='flex_center_row row' style='margin-top: 10px;'>" +
             answerButtons + "</div><div class='flex_center_row row' id='" + continueIDName + "' style='margin-top: 40px;'><button type='button' class='btn btn-primary col-8 continue-button' style='display: none;'>Continue</button></div>";
             whereToPush.push(newQuestion);
        }
     }
 
     // 與generateMultipleChoiceQuestions() 大同小異, 但須注意裡面問題的text和JSON reference有分別
-    var generateMultipleChoiceQuestionsForCase = function(caseList, maxQuestions, questionsInListLength, answerClassName, continueIDName, whereToPush) {
+    var generateMultipleChoiceQuestionsForCase = function(caseList, maxQuestions, answerClassName, continueIDName, whereToPush) {
         var arr = caseList.slice();
-        var loopNum = Math.min(maxQuestions, questionsInListLength);
+        var loopNum = Math.min(maxQuestions, caseList.length);
         
-        for(var i = 1; i <= loopNum; i++){
+        for(var i = 0; i < loopNum; i++){
             var arr2 = arr.slice();
             var randomNumber = Math.floor((Math.random()*arr.length));
             var rightAnswerPlace = Math.floor((Math.random()*4));
@@ -799,6 +765,43 @@ window.onload = function() {
         }
     }
 
+    var otherPhoneQuestionGen = function(){
+        // 5個parameter作用如下:
+        // 1: 需要引用的題庫
+        // 2: 決定問題的數量(例子: 若otherPhoneList小於10, 則取otherPhoneList的length, 否則取10)
+        // 3, 4: HTML class reference, 用來正確顯示排版 (詳見generateMultipleChoiceQuestions() 裡的註解)
+        // 5: 将刚才生成的（关于题目选项）html和下列（关于题目说明的）html一起加入...QuestionList，每当需要在页面上显示一道新题目时，就从这个list中抛出一道；具体详见文件底部的一系列click function 
+        generateMultipleChoiceQuestions(otherPhoneList, 10, 'answer-phone', 'modelContinue', phoneQuestionList);
+    }
+    var day1Gen = function(){
+        generateMultipleChoiceQuestions(day1List, 5, 'answer-day1', 'day1Continue', day1QuestionList);
+    }
+    var day1bGen = function(){
+        generateMultipleChoiceQuestions(day1bList, 5, 'answer-day1', 'day1Continue', day1QuestionList);
+    }
+    var day2Gen = function(){
+        generateMultipleChoiceQuestions(day2List, 10, 'answer-day2', 'day2Continue', day2QuestionList);
+    }
+    var day3Gen = function(){
+        generateMultipleChoiceQuestions(day3List, 10, 'answer-day3', 'day3Continue', day3QuestionList);
+    }
+    var samsungQuestionGen = function(){
+        generateMultipleChoiceQuestions(samsungList, 10, 'answer-phone', 'modelContinue', phoneQuestionList);
+    }
+    var samsungTabQuestionGen = function(){
+        generateMultipleChoiceQuestions(otherTabList, 10, 'answer-stab', 'stabContinue', stabQuestionList);
+    }
+    var ipadQuestionGen = function(){
+        generateMultipleChoiceQuestions(ipadList, 10, 'answer-phone', 'modelContinue', phoneQuestionList);
+    }
+    var phoneQuestionGen = function(){
+        generateMultipleChoiceQuestions(iphoneList, 10, 'answer-phone', 'modelContinue', phoneQuestionList);
+    }
+    var caseQuestionGen = function(){
+        // 與generateMultipleChoiceQuestions() 差不多
+        generateMultipleChoiceQuestionsForCase(caseList, 10, 'answer-case', 'caseContinue', caseQuestionList);
+    }
+
     var main = async function() {
         // 1
         //使用async/await等待完getiPhoneSheetValues()回傳JSON檔案後，才會執行剩下的指令
@@ -818,7 +821,6 @@ window.onload = function() {
                 //注意這裡：＂match(/\/d\/(.+)\//)[1]＂這裡Regex會找到兩個結果，只有第二個值合適，填[1]取得第二個值。
                 var oldUrl = iphoneData.values[i][2].match(/\/d\/(.+)\//)[1];
                 //假設用上面的例子，獲取成功後的字串長這樣: 19FJQCi6StpJDIEZzagZ6pZHn1SOtVLCx
-                console.log(oldUrl);
                 
                 var newUrl = "https://drive.google.com/uc?id=" + oldUrl;
                 //沿用上面的例子，這裡newUrl的值會是：https://drive.google.com/uc?id=19FJQCi6StpJDIEZzagZ6pZHn1SOtVLCx
@@ -844,7 +846,6 @@ window.onload = function() {
             }
             else {
                 var oldUrl = samsungData.values[i][2].match(/\/d\/(.+)\//)[1];
-                console.log(oldUrl);
                 var newUrl = "https://drive.google.com/uc?id=" + oldUrl;
 
                 samsungList.push(
@@ -866,7 +867,6 @@ window.onload = function() {
             }
             else {
                 var oldUrl = ipadData.values[i][2].match(/\/d\/(.+)\//)[1];
-                console.log(oldUrl);
                 var newUrl = "https://drive.google.com/uc?id=" + oldUrl;
 
                 ipadList.push(
@@ -888,7 +888,6 @@ window.onload = function() {
             }
             else {
                 var oldUrl = samsungTabletData.values[i][2].match(/\/d\/(.+)\//)[1];
-                console.log(oldUrl);
                 var newUrl = "https://drive.google.com/uc?id=" + oldUrl;
 
                 otherTabList.push(
@@ -910,7 +909,6 @@ window.onload = function() {
             }
             else {
                 var oldUrl = uncommonModelData.values[i][2].match(/\/d\/(.+)\//)[1];
-                console.log(oldUrl);
                 var newUrl = "https://drive.google.com/uc?id=" + oldUrl;
 
                 otherPhoneList.push(
@@ -932,7 +930,6 @@ window.onload = function() {
             }
             else {
                 var oldUrl = accessoriesData.values[i][2].match(/\/d\/(.+)\//)[1];
-                console.log(oldUrl);
                 var newUrl = "https://drive.google.com/uc?id=" + oldUrl;
 
                 caseList.push(
@@ -948,26 +945,27 @@ window.onload = function() {
 
         //day1 多选题题库(day1默认包含所有iPhone型号，即iphoneList的内容)； 可加入型号
         //day1: 先问完Samsung再问iPhone型号
-        day1List = samsungList;
-        day1bList = iphoneList;
+        day1List = samsungList.slice();
+        day1bList = iphoneList.slice();
         //day2 默认为ipad题库
-        day2List = ipadList;
+        day2List = ipadList.slice();
         //day3 多选题题库；可加入产品
+        day3List = otherPhoneList.slice();
         // day3List = new this.Array(case77, case78, case79, case80, case83, case85, case88, case89, case90,
         // case94, carcharger1, carcharger2, airpodcover1, airpodcover2, watchband1, watchband2, watchband3);
         //顯示首頁
         initializeDisplay();
         //call 题目生成函数
+        day1Gen();
+        day1bGen();
+        day2Gen();
+        day3Gen();
         caseQuestionGen();
         phoneQuestionGen();
         ipadQuestionGen();
         samsungQuestionGen();
         otherPhoneQuestionGen();
         samsungTabQuestionGen();
-        day1Gen();
-        day1bGen();
-        day2Gen();
-        day3Gen();
         //在網頁中顯示整個題庫
         initializeDatabase();
 
