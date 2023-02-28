@@ -635,17 +635,15 @@ window.onload = function() {
     
     //所有...Gen 函数的功能和实现逻辑都类似，设置一个list arr以及一个list arr2, arr和arr2在初始状态下相等，即出题范围；每生成一个正确答案为i的题目，则i从arr中被剔除（即可避免重复出题）；
     //生成每个单一题目的过程中，每生成一个错误答案m,则m从arr2中被剔除（避免正确答案被混入错误答案），并在生成下一道题目时重置
-    var generateMultipleChoiceQuestions = function(phoneList, maxQuestions, answerClassName, continueIDName, whereToPush) {
-        var arr = phoneList.slice();
-        var loopNum = Math.min(maxQuestions, phoneList.length); //生成题目的数量，通常情況下至多有5题或10题(maxQuestions),若题库太小则取题库的大小(questionsInListLength)
+    var generateMultipleChoiceQuestions = function(caseList, maxQuestions, answerClassName, continueIDName, whereToPush) {
+        var arr = JSON.parse(JSON.stringify(caseList));
+        var loopNum = Math.min(maxQuestions, caseList.length); //生成题目的数量，通常情況下至多有5题或10题(maxQuestions),若题库太小则取题库的大小(questionsInListLength)
         console.log(loopNum);
 
         for(var i = 0; i < loopNum; i++){
             var arr2 = arr.slice();
             var rightAnswerIndex = Math.floor((Math.random()*arr.length)); //随机生成正确答案的index
-            console.log("rightAnswerIndex: " + rightAnswerIndex);
             var rightAnswerPlace = Math.floor((Math.random()*4)); //正确答案在题目中的位置
-            console.log("rightAnswerPlace: " + rightAnswerPlace);
             var rightAnswerContent = arr[rightAnswerIndex]; //从出题范围中获取正确答案的具体信息
             arr.splice(rightAnswerIndex,1); //从arr1中剔除正确答案避免重复出题
             arr2.splice(rightAnswerIndex,1); //从arr2中剔除正确答案避免正确答案的选项重复出现
@@ -717,8 +715,10 @@ window.onload = function() {
 
     // 與generateMultipleChoiceQuestions() 大同小異, 但須注意裡面問題的text和JSON reference有分別
     var generateMultipleChoiceQuestionsForCase = function(caseList, maxQuestions, answerClassName, continueIDName, whereToPush) {
-        var arr = caseList.slice();
+        console.log(caseList);
+        var arr = JSON.parse(JSON.stringify(caseList));
         var loopNum = Math.min(maxQuestions, caseList.length);
+        console.log(loopNum);
         
         for(var i = 0; i < loopNum; i++){
             var arr2 = arr.slice();
@@ -772,6 +772,7 @@ window.onload = function() {
     }
 
     var otherPhoneQuestionGen = function(){
+        console.log("otherPhoneQuestionGen");
         // 5個parameter作用如下:
         // 1: 需要引用的題庫
         // 2: 決定問題的數量(例子: 若otherPhoneList小於10, 則取otherPhoneList的length, 否則取10)
@@ -780,30 +781,39 @@ window.onload = function() {
         generateMultipleChoiceQuestions(otherPhoneList, 10, 'answer-phone', 'modelContinue', phoneQuestionList);
     }
     var day1Gen = function(){
+        console.log("day1Gen");
         generateMultipleChoiceQuestions(day1List, 5, 'answer-day1', 'day1Continue', day1QuestionList);
     }
     var day1bGen = function(){
+        console.log("day1bGen");
         generateMultipleChoiceQuestions(day1bList, 5, 'answer-day1', 'day1Continue', day1QuestionList);
     }
     var day2Gen = function(){
+        console.log("day2Gen");
         generateMultipleChoiceQuestions(day2List, 10, 'answer-day2', 'day2Continue', day2QuestionList);
     }
     var day3Gen = function(){
+        console.log("day3Gen");
         generateMultipleChoiceQuestions(day3List, 10, 'answer-day3', 'day3Continue', day3QuestionList);
     }
     var samsungQuestionGen = function(){
+        console.log("samsungQuestionGen");
         generateMultipleChoiceQuestions(samsungList, 10, 'answer-phone', 'modelContinue', phoneQuestionList);
     }
     var samsungTabQuestionGen = function(){
+        console.log("samsungTabQuestionGen");
         generateMultipleChoiceQuestions(otherTabList, 10, 'answer-stab', 'stabContinue', stabQuestionList);
     }
     var ipadQuestionGen = function(){
+        console.log("ipadQuestionGen");
         generateMultipleChoiceQuestions(ipadList, 10, 'answer-phone', 'modelContinue', phoneQuestionList);
     }
     var phoneQuestionGen = function(){
+        console.log("phoneQuestionGen");
         generateMultipleChoiceQuestions(iphoneList, 10, 'answer-phone', 'modelContinue', phoneQuestionList);
     }
     var caseQuestionGen = function(){
+        console.log("caseQuestionGen");
         // 與generateMultipleChoiceQuestions() 差不多
         generateMultipleChoiceQuestionsForCase(caseList, 10, 'answer-case', 'caseContinue', caseQuestionList);
     }
@@ -909,6 +919,7 @@ window.onload = function() {
                 );
             }
         }
+        console.log(otherTabList);
         // 5
         var uncommonModelData = await getUncommonModelSheetValues();
         for (let i = 0; i < uncommonModelData.values.length; i++) {
