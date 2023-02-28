@@ -321,8 +321,14 @@ window.onload = function() {
     var day2QuestionList = [];
     var day3QuestionList = [];
 
-
-
+    // Called at the beginning
+    var initializeLoadingText = function() {
+        document.getElementById("waitDiv").style.display = "block";
+    }
+    // Called at the beginning
+    var deleteLoadingText = function() {
+        document.getElementById("waitDiv").style.display = "none";
+    }
     // Called at the beginning
     var initializeDisplay = function() {
         document.getElementById("learnDiv").style.display = "block";
@@ -803,6 +809,10 @@ window.onload = function() {
     }
 
     var main = async function() {
+
+        // 0
+        initializeLoadingText();
+
         // 1
         //使用async/await等待完getiPhoneSheetValues()回傳JSON檔案後，才會執行剩下的指令
         var iphoneData = await getiPhoneSheetValues();
@@ -954,6 +964,7 @@ window.onload = function() {
         // day3List = new this.Array(case77, case78, case79, case80, case83, case85, case88, case89, case90,
         // case94, carcharger1, carcharger2, airpodcover1, airpodcover2, watchband1, watchband2, watchband3);
         //顯示首頁
+        deleteLoadingText();
         initializeDisplay();
         //call 题目生成函数
         day1Gen();

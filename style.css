@@ -69,6 +69,14 @@ a:active {
   text-decoration: none;
 }
 
+#waitDiv{
+  text-align: center;
+}
+
+#waitDiv h3{
+    margin: 10px;
+}
+
 #learnDiv{
     text-align: center;
 }
