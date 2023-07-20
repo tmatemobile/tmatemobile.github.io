@@ -284,7 +284,7 @@ window.onload = function() {
     //     case74, case77, case78, case79, case80, case83, case85, case88, case89, case90, case94,
     //     carcharger1, carcharger2, airpodcover1, airpodcover2, watchband1, watchband2, watchband3, case106);
     //三星平板题库，也就是主页上的 “samsung tablet model identification”；可加入型号
-    var otherTabList = new this.Array();
+    var samsungTabletList = new this.Array();
     // var otherTabList=new Array(otherTablet1, otherTablet2, otherTablet3, otherTablet4, otherTablet5, otherTablet6, otherTablet7, otherTablet8, otherTablet9, otherTablet10, otherTablet11,
     //     otherTablet12, otherTablet13);
     //day1 多选题题库(day1默认包含所有iPhone型号，即iphoneList的内容)； 可加入型号
@@ -353,7 +353,7 @@ window.onload = function() {
                 '<div class="grid-item">' + element.name + '</div>'      
             )
         });
-        otherTabList.forEach(element => {
+        samsungTabletList.forEach(element => {
             document.getElementById('samsungTabletDatabase').insertAdjacentHTML(
                 'beforeend',
                 '<div class="grid-item">' + element.name + '</div>'      
@@ -802,7 +802,7 @@ window.onload = function() {
     }
     var samsungTabQuestionGen = function(){
         console.log("samsungTabQuestionGen");
-        generateMultipleChoiceQuestions(otherTabList, 10, 'answer-stab', 'stabContinue', stabQuestionList);
+        generateMultipleChoiceQuestions(samsungTabletList, 5, 'answer-stab', 'stabContinue', stabQuestionList);
     }
     var ipadQuestionGen = function(){
         console.log("ipadQuestionGen");
@@ -910,7 +910,7 @@ window.onload = function() {
                 var oldUrl = samsungTabletData.values[i][2].match(/\/d\/(.+)\//)[1];
                 var newUrl = "https://drive.google.com/uc?id=" + oldUrl;
 
-                otherTabList.push(
+                samsungTabletList.push(
                     {
                         name: samsungTabletData.values[i][0],
                         desc: samsungTabletData.values[i][1],
@@ -919,7 +919,6 @@ window.onload = function() {
                 );
             }
         }
-        console.log(otherTabList);
         // 5
         var uncommonModelData = await getUncommonModelSheetValues();
         for (let i = 0; i < uncommonModelData.values.length; i++) {
