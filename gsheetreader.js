@@ -10,7 +10,7 @@
 const SHEET_ID = '1hb2XiLriTd_RzLYDDxsQwSmflKVDJCdSnY-5VNqYR68';
 
 // 存取Google Sheet API v4的API key
-// 如果題庫讀取失敗，顯示錯誤為憑證錯誤的話，打開一個任意的Google Cloud Project，加入Google Sheet API，再新建一個API key即可
+// 如果題庫讀取失敗，瀏覽器按F12查看原始碼時顯示錯誤為憑證錯誤的話，打開一個任意的Google Cloud Project，加入Google Sheet API，再新建一個API key即可
 // 詳見：https://levelup.gitconnected.com/google-sheets-api-tutorial-with-javascript-588f581aa1d9
 const API_KEY = 'AIzaSyAb8fdJjnhKwj0LlZWz3kcC0Uz7kxyIQXc';
 
@@ -22,13 +22,21 @@ const PAGE4_NAME = '4 - Samsung Tablet';
 const PAGE5_NAME = '5 - Uncommon Model';
 const PAGE6_NAME = '6 - Accessories';
 
-//提取資料的範圍
-const PAGE1_RANGE = 'A2:C40';
-const PAGE2_RANGE = 'A2:C40';
-const PAGE3_RANGE = 'A2:C40';
-const PAGE4_RANGE = 'A2:C40';
-const PAGE5_RANGE = 'A2:C40';
-const PAGE6_RANGE = 'A2:C80';
+const DAY1FILLIN_NAME =  'Day 1 Questions';
+const DAY2FILLIN_NAME =  'Day 2 Questions';
+const DAY3FILLIN_NAME =  'Day 3 Questions';
+
+//提取資料的範圍(對應excel檔案的行列)
+const PAGE1_RANGE = 'A2:C60';
+const PAGE2_RANGE = 'A2:C60';
+const PAGE3_RANGE = 'A2:C60';
+const PAGE4_RANGE = 'A2:C60';
+const PAGE5_RANGE = 'A2:C60';
+const PAGE6_RANGE = 'A2:C60';
+
+const DAY1FILLIN_RANGE =  'A2:D30';
+const DAY2FILLIN_RANGE =  'A2:D30';
+const DAY3FILLIN_RANGE =  'A2:D30';
 
 // 1 - iPhone
 var getiPhoneSheetValues = async () => {
@@ -122,6 +130,58 @@ var getAccessoriesSheetValues = async () => {
     return data;
   }
 
+// Day 1 Questions
+var getDay1QuestionsSheetValues = async () => {
+  const request = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${DAY1FILLIN_NAME}!${DAY1FILLIN_RANGE}?key=${API_KEY}`, 
+  {
+      headers: 
+      {
+      "Content-Type": "application/json"
+      },
+      valueRenderOption: "FORMULA"
+  });
+  const data = await request.json();
+  console.log(data);
+  return data;
+}
+
+// Day 2 Questions
+var getDay2QuestionsSheetValues = async () => {
+  const request = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${DAY2FILLIN_NAME}!${DAY2FILLIN_RANGE}?key=${API_KEY}`, 
+  {
+      headers: 
+      {
+      "Content-Type": "application/json"
+      },
+      valueRenderOption: "FORMULA"
+  });
+  const data = await request.json();
+  console.log(data);
+  return data;
+}
+
+// Day 3 Questions
+var getDay3QuestionsSheetValues = async () => {
+  const request = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${DAY3FILLIN_NAME}!${DAY3FILLIN_RANGE}?key=${API_KEY}`, 
+  {
+      headers: 
+      {
+      "Content-Type": "application/json"
+      },
+      valueRenderOption: "FORMULA"
+  });
+  const data = await request.json();
+  console.log(data);
+  return data;
+}
+
   //給main.js使用
-  export {getiPhoneSheetValues, getSamsungSheetValues, getiPadSheetValues, 
-    getSamsungTabletSheetValues, getUncommonModelSheetValues, getAccessoriesSheetValues};
+  export {getiPhoneSheetValues, 
+        getSamsungSheetValues, 
+        getiPadSheetValues, 
+        getSamsungTabletSheetValues, 
+        getUncommonModelSheetValues, 
+        getAccessoriesSheetValues,
+        getDay1QuestionsSheetValues,
+        getDay2QuestionsSheetValues,
+        getDay3QuestionsSheetValues};

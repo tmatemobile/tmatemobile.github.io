@@ -1,5 +1,12 @@
-import {getiPhoneSheetValues, getSamsungSheetValues, getiPadSheetValues, 
-    getSamsungTabletSheetValues, getUncommonModelSheetValues, getAccessoriesSheetValues} from "./gsheetreader.js";
+import {getiPhoneSheetValues, 
+    getSamsungSheetValues, 
+    getiPadSheetValues, 
+    getSamsungTabletSheetValues, 
+    getUncommonModelSheetValues, 
+    getAccessoriesSheetValues,
+    getDay1QuestionsSheetValues,
+    getDay2QuestionsSheetValues,
+    getDay3QuestionsSheetValues} from "./gsheetreader.js";
 
 window.onload = function() {
     //更新时间的注释
@@ -15,6 +22,7 @@ window.onload = function() {
     //店内产品题库， 也就是主页上的"case and accessaries identification" ；可加入产品
     var caseList = new this.Array();
     //三星平板题库，也就是主页上的 “samsung tablet model identification”；可加入型号
+    //day2 默认为iPhone+Samsung phone题库
     var samsungTabletList = new this.Array();
     var day1List = new this.Array();
     var day1bList = new this.Array();
@@ -22,6 +30,12 @@ window.onload = function() {
     var day2List = new this.Array();
     //day3 多选题题库；可加入产品
     var day3List = new this.Array();
+
+    //
+    var day1QuestionsList = new this.Array();
+    var day2QuestionsList = new this.Array();
+    var day3QuestionsList = new this.Array();
+
     //以下18行不建议修改
     var caseI = 1;
     var modelI = 1;
@@ -53,6 +67,32 @@ window.onload = function() {
     // Called at the beginning
     var initializeDisplay = function() {
         document.getElementById("learnDiv").style.display = "block";
+    }
+    // Called at the beginning
+    var day1FillInQuestionsGen = function() {
+        day1QuestionsList.forEach(element => {
+            document.getElementById('day1FillDiv').insertAdjacentHTML(
+                'beforeend',
+                '<div class="input-group mb-3">' +
+                    '<div class="input-group-prepend">' +
+                    '<span class="input-group-text">'+ element.question +'</span>'+
+                    '</div>' +
+                    '<input type="text" class="form-control" id="day1Fill_1" placeholder="' + element.tips + '" aria-describedby="day1Fill_1">' +
+                    '<div class="valid-feedback" id="day1Fill_1_right" style="display: none;">' +
+                    'Correct!' +
+                    '</div>' +
+                    '<div class="invalid-feedback" id="day1Fill_1_wrong" style="display: none;">' +
+                    + element.wrongMessage +
+                    '</div>' +
+                '</div>'
+            )
+        }); 
+        document.getElementById('day1FillDiv').insertAdjacentHTML(
+            'beforeend',
+            '<div class="flex_center_row row" style="margin-top: 40px;">' +
+                '<button type="button" class="btn btn-primary col-8" style="display: block;" id="day1Submit" >Submit</button>' +
+            '</div>'
+        );
     }
     // Called at the end
     var initializeDatabase = function() {
@@ -681,6 +721,29 @@ window.onload = function() {
                 );
             }
         }
+        // 7 - Day 1 Questions
+        var day1QuestionsData = await getDay1QuestionsSheetValues();
+        for (let i = 0; i < day1QuestionsData.values.length; i++) {
+            //只要Question/Correct Answer/image兩項有一項為空，則跳過，防止因Google Sheet裡有空行而報錯
+            //Tips和WrongMessage可以不寫,因此不判定
+            if(!day1QuestionsData.values[i][0] ||
+                !day1QuestionsData.values[i][1]) {
+                continue;
+            }
+            else {
+                //把正確的值加到題庫裡
+                day1QuestionsList.push(
+                    {
+                        question: day1QuestionsData.values[i][0],
+                        answer: day1QuestionsData.values[i][1],
+                        tips: day1QuestionsData.values[i][2],
+                        wrongMessage: day1QuestionsData.values[i][3]
+                    }
+                );
+            }
+        }
+        console.log(day1QuestionsList);
+
         //day1 多选题题库(day1默认包含所有iPhone型号，即iphoneList的内容)； 可加入型号
         //day1: 先问完Samsung再问iPhone型号
         day1List = samsungList.slice();
@@ -703,6 +766,10 @@ window.onload = function() {
         samsungQuestionGen();
         otherPhoneQuestionGen();
         samsungTabQuestionGen();
+        
+        day1FillInQuestionsGen();
+        //day2FillInQuestionsGen();
+        //day3FillInQuestionsGen();
         //在網頁中顯示整個題庫
         initializeDatabase();
 
