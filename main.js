@@ -1,5 +1,12 @@
-import {getiPhoneSheetValues, getSamsungSheetValues, getiPadSheetValues, 
-    getSamsungTabletSheetValues, getUncommonModelSheetValues, getAccessoriesSheetValues} from "./gsheetreader.js";
+import {getiPhoneSheetValues, 
+    getSamsungSheetValues, 
+    getiPadSheetValues, 
+    getSamsungTabletSheetValues, 
+    getUncommonModelSheetValues, 
+    getAccessoriesSheetValues,
+    getDay1QuestionsSheetValues,
+    getDay2QuestionsSheetValues,
+    getDay3QuestionsSheetValues} from "./gsheetreader.js";
 
 window.onload = function() {
     //更新时间的注释
@@ -15,6 +22,7 @@ window.onload = function() {
     //店内产品题库， 也就是主页上的"case and accessaries identification" ；可加入产品
     var caseList = new this.Array();
     //三星平板题库，也就是主页上的 “samsung tablet model identification”；可加入型号
+    //day2 默认为iPhone+Samsung phone题库
     var samsungTabletList = new this.Array();
     var day1List = new this.Array();
     var day1bList = new this.Array();
@@ -22,6 +30,12 @@ window.onload = function() {
     var day2List = new this.Array();
     //day3 多选题题库；可加入产品
     var day3List = new this.Array();
+
+    //
+    var day1QuestionsList = new this.Array();
+    var day2QuestionsList = new this.Array();
+    var day3QuestionsList = new this.Array();
+
     //以下18行不建议修改
     var caseI = 1;
     var modelI = 1;
@@ -53,6 +67,93 @@ window.onload = function() {
     // Called at the beginning
     var initializeDisplay = function() {
         document.getElementById("learnDiv").style.display = "block";
+    }
+    // Called at the beginning
+    var day1FillInQuestionsGen = function() {
+        // Fill in questions
+        day1QuestionsList.forEach((element, index) => {
+            const adjustedIndex = index + 1;
+            document.getElementById('day1FillDiv').insertAdjacentHTML(
+                'beforeend',
+                '<div class="input-group mb-3">' +
+                    '<div class="input-group-prepend">' +
+                    '<span class="input-group-text">'+ element.question +'</span>'+
+                    '</div>' +
+                    '<input type="text" class="form-control" id="day1Fill_' + adjustedIndex + '" placeholder="' + element.tips + '" aria-describedby="day1Fill_' + adjustedIndex + '">' +
+                    '<div class="valid-feedback" id="day1Fill_' + adjustedIndex + '_right" style="display: none;">' +
+                    'Correct!' +
+                    '</div>' +
+                    '<div class="invalid-feedback" id="day1Fill_' + adjustedIndex + '_wrong" style="display: none;">' +
+                    element.wrongMessage +
+                    '</div>' +
+                '</div>'
+            )
+        }); 
+        // Button 
+        document.getElementById('day1FillDiv').insertAdjacentHTML(
+            'beforeend',
+            '<div class="flex_center_row row" style="margin-top: 40px;">' +
+                '<button type="button" class="btn btn-primary col-8" style="display: block;" id="day1Submit" >Submit</button>' +
+            '</div>'
+        );
+    }
+    // Called at the beginning
+    var day2FillInQuestionsGen = function() {
+        // Fill in questions
+        day2QuestionsList.forEach((element, index) => {
+            const adjustedIndex = index + 1;
+            document.getElementById('day2FillDiv').insertAdjacentHTML(
+                'beforeend',
+                '<div class="input-group mb-3">' +
+                    '<div class="input-group-prepend">' +
+                    '<span class="input-group-text">'+ element.question +'</span>'+
+                    '</div>' +
+                    '<input type="text" class="form-control" id="day2Fill_' + adjustedIndex + '" placeholder="' + element.tips + '" aria-describedby="day1Fill_' + adjustedIndex + '">' +
+                    '<div class="valid-feedback" id="day2Fill_' + adjustedIndex + '_right" style="display: none;">' +
+                    'Correct!' +
+                    '</div>' +
+                    '<div class="invalid-feedback" id="day2Fill_' + adjustedIndex + '_wrong" style="display: none;">' +
+                    element.wrongMessage +
+                    '</div>' +
+                '</div>'
+            )
+        }); 
+        // Button 
+        document.getElementById('day2FillDiv').insertAdjacentHTML(
+            'beforeend',
+            '<div class="flex_center_row row" style="margin-top: 40px;">' +
+                '<button type="button" class="btn btn-primary col-8" style="display: block;" id="day2Submit" >Submit</button>' +
+            '</div>'
+        );
+    }
+    // Called at the beginning
+    var day3FillInQuestionsGen = function() {
+        // Fill in questions
+        day3QuestionsList.forEach((element, index) => {
+            const adjustedIndex = index + 1;
+            document.getElementById('day3FillDiv').insertAdjacentHTML(
+                'beforeend',
+                '<div class="input-group mb-3">' +
+                    '<div class="input-group-prepend">' +
+                    '<span class="input-group-text">'+ element.question +'</span>'+
+                    '</div>' +
+                    '<input type="text" class="form-control" id="day3Fill_' + adjustedIndex + '" placeholder="' + element.tips + '" aria-describedby="day1Fill_' + adjustedIndex + '">' +
+                    '<div class="valid-feedback" id="day3Fill_' + adjustedIndex + '_right" style="display: none;">' +
+                    'Correct!' +
+                    '</div>' +
+                    '<div class="invalid-feedback" id="day3Fill_' + adjustedIndex + '_wrong" style="display: none;">' +
+                    element.wrongMessage +
+                    '</div>' +
+                '</div>'
+            )
+        }); 
+        // Button 
+        document.getElementById('day3FillDiv').insertAdjacentHTML(
+            'beforeend',
+            '<div class="flex_center_row row" style="margin-top: 40px;">' +
+                '<button type="button" class="btn btn-primary col-8" style="display: block;" id="day3Submit" >Submit</button>' +
+            '</div>'
+        );
     }
     // Called at the end
     var initializeDatabase = function() {
@@ -243,115 +344,142 @@ window.onload = function() {
     $(document).on('click','#day1Submit',function(){
         $("#day1Submit").addClass('disabled'); //submit按钮点击一次后便不能再点
         $("#day1Submit").prop('disabled', true);
-        if($("#day1Fill_1").val() == 30){
-            document.getElementById("day1Fill_1_right").style.display = "block";
-        }
-        if($("#day1Fill_1").val() != 30){
-            document.getElementById("day1Fill_1_wrong").style.display = "block";
-        };
-        if($("#day1Fill_2").val() == 10){
-            document.getElementById("day1Fill_2_right").style.display = "block";
-        }
-        if($("#day1Fill_2").val() != 10){
-            document.getElementById("day1Fill_2_wrong").style.display = "block";
-        };
-        if($("#day1Fill_3").val() == 40){
-            document.getElementById("day1Fill_3_right").style.display = "block";
-        }
-        if($("#day1Fill_3").val() != 40){
-            document.getElementById("day1Fill_3_wrong").style.display = "block";
-        };
-        if($("#day1Fill_4").val() == 'No'){
-            document.getElementById("day1Fill_4_right").style.display = "block";
-        }
-        if($("#day1Fill_4").val() == 'no'){
-            document.getElementById("day1Fill_4_right").style.display = "block";
-        }
-        if($("#day1Fill_4").val() != 'No' && $("#day1Fill_4").val() != 'no'){
-            document.getElementById("day1Fill_4_wrong").style.display = "block";
-        }
-        if($("#day1Fill_5").val() == 'No'){
-            document.getElementById("day1Fill_5_right").style.display = "block";
-        }
-        if($("#day1Fill_5").val() == 'no'){
-            document.getElementById("day1Fill_5_right").style.display = "block";
-        }
-        if($("#day1Fill_5").val() != 'No' && $("#day1Fill_5").val() != 'no'){
-            document.getElementById("day1Fill_5_wrong").style.display = "block";
-        }
+        day1QuestionsList.forEach((element, index) => {
+            const adjustedIndex = index + 1;
+            if($("#day1Fill_" + adjustedIndex).val().toLowerCase() == element.answer.toLowerCase()){
+                document.getElementById("day1Fill_" + adjustedIndex + "_right").style.display = "block";
+            }
+            else {
+                document.getElementById("day1Fill_" + adjustedIndex + "_wrong").style.display = "block";
+            }
+        });
+        // if($("#day1Fill_1").val() == 30){
+        //     document.getElementById("day1Fill_1_right").style.display = "block";
+        // }
+        // if($("#day1Fill_1").val() != 30){
+        //     document.getElementById("day1Fill_1_wrong").style.display = "block";
+        // };
+        // if($("#day1Fill_2").val() == 10){
+        //     document.getElementById("day1Fill_2_right").style.display = "block";
+        // }
+        // if($("#day1Fill_2").val() != 10){
+        //     document.getElementById("day1Fill_2_wrong").style.display = "block";
+        // };
+        // if($("#day1Fill_3").val() == 40){
+        //     document.getElementById("day1Fill_3_right").style.display = "block";
+        // }
+        // if($("#day1Fill_3").val() != 40){
+        //     document.getElementById("day1Fill_3_wrong").style.display = "block";
+        // };
+        // if($("#day1Fill_4").val() == 'No'){
+        //     document.getElementById("day1Fill_4_right").style.display = "block";
+        // }
+        // if($("#day1Fill_4").val() == 'no'){
+        //     document.getElementById("day1Fill_4_right").style.display = "block";
+        // }
+        // if($("#day1Fill_4").val() != 'No' && $("#day1Fill_4").val() != 'no'){
+        //     document.getElementById("day1Fill_4_wrong").style.display = "block";
+        // }
+        // if($("#day1Fill_5").val() == 'No'){
+        //     document.getElementById("day1Fill_5_right").style.display = "block";
+        // }
+        // if($("#day1Fill_5").val() == 'no'){
+        //     document.getElementById("day1Fill_5_right").style.display = "block";
+        // }
+        // if($("#day1Fill_5").val() != 'No' && $("#day1Fill_5").val() != 'no'){
+        //     document.getElementById("day1Fill_5_wrong").style.display = "block";
+        // }
     })
 
     $(document).on('click','#day2Submit',function(){
         $("#day2Submit").addClass('disabled');
         $("#day2Submit").prop('disabled', true);
-        if($("#day2Fill_1").val() == 25){
-            document.getElementById("day2Fill_1_right").style.display = "block";
-        }
-        if($("#day2Fill_1").val() != 25){
-            document.getElementById("day2Fill_1_wrong").style.display = "block";
-        };
-        if($("#day2Fill_2").val() == 35){
-            document.getElementById("day2Fill_2_right").style.display = "block";
-        }
-        if($("#day2Fill_2").val() != 35){
-            document.getElementById("day2Fill_2_wrong").style.display = "block";
-        };
-        if($("#day2Fill_3").val() == 25){
-            document.getElementById("day2Fill_3_right").style.display = "block";
-        }
-        if($("#day2Fill_3").val() != 25){
-            document.getElementById("day2Fill_3_wrong").style.display = "block";
-        };
-        if($("#day2Fill_4").val() == 40){
-            document.getElementById("day2Fill_4_right").style.display = "block";
-        }
-        if($("#day2Fill_4").val() != 40){
-            document.getElementById("day2Fill_4_wrong").style.display = "block";
-        }
-        if($("#day2Fill_5").val() == 40){
-            document.getElementById("day2Fill_5_right").style.display = "block";
-        }
-        if($("#day2Fill_5").val() != 40){
-            document.getElementById("day2Fill_5_wrong").style.display = "block";
-        }
+        day2QuestionsList.forEach((element, index) => {
+            const adjustedIndex = index + 1;
+            if($("#day2Fill_" + adjustedIndex).val().toLowerCase() == element.answer.toLowerCase()){
+                document.getElementById("day2Fill_" + adjustedIndex + "_right").style.display = "block";
+            }
+            else {
+                document.getElementById("day2Fill_" + adjustedIndex + "_wrong").style.display = "block";
+            }
+        });
+        // if($("#day2Fill_1").val() == 25){
+        //     document.getElementById("day2Fill_1_right").style.display = "block";
+        // }
+        // if($("#day2Fill_1").val() != 25){
+        //     document.getElementById("day2Fill_1_wrong").style.display = "block";
+        // };
+        // if($("#day2Fill_2").val() == 35){
+        //     document.getElementById("day2Fill_2_right").style.display = "block";
+        // }
+        // if($("#day2Fill_2").val() != 35){
+        //     document.getElementById("day2Fill_2_wrong").style.display = "block";
+        // };
+        // if($("#day2Fill_3").val() == 25){
+        //     document.getElementById("day2Fill_3_right").style.display = "block";
+        // }
+        // if($("#day2Fill_3").val() != 25){
+        //     document.getElementById("day2Fill_3_wrong").style.display = "block";
+        // };
+        // if($("#day2Fill_4").val() == 40){
+        //     document.getElementById("day2Fill_4_right").style.display = "block";
+        // }
+        // if($("#day2Fill_4").val() != 40){
+        //     document.getElementById("day2Fill_4_wrong").style.display = "block";
+        // }
+        // if($("#day2Fill_5").val() == 40){
+        //     document.getElementById("day2Fill_5_right").style.display = "block";
+        // }
+        // if($("#day2Fill_5").val() != 40){
+        //     document.getElementById("day2Fill_5_wrong").style.display = "block";
+        // }
     })
 
     $(document).on('click','#day3Submit',function(){
         $("#day3Submit").addClass('disabled');
         $("#day3Submit").prop('disabled', true);
-        if($("#day3Fill_1").val() == 20){
-            document.getElementById("day3Fill_1_right").style.display = "block";
-        }
-        if($("#day3Fill_1").val() != 20){
-            document.getElementById("day3Fill_1_wrong").style.display = "block";
-        };
-        if($("#day3Fill_2").val() == 30){
-            document.getElementById("day3Fill_2_right").style.display = "block";
-        }
-        if($("#day3Fill_2").val() != 30){
-            document.getElementById("day3Fill_2_wrong").style.display = "block";
-        };
-        if($("#day3Fill_3").val() == 25){
-            document.getElementById("day3Fill_3_right").style.display = "block";
-        }
-        if($("#day3Fill_3").val() != 25){
-            document.getElementById("day3Fill_3_wrong").style.display = "block";
-        };
-        if($("#day3Fill_4").val() == 25){
-            document.getElementById("day3Fill_4_right").style.display = "block";
-        }
-        if($("#day3Fill_4").val() != 25){
-            document.getElementById("day3Fill_4_wrong").style.display = "block";
-        }
-        if($("#day3Fill_5").val() == 'No'){
-            document.getElementById("day3Fill_5_right").style.display = "block";
-        }
-        if($("#day3Fill_5").val() == 'no'){
-            document.getElementById("day3Fill_5_right").style.display = "block";
-        }
-        if($("#day3Fill_5").val() != 'No' && $("#day1Fill_5").val() != 'no'){
-            document.getElementById("day3Fill_5_wrong").style.display = "block";
-        }
+        day3QuestionsList.forEach((element, index) => {
+            const adjustedIndex = index + 1;
+            if($("#day3Fill_" + adjustedIndex).val().toLowerCase() == element.answer.toLowerCase()){
+                document.getElementById("day3Fill_" + adjustedIndex + "_right").style.display = "block";
+            }
+            else {
+                document.getElementById("day3Fill_" + adjustedIndex + "_wrong").style.display = "block";
+            }
+        });
+        // if($("#day3Fill_1").val() == 20){
+        //     document.getElementById("day3Fill_1_right").style.display = "block";
+        // }
+        // if($("#day3Fill_1").val() != 20){
+        //     document.getElementById("day3Fill_1_wrong").style.display = "block";
+        // };
+        // if($("#day3Fill_2").val() == 30){
+        //     document.getElementById("day3Fill_2_right").style.display = "block";
+        // }
+        // if($("#day3Fill_2").val() != 30){
+        //     document.getElementById("day3Fill_2_wrong").style.display = "block";
+        // };
+        // if($("#day3Fill_3").val() == 25){
+        //     document.getElementById("day3Fill_3_right").style.display = "block";
+        // }
+        // if($("#day3Fill_3").val() != 25){
+        //     document.getElementById("day3Fill_3_wrong").style.display = "block";
+        // };
+        // if($("#day3Fill_4").val() == 25){
+        //     document.getElementById("day3Fill_4_right").style.display = "block";
+        // }
+        // if($("#day3Fill_4").val() != 25){
+        //     document.getElementById("day3Fill_4_wrong").style.display = "block";
+        // }
+        // if($("#day3Fill_5").val() == 'No'){
+        //     document.getElementById("day3Fill_5_right").style.display = "block";
+        // }
+        // if($("#day3Fill_5").val() == 'no'){
+        //     document.getElementById("day3Fill_5_right").style.display = "block";
+        // }
+        // if($("#day3Fill_5").val() != 'No' && $("#day1Fill_5").val() != 'no'){
+        //     document.getElementById("day3Fill_5_wrong").style.display = "block";
+        // }
     })
     
     //所有...Gen 函数的功能和实现逻辑都类似，设置一个list arr以及一个list arr2, arr和arr2在初始状态下相等，即出题范围；每生成一个正确答案为i的题目，则i从arr中被剔除（即可避免重复出题）；
@@ -681,6 +809,73 @@ window.onload = function() {
                 );
             }
         }
+        // 7 - Day 1 Questions
+        var day1QuestionsData = await getDay1QuestionsSheetValues();
+        for (let i = 0; i < day1QuestionsData.values.length; i++) {
+            //只要Question/Correct Answer/image兩項有一項為空，則跳過，防止因Google Sheet裡有空行而報錯
+            //Tips和WrongMessage可以不寫,因此不判定
+            if(!day1QuestionsData.values[i][0] ||
+                !day1QuestionsData.values[i][1]) {
+                continue;
+            }
+            else {
+                //把正確的值加到題庫裡
+                day1QuestionsList.push(
+                    {
+                        question: day1QuestionsData.values[i][0],
+                        answer: day1QuestionsData.values[i][1],
+                        tips: day1QuestionsData.values[i][2],
+                        wrongMessage: day1QuestionsData.values[i][3]
+                    }
+                );
+            }
+        }
+        console.log(day1QuestionsList);
+        // 8 - Day 2 Questions
+        var day2QuestionsData = await getDay2QuestionsSheetValues();
+        for (let i = 0; i < day2QuestionsData.values.length; i++) {
+            //只要Question/Correct Answer/image兩項有一項為空，則跳過，防止因Google Sheet裡有空行而報錯
+            //Tips和WrongMessage可以不寫,因此不判定
+            if(!day2QuestionsData.values[i][0] ||
+                !day2QuestionsData.values[i][1]) {
+                continue;
+            }
+            else {
+                //把正確的值加到題庫裡
+                day2QuestionsList.push(
+                    {
+                        question: day2QuestionsData.values[i][0],
+                        answer: day2QuestionsData.values[i][1],
+                        tips: day2QuestionsData.values[i][2],
+                        wrongMessage: day2QuestionsData.values[i][3]
+                    }
+                );
+            }
+        }
+        console.log(day2QuestionsList);
+        // 9 - Day 3 Questions
+        var day3QuestionsData = await getDay3QuestionsSheetValues();
+        for (let i = 0; i < day3QuestionsData.values.length; i++) {
+            //只要Question/Correct Answer/image兩項有一項為空，則跳過，防止因Google Sheet裡有空行而報錯
+            //Tips和WrongMessage可以不寫,因此不判定
+            if(!day3QuestionsData.values[i][0] ||
+                !day3QuestionsData.values[i][1]) {
+                continue;
+            }
+            else {
+                //把正確的值加到題庫裡
+                day3QuestionsList.push(
+                    {
+                        question: day3QuestionsData.values[i][0],
+                        answer: day3QuestionsData.values[i][1],
+                        tips: day3QuestionsData.values[i][2],
+                        wrongMessage: day3QuestionsData.values[i][3]
+                    }
+                );
+            }
+        }
+        console.log(day3QuestionsList);
+
         //day1 多选题题库(day1默认包含所有iPhone型号，即iphoneList的内容)； 可加入型号
         //day1: 先问完Samsung再问iPhone型号
         day1List = samsungList.slice();
@@ -703,6 +898,10 @@ window.onload = function() {
         samsungQuestionGen();
         otherPhoneQuestionGen();
         samsungTabQuestionGen();
+        
+        day1FillInQuestionsGen();
+        day2FillInQuestionsGen();
+        day3FillInQuestionsGen();
         //在網頁中顯示整個題庫
         initializeDatabase();
 
