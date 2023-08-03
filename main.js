@@ -346,7 +346,7 @@ window.onload = function() {
         $("#day1Submit").prop('disabled', true);
         day1QuestionsList.forEach((element, index) => {
             const adjustedIndex = index + 1;
-            if($("#day1Fill_" + adjustedIndex).val() == element.answer){
+            if($("#day1Fill_" + adjustedIndex).val().toLowerCase() == element.answer.toLowerCase()){
                 document.getElementById("day1Fill_" + adjustedIndex + "_right").style.display = "block";
             }
             else {
@@ -396,7 +396,7 @@ window.onload = function() {
         $("#day2Submit").prop('disabled', true);
         day2QuestionsList.forEach((element, index) => {
             const adjustedIndex = index + 1;
-            if($("#day2Fill_" + adjustedIndex).val() == element.answer){
+            if($("#day2Fill_" + adjustedIndex).val().toLowerCase() == element.answer.toLowerCase()){
                 document.getElementById("day2Fill_" + adjustedIndex + "_right").style.display = "block";
             }
             else {
@@ -440,7 +440,7 @@ window.onload = function() {
         $("#day3Submit").prop('disabled', true);
         day3QuestionsList.forEach((element, index) => {
             const adjustedIndex = index + 1;
-            if($("#day3Fill_" + adjustedIndex).val() == element.answer){
+            if($("#day3Fill_" + adjustedIndex).val().toLowerCase() == element.answer.toLowerCase()){
                 document.getElementById("day3Fill_" + adjustedIndex + "_right").style.display = "block";
             }
             else {
