@@ -79,7 +79,7 @@ window.onload = function() {
                     '<div class="input-group-prepend">' +
                     '<span class="input-group-text">'+ element.question +'</span>'+
                     '</div>' +
-                    '<input type="text" class="form-control" id="day1Fill_' + adjustedIndex + '" placeholder="' + element.tips + '" aria-describedby="day1Fill_1">' +
+                    '<input type="text" class="form-control" id="day1Fill_' + adjustedIndex + '" placeholder="' + element.tips + '" aria-describedby="day1Fill_' + adjustedIndex + '">' +
                     '<div class="valid-feedback" id="day1Fill_' + adjustedIndex + '_right" style="display: none;">' +
                     'Correct!' +
                     '</div>' +
@@ -108,7 +108,7 @@ window.onload = function() {
                     '<div class="input-group-prepend">' +
                     '<span class="input-group-text">'+ element.question +'</span>'+
                     '</div>' +
-                    '<input type="text" class="form-control" id="day2Fill_' + adjustedIndex + '" placeholder="' + element.tips + '" aria-describedby="day2Fill_1">' +
+                    '<input type="text" class="form-control" id="day2Fill_' + adjustedIndex + '" placeholder="' + element.tips + '" aria-describedby="day1Fill_' + adjustedIndex + '">' +
                     '<div class="valid-feedback" id="day2Fill_' + adjustedIndex + '_right" style="display: none;">' +
                     'Correct!' +
                     '</div>' +
@@ -137,7 +137,7 @@ window.onload = function() {
                     '<div class="input-group-prepend">' +
                     '<span class="input-group-text">'+ element.question +'</span>'+
                     '</div>' +
-                    '<input type="text" class="form-control" id="day3Fill_' + adjustedIndex + '" placeholder="' + element.tips + '" aria-describedby="day3Fill_1">' +
+                    '<input type="text" class="form-control" id="day3Fill_' + adjustedIndex + '" placeholder="' + element.tips + '" aria-describedby="day1Fill_' + adjustedIndex + '">' +
                     '<div class="valid-feedback" id="day3Fill_' + adjustedIndex + '_right" style="display: none;">' +
                     'Correct!' +
                     '</div>' +
@@ -347,10 +347,10 @@ window.onload = function() {
         day1QuestionsList.forEach((element, index) => {
             const adjustedIndex = index + 1;
             if($("#day1Fill_" + adjustedIndex).val() == element.answer){
-                document.getElementById("#day1Fill_" + adjustedIndex + "_right").style.display = "block";
+                document.getElementById("day1Fill_" + adjustedIndex + "_right").style.display = "block";
             }
             else {
-                document.getElementById("#day1Fill_" + adjustedIndex + "_wrong").style.display = "block";
+                document.getElementById("day1Fill_" + adjustedIndex + "_wrong").style.display = "block";
             }
         });
         // if($("#day1Fill_1").val() == 30){
@@ -397,10 +397,10 @@ window.onload = function() {
         day2QuestionsList.forEach((element, index) => {
             const adjustedIndex = index + 1;
             if($("#day2Fill_" + adjustedIndex).val() == element.answer){
-                document.getElementById("#day2Fill_" + adjustedIndex + "_right").style.display = "block";
+                document.getElementById("day2Fill_" + adjustedIndex + "_right").style.display = "block";
             }
             else {
-                document.getElementById("#day2Fill_" + adjustedIndex + "_wrong").style.display = "block";
+                document.getElementById("day2Fill_" + adjustedIndex + "_wrong").style.display = "block";
             }
         });
         // if($("#day2Fill_1").val() == 25){
@@ -441,10 +441,10 @@ window.onload = function() {
         day3QuestionsList.forEach((element, index) => {
             const adjustedIndex = index + 1;
             if($("#day3Fill_" + adjustedIndex).val() == element.answer){
-                document.getElementById("#day3Fill_" + adjustedIndex + "_right").style.display = "block";
+                document.getElementById("day3Fill_" + adjustedIndex + "_right").style.display = "block";
             }
             else {
-                document.getElementById("#day3Fill_" + adjustedIndex + "_wrong").style.display = "block";
+                document.getElementById("day3Fill_" + adjustedIndex + "_wrong").style.display = "block";
             }
         });
         // if($("#day3Fill_1").val() == 20){
