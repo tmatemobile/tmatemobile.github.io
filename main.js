@@ -885,7 +885,7 @@ window.onload = function() {
         day1bGen();
         day2Gen();
         day3Gen();
-        //caseQuestionGen();
+        caseQuestionGen();
         phoneQuestionGen();
         ipadQuestionGen();
         samsungQuestionGen();
