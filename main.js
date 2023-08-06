@@ -674,9 +674,9 @@ window.onload = function() {
         //使用async/await等待完getiPhoneSheetValues()回傳JSON檔案後，才會執行剩下的指令
         var iphoneData = await getiPhoneSheetValues();
         for (let i = 0; i < iphoneData.values.length; i++) {
-            //只要name/description/image三項有一項為空，則跳過，防止因Google Sheet裡有空行而報錯
+            //只要name/image有一項為空，則跳過，防止因Google Sheet裡有空行而報錯
+            //Description可以不寫
             if(!iphoneData.values[i][0] ||
-                !iphoneData.values[i][1] ||
                 !iphoneData.values[i][2]) {
                 continue;
             }
@@ -707,7 +707,6 @@ window.onload = function() {
         var samsungData = await getSamsungSheetValues();
         for (let i = 0; i < samsungData.values.length; i++) {
             if(!samsungData.values[i][0] ||
-                !samsungData.values[i][1] ||
                 !samsungData.values[i][2]) {
                 continue;
             }
@@ -728,7 +727,6 @@ window.onload = function() {
         var ipadData = await getiPadSheetValues();
         for (let i = 0; i < ipadData.values.length; i++) {
             if(!ipadData.values[i][0] ||
-                !ipadData.values[i][1] ||
                 !ipadData.values[i][2]) {
                 continue;
             }
@@ -749,7 +747,6 @@ window.onload = function() {
         var samsungTabletData = await getSamsungTabletSheetValues();
         for (let i = 0; i < samsungTabletData.values.length; i++) {
             if(!samsungTabletData.values[i][0] ||
-                !samsungTabletData.values[i][1] ||
                 !samsungTabletData.values[i][2]) {
                 continue;
             }
@@ -770,7 +767,6 @@ window.onload = function() {
         var uncommonModelData = await getUncommonModelSheetValues();
         for (let i = 0; i < uncommonModelData.values.length; i++) {
             if(!uncommonModelData.values[i][0] ||
-                !uncommonModelData.values[i][1] ||
                 !uncommonModelData.values[i][2]) {
                 continue;
             }
@@ -791,7 +787,6 @@ window.onload = function() {
         var accessoriesData = await getAccessoriesSheetValues();
         for (let i = 0; i < accessoriesData.values.length; i++) {
             if(!accessoriesData.values[i][0] ||
-                !accessoriesData.values[i][1] ||
                 !accessoriesData.values[i][2]) {
                 continue;
             }
