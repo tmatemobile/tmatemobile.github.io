@@ -9,8 +9,6 @@ import {getiPhoneSheetValues,
     getDay3QuestionsSheetValues} from "./gsheetreader.js";
 
 window.onload = function() {
-    //更新时间的注释
-    console.log('updated 20/07/2023')
     //iphone 题库； iphone, ipad, 三星主流型号题库， 以及小型号手机题库 共同组成主页上的 “phone/ipad model identification” ；可加入型号
     var iphoneList = new this.Array();
     //ipad 题库，同时也是day2 题库； 此外， iphone, ipad, 三星主流型号题库， 以及小型号手机题库 共同组成主页上的 “phone/ipad model identification” ；可加入型号
@@ -887,7 +885,7 @@ window.onload = function() {
         day1bGen();
         day2Gen();
         day3Gen();
-        caseQuestionGen();
+        //caseQuestionGen();
         phoneQuestionGen();
         ipadQuestionGen();
         samsungQuestionGen();
