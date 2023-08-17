@@ -28,8 +28,7 @@ window.onload = function() {
     var day2List = new this.Array();
     //day3 多选题题库；可加入产品
     var day3List = new this.Array();
-
-    //
+    // 2D array，儲存從Google Sheet得到的數值，用來生成填空題
     var day1QuestionsList = new this.Array();
     var day2QuestionsList = new this.Array();
     var day3QuestionsList = new this.Array();
@@ -54,21 +53,22 @@ window.onload = function() {
     var day2QuestionList = [];
     var day3QuestionList = [];
 
-    // Called at the beginning
+    // 題庫讀取完畢前將顯示loading text
     var initializeLoadingText = function() {
         document.getElementById("waitDiv").style.display = "block";
     }
-    // Called at the beginning
+    // 題庫讀取完畢
     var deleteLoadingText = function() {
         document.getElementById("waitDiv").style.display = "none";
     }
-    // Called at the beginning
+    // 題庫讀取完畢，啟用learnDiv，learnDiv對應的是三行文字: Phone/Tablet Models, Phone/Tablet Case and accesaries, Other
     var initializeDisplay = function() {
         document.getElementById("learnDiv").style.display = "block";
     }
-    // Called at the beginning
+
+    // 程式開始運行時就已經把所需的數值從Google Sheet中提取出來，並儲存到day1QuestionsList了，day1QuestionsList是一個2D array
+    // 用forEach把day1QuestionsList的值，配合以下的HTML生成填空題
     var day1FillInQuestionsGen = function() {
-        // Fill in questions
         day1QuestionsList.forEach((element, index) => {
             const adjustedIndex = index + 1;
             document.getElementById('day1FillDiv').insertAdjacentHTML(
@@ -87,7 +87,7 @@ window.onload = function() {
                 '</div>'
             )
         }); 
-        // Button 
+        // 同時生成Button
         document.getElementById('day1FillDiv').insertAdjacentHTML(
             'beforeend',
             '<div class="flex_center_row row" style="margin-top: 40px;">' +
@@ -95,9 +95,7 @@ window.onload = function() {
             '</div>'
         );
     }
-    // Called at the beginning
     var day2FillInQuestionsGen = function() {
-        // Fill in questions
         day2QuestionsList.forEach((element, index) => {
             const adjustedIndex = index + 1;
             document.getElementById('day2FillDiv').insertAdjacentHTML(
@@ -116,7 +114,6 @@ window.onload = function() {
                 '</div>'
             )
         }); 
-        // Button 
         document.getElementById('day2FillDiv').insertAdjacentHTML(
             'beforeend',
             '<div class="flex_center_row row" style="margin-top: 40px;">' +
@@ -124,9 +121,7 @@ window.onload = function() {
             '</div>'
         );
     }
-    // Called at the beginning
     var day3FillInQuestionsGen = function() {
-        // Fill in questions
         day3QuestionsList.forEach((element, index) => {
             const adjustedIndex = index + 1;
             document.getElementById('day3FillDiv').insertAdjacentHTML(
@@ -145,7 +140,6 @@ window.onload = function() {
                 '</div>'
             )
         }); 
-        // Button 
         document.getElementById('day3FillDiv').insertAdjacentHTML(
             'beforeend',
             '<div class="flex_center_row row" style="margin-top: 40px;">' +
@@ -153,7 +147,7 @@ window.onload = function() {
             '</div>'
         );
     }
-    // Called at the end
+    //在網頁中顯示整個題庫，讓使用者得知出題範圍
     var initializeDatabase = function() {
         iphoneList.forEach(element => {
             document.getElementById('iphoneDatabase').insertAdjacentHTML(
@@ -192,7 +186,7 @@ window.onload = function() {
             )
         });
     }
-    //hide all page for showing the right page
+    //隱藏所有頁面，用來重新讀取正確的頁面
     var resetDisplay = function(){
         document.getElementById("learnDiv").style.display = "none";
         document.getElementById("caseDiv").style.display = "none";
@@ -213,57 +207,46 @@ window.onload = function() {
         resetDisplay();
         document.getElementById("learnDiv").style.display = "block";
     }
-
     this.document.getElementById("caseTestButton").onclick = function(){
         resetDisplay();
         document.getElementById("caseDiv").style.display = "block";
     }
-
     this.document.getElementById("modelTestButton").onclick = function(){
         resetDisplay();
         document.getElementById("phoneDiv").style.display = "block";
     }
-
     this.document.getElementById("stabTestButton").onclick = function(){
         resetDisplay();
         document.getElementById("stabDiv").style.display = "block";
     }
-
     this.document.getElementById("databaseButton").onclick = function(){
         resetDisplay();
         document.getElementById("databaseDiv").style.display = "block";
     }
-
     this.document.getElementById("day1Multi").onclick = function(){
         resetDisplay();
         document.getElementById("day1MultiDiv").style.display = "block";
     }
-
     this.document.getElementById("day2Multi").onclick = function(){
         resetDisplay();
         document.getElementById("day2MultiDiv").style.display = "block";
     }
-
     this.document.getElementById("day3Multi").onclick = function(){
         resetDisplay();
         document.getElementById("day3MultiDiv").style.display = "block";
     }
-
     this.document.getElementById("day1Fill").onclick = function(){
         resetDisplay();
         document.getElementById("day1FillDiv").style.display = "block";
     }
-
     this.document.getElementById("day2Fill").onclick = function(){
         resetDisplay();
         document.getElementById("day2FillDiv").style.display = "block";
     }
-
     this.document.getElementById("day3Fill").onclick = function(){
         resetDisplay();
         document.getElementById("day3FillDiv").style.display = "block";
     }
-
 
     //点击选择题选项时触发的函数
     $(document).on('click','.answer-case',function(){ //触发索引使用的class name需与生成题目选项（之前的..Gen系列函数）时的class name匹配
@@ -340,53 +323,22 @@ window.onload = function() {
 
     //填空题的验证函数，点击页面上的submit按钮时触发， 此处的索引id也要与生成时的匹配
     $(document).on('click','#day1Submit',function(){
-        $("#day1Submit").addClass('disabled'); //submit按钮点击一次后便不能再点
+        //submit按钮点击一次后便不能再点
+        $("#day1Submit").addClass('disabled'); 
         $("#day1Submit").prop('disabled', true);
         day1QuestionsList.forEach((element, index) => {
+            // 用forEach搜尋這些class: day1Fill_1_right, day1Fill_1_wrong, day1Fill_2_right, day1Fill_2_wrong..... 如此類推
             const adjustedIndex = index + 1;
+            // 填空題填Yes/No時，不會因大小楷而報錯
             if($("#day1Fill_" + adjustedIndex).val().toLowerCase() == element.answer.toLowerCase()){
+                // 答案正確
                 document.getElementById("day1Fill_" + adjustedIndex + "_right").style.display = "block";
             }
             else {
+                // 答案錯誤
                 document.getElementById("day1Fill_" + adjustedIndex + "_wrong").style.display = "block";
             }
         });
-        // if($("#day1Fill_1").val() == 30){
-        //     document.getElementById("day1Fill_1_right").style.display = "block";
-        // }
-        // if($("#day1Fill_1").val() != 30){
-        //     document.getElementById("day1Fill_1_wrong").style.display = "block";
-        // };
-        // if($("#day1Fill_2").val() == 10){
-        //     document.getElementById("day1Fill_2_right").style.display = "block";
-        // }
-        // if($("#day1Fill_2").val() != 10){
-        //     document.getElementById("day1Fill_2_wrong").style.display = "block";
-        // };
-        // if($("#day1Fill_3").val() == 40){
-        //     document.getElementById("day1Fill_3_right").style.display = "block";
-        // }
-        // if($("#day1Fill_3").val() != 40){
-        //     document.getElementById("day1Fill_3_wrong").style.display = "block";
-        // };
-        // if($("#day1Fill_4").val() == 'No'){
-        //     document.getElementById("day1Fill_4_right").style.display = "block";
-        // }
-        // if($("#day1Fill_4").val() == 'no'){
-        //     document.getElementById("day1Fill_4_right").style.display = "block";
-        // }
-        // if($("#day1Fill_4").val() != 'No' && $("#day1Fill_4").val() != 'no'){
-        //     document.getElementById("day1Fill_4_wrong").style.display = "block";
-        // }
-        // if($("#day1Fill_5").val() == 'No'){
-        //     document.getElementById("day1Fill_5_right").style.display = "block";
-        // }
-        // if($("#day1Fill_5").val() == 'no'){
-        //     document.getElementById("day1Fill_5_right").style.display = "block";
-        // }
-        // if($("#day1Fill_5").val() != 'No' && $("#day1Fill_5").val() != 'no'){
-        //     document.getElementById("day1Fill_5_wrong").style.display = "block";
-        // }
     })
 
     $(document).on('click','#day2Submit',function(){
@@ -401,36 +353,6 @@ window.onload = function() {
                 document.getElementById("day2Fill_" + adjustedIndex + "_wrong").style.display = "block";
             }
         });
-        // if($("#day2Fill_1").val() == 25){
-        //     document.getElementById("day2Fill_1_right").style.display = "block";
-        // }
-        // if($("#day2Fill_1").val() != 25){
-        //     document.getElementById("day2Fill_1_wrong").style.display = "block";
-        // };
-        // if($("#day2Fill_2").val() == 35){
-        //     document.getElementById("day2Fill_2_right").style.display = "block";
-        // }
-        // if($("#day2Fill_2").val() != 35){
-        //     document.getElementById("day2Fill_2_wrong").style.display = "block";
-        // };
-        // if($("#day2Fill_3").val() == 25){
-        //     document.getElementById("day2Fill_3_right").style.display = "block";
-        // }
-        // if($("#day2Fill_3").val() != 25){
-        //     document.getElementById("day2Fill_3_wrong").style.display = "block";
-        // };
-        // if($("#day2Fill_4").val() == 40){
-        //     document.getElementById("day2Fill_4_right").style.display = "block";
-        // }
-        // if($("#day2Fill_4").val() != 40){
-        //     document.getElementById("day2Fill_4_wrong").style.display = "block";
-        // }
-        // if($("#day2Fill_5").val() == 40){
-        //     document.getElementById("day2Fill_5_right").style.display = "block";
-        // }
-        // if($("#day2Fill_5").val() != 40){
-        //     document.getElementById("day2Fill_5_wrong").style.display = "block";
-        // }
     })
 
     $(document).on('click','#day3Submit',function(){
@@ -445,39 +367,6 @@ window.onload = function() {
                 document.getElementById("day3Fill_" + adjustedIndex + "_wrong").style.display = "block";
             }
         });
-        // if($("#day3Fill_1").val() == 20){
-        //     document.getElementById("day3Fill_1_right").style.display = "block";
-        // }
-        // if($("#day3Fill_1").val() != 20){
-        //     document.getElementById("day3Fill_1_wrong").style.display = "block";
-        // };
-        // if($("#day3Fill_2").val() == 30){
-        //     document.getElementById("day3Fill_2_right").style.display = "block";
-        // }
-        // if($("#day3Fill_2").val() != 30){
-        //     document.getElementById("day3Fill_2_wrong").style.display = "block";
-        // };
-        // if($("#day3Fill_3").val() == 25){
-        //     document.getElementById("day3Fill_3_right").style.display = "block";
-        // }
-        // if($("#day3Fill_3").val() != 25){
-        //     document.getElementById("day3Fill_3_wrong").style.display = "block";
-        // };
-        // if($("#day3Fill_4").val() == 25){
-        //     document.getElementById("day3Fill_4_right").style.display = "block";
-        // }
-        // if($("#day3Fill_4").val() != 25){
-        //     document.getElementById("day3Fill_4_wrong").style.display = "block";
-        // }
-        // if($("#day3Fill_5").val() == 'No'){
-        //     document.getElementById("day3Fill_5_right").style.display = "block";
-        // }
-        // if($("#day3Fill_5").val() == 'no'){
-        //     document.getElementById("day3Fill_5_right").style.display = "block";
-        // }
-        // if($("#day3Fill_5").val() != 'No' && $("#day1Fill_5").val() != 'no'){
-        //     document.getElementById("day3Fill_5_wrong").style.display = "block";
-        // }
     })
     
     //所有...Gen 函数的功能和实现逻辑都类似，设置一个list arr以及一个list arr2, arr和arr2在初始状态下相等，即出题范围；每生成一个正确答案为i的题目，则i从arr中被剔除（即可避免重复出题）；
@@ -666,10 +555,10 @@ window.onload = function() {
     }
 
     var main = async function() {
-        // 0
+        // Step 1: 顯示loading text
         initializeLoadingText();
-        // 1
-        //使用async/await等待完getiPhoneSheetValues()回傳JSON檔案後，才會執行剩下的指令
+
+        // Step 2: 使用async/await等待完getiPhoneSheetValues()回傳JSON檔案後，才會執行剩下的指令
         var iphoneData = await getiPhoneSheetValues();
         for (let i = 0; i < iphoneData.values.length; i++) {
             //只要name/image有一項為空，則跳過，防止因Google Sheet裡有空行而報錯
@@ -805,7 +694,7 @@ window.onload = function() {
         // 7 - Day 1 Questions
         var day1QuestionsData = await getDay1QuestionsSheetValues();
         for (let i = 0; i < day1QuestionsData.values.length; i++) {
-            //只要Question/Correct Answer/image兩項有一項為空，則跳過，防止因Google Sheet裡有空行而報錯
+            //只要Question/Correct Answer/兩項有一項為空，則跳過，防止因Google Sheet裡有空行而報錯
             //Tips和WrongMessage可以不寫,因此不判定
             if(!day1QuestionsData.values[i][0] ||
                 !day1QuestionsData.values[i][1]) {
@@ -869,6 +758,7 @@ window.onload = function() {
         }
         console.log(day3QuestionsList);
 
+        // Step 3: 生成題目
         //day1 多选题题库(day1默认包含所有iPhone型号，即iphoneList的内容)； 可加入型号
         //day1: 先问完Samsung再问iPhone型号
         day1List = samsungList.slice();
@@ -880,7 +770,7 @@ window.onload = function() {
         //顯示首頁
         deleteLoadingText();
         initializeDisplay();
-        //call 题目生成函数
+        //生成選擇題
         day1Gen();
         day1bGen();
         day2Gen();
@@ -891,11 +781,11 @@ window.onload = function() {
         samsungQuestionGen();
         otherPhoneQuestionGen();
         samsungTabQuestionGen();
-        
+        //生成填空題
         day1FillInQuestionsGen();
         day2FillInQuestionsGen();
         day3FillInQuestionsGen();
-        //在網頁中顯示整個題庫
+        //在網頁中顯示整個題庫，讓使用者得知出題範圍
         initializeDatabase();
 
         //点击多选题页面的continue按键时触发的函数，索引id要与生成时的匹配
@@ -996,5 +886,6 @@ window.onload = function() {
             }
         });
     }
+
     main();
 }

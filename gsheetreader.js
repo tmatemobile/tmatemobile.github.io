@@ -21,7 +21,6 @@ const PAGE3_NAME = '3 - iPad';
 const PAGE4_NAME = '4 - Samsung Tablet';
 const PAGE5_NAME = '5 - Uncommon Model';
 const PAGE6_NAME = '6 - Accessories';
-
 const DAY1FILLIN_NAME =  'Day 1 Questions';
 const DAY2FILLIN_NAME =  'Day 2 Questions';
 const DAY3FILLIN_NAME =  'Day 3 Questions';
@@ -33,7 +32,6 @@ const PAGE3_RANGE = 'A2:C60';
 const PAGE4_RANGE = 'A2:C60';
 const PAGE5_RANGE = 'A2:C60';
 const PAGE6_RANGE = 'A2:C60';
-
 const DAY1FILLIN_RANGE =  'A2:D30';
 const DAY2FILLIN_RANGE =  'A2:D30';
 const DAY3FILLIN_RANGE =  'A2:D30';
@@ -43,6 +41,7 @@ var getiPhoneSheetValues = async () => {
     //發出HTTP請求
     const request = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${PAGE1_NAME}!${PAGE1_RANGE}?key=${API_KEY}`, 
     {
+      // headers須使用"Content-Type": "application/json", 否則會出錯
         headers: 
         {
         "Content-Type": "application/json"
