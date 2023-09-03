@@ -5,8 +5,9 @@
 // https://developer.okta.com/blog/2021/08/02/fix-common-problems-cors#cors-in-flight
 // https://stackoverflow.com/questions/56138090/how-to-get-an-image-in-cell-url-from-the-google-sheets-api
 
-// Google Sheet ID藏在Google sheet的連結網址裡面
+
 // Google sheet的連結: https://docs.google.com/spreadsheets/d/1hb2XiLriTd_RzLYDDxsQwSmflKVDJCdSnY-5VNqYR68/edit#gid=0
+// Google Sheet ID藏在Google sheet的連結網址裡面
 const SHEET_ID = '1hb2XiLriTd_RzLYDDxsQwSmflKVDJCdSnY-5VNqYR68';
 
 // 存取Google Sheet API v4的API key
@@ -14,7 +15,7 @@ const SHEET_ID = '1hb2XiLriTd_RzLYDDxsQwSmflKVDJCdSnY-5VNqYR68';
 // 詳見：https://levelup.gitconnected.com/google-sheets-api-tutorial-with-javascript-588f581aa1d9
 const API_KEY = 'AIzaSyAb8fdJjnhKwj0LlZWz3kcC0Uz7kxyIQXc';
 
-//工作表(Sheet)的名稱，要修改的話注意空格與大小寫。
+//對應工作表(Sheet)的名稱，要修改的話注意空格與大小寫。
 const PAGE1_NAME = '1 - iPhone';
 const PAGE2_NAME = '2 - Samsung';
 const PAGE3_NAME = '3 - iPad';
